@@ -3,6 +3,7 @@ import { Route, Switch, Redirect } from "react-router-dom";
 import styles from "./style.module.scss";
 import useTheme from "../../hoc/ThemeProvider";
 
+import "../../i18n/index.js";
 import Header from "../../components/Header";
 import Dashboard from "../Dashboard";
 import Footer from "../../components/Footer";

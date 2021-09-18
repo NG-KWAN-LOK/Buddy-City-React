@@ -1,6 +1,7 @@
 import React, { useState, useCallback, useEffect } from "react";
 import { Link } from "react-router-dom";
 import styles from "./style.module.scss";
+import { useTranslation } from "react-i18next";
 
 import ThemeSwitcher from "../../ThemeSwitcher";
 interface NavBarProps {
@@ -12,6 +13,10 @@ const NavBar: React.FC<NavBarProps> = ({
   setMobileNavOff,
 }) => {
   //console.log(setMobileNavOn);
+  const { t, i18n } = useTranslation();
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+  };
   return (
     <nav
       className={
@@ -25,55 +30,74 @@ const NavBar: React.FC<NavBarProps> = ({
           <div className={styles.PhoneTop__mainnav__container__col__title}>
             MENU
           </div>
-          <Link className={styles.PhoneTop__mainnav__container__col__a} to='/'>
+          <Link
+            className={styles.PhoneTop__mainnav__container__col__a}
+            to='/'
+            onClick={setMobileNavOff}
+          >
             <div className={styles.PhoneTop__mainnav__container__col__a__menu}>
               <i
                 aria-hidden='true'
                 className={styles["ion-android-arrow-dropdown"]}
               ></i>
-              <span id='topFooterLang_phoneHome'>回到主頁</span>
+              <span id='topFooterLang_phoneHome'>
+                {t("topFooterLang_phoneHome")}
+              </span>
             </div>
           </Link>
           <a
             className={styles.PhoneTop__mainnav__container__col__a}
             href='https://buddycityinfo.sgngs.com/map.html'
             target='_blank'
+            onClick={setMobileNavOff}
           >
             <div className={styles.PhoneTop__mainnav__container__col__a__menu}>
               <i
                 aria-hidden='true'
                 className={styles["ion-android-arrow-dropdown"]}
               ></i>
-              <span id='topFooterLang_phoneOnlineMap'>網上地圖</span>
+              <span id='topFooterLang_phoneOnlineMap'>
+                {t("topFooterLang_phoneOnlineMap")}
+              </span>
             </div>
           </a>
           <Link
             className={styles.PhoneTop__mainnav__container__col__a}
             to='/building_list'
+            onClick={setMobileNavOff}
           >
             <div className={styles.PhoneTop__mainnav__container__col__a__menu}>
               <i
                 aria-hidden='true'
                 className={styles["ion-android-arrow-dropdown"]}
               ></i>
-              <span id='topFooterLang_phoneBulidingList'>城市建築物名冊</span>
+              <span id='topFooterLang_phoneBulidingList'>
+                {t("topFooterLang_phoneBulidingList")}
+              </span>
             </div>
           </Link>
           <Link
             className={styles.PhoneTop__mainnav__container__col__a}
             to='/resident'
+            onClick={setMobileNavOff}
           >
-            <div className={styles.PhoneTop__mainnav__container__col__a__menu}>
+            <div
+              className={styles.PhoneTop__mainnav__container__col__a__menu}
+              onClick={setMobileNavOff}
+            >
               <i
                 aria-hidden='true'
                 className={styles["ion-android-arrow-dropdown"]}
               ></i>
-              <span id='topFooterLang_phoneResidentList'>居民名冊</span>
+              <span id='topFooterLang_phoneResidentList'>
+                {t("topFooterLang_phoneResidentList")}
+              </span>
             </div>
           </Link>
           <Link
             className={styles.PhoneTop__mainnav__container__col__a}
             to='/bcctb-about-us'
+            onClick={setMobileNavOff}
           >
             <div className={styles.PhoneTop__mainnav__container__col__a__menu}>
               BCCTB
@@ -87,7 +111,7 @@ const NavBar: React.FC<NavBarProps> = ({
           <div className={styles.PhoneTop__mainnav__container__col__a}>
             <div
               className={styles.PhoneTop__mainnav__container__col__a__language}
-              onclick='SelectLang(1)'
+              onClick={() => changeLanguage("zh-tw")}
             >
               正體中文
             </div>
@@ -95,7 +119,7 @@ const NavBar: React.FC<NavBarProps> = ({
           <div className={styles.PhoneTop__mainnav__container__col__a}>
             <div
               className={styles.PhoneTop__mainnav__container__col__a__language}
-              onclick='SelectLang(2)'
+              onClick={() => changeLanguage("en")}
             >
               ENGLISH
             </div>
@@ -103,7 +127,7 @@ const NavBar: React.FC<NavBarProps> = ({
           <div className={styles.PhoneTop__mainnav__container__col__a}>
             <div
               className={styles.PhoneTop__mainnav__container__col__a__language}
-              onclick='SelectLang(3)'
+              onClick={() => changeLanguage("jp")}
             >
               日本語
             </div>
@@ -119,7 +143,7 @@ const NavBar: React.FC<NavBarProps> = ({
               }
               id='topFooterLang_phoneDarkMode'
             >
-              夜間模式
+              {t("topFooterLang_phoneDarkMode")}
             </div>
             <ThemeSwitcher />
           </div>

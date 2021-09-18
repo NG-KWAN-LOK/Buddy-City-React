@@ -1,16 +1,19 @@
-import React from "react";
+import React, { Suspense } from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router } from "react-router-dom";
 import "./index.css";
 import { ThemeProvider } from "./hoc/ThemeProvider";
 import App from "./containers/App";
 import reportWebVitals from "./reportWebVitals";
+import "./i18n/index.js";
 
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider>
       <Router>
-        <App />
+        <Suspense fallback={"loading"}>
+          <App />
+        </Suspense>
       </Router>
     </ThemeProvider>
   </React.StrictMode>,

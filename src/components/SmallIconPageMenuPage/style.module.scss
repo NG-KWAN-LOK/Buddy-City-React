@@ -1,0 +1,87 @@
+@import "../../utils/theme.scss";
+
+.main {
+  margin: 0 auto;
+  padding-bottom: 30px;
+  background-color: var(--primary-bg-color);
+  transition: 0.5s;
+  @media only screen and (max-width: 550px) {
+    width: 100%;
+  }
+  @media only screen and (min-width: 550px) {
+    width: 100%;
+  }
+  @media only screen and (min-width: 768px) {
+    max-width: 720px;
+    width: 90%;
+    border-left: 1px solid var(--main-between-line-color);
+    border-right: 1px solid var(--main-between-line-color);
+  }
+  @media only screen and (min-width: 1024px) {
+    max-width: 980px;
+    width: 90%;
+    border-left: 1px solid var(--main-between-line-color);
+    border-right: 1px solid var(--main-between-line-color);
+  }
+  @media only screen and (min-width: 1280px) {
+    max-width: 1280px;
+    width: 90%;
+    border-left: 1px solid var(--main-between-line-color);
+    border-right: 1px solid var(--main-between-line-color);
+  }
+}
+
+.main__nav {
+  display: none;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  @media only screen and (min-width: 768px) {
+    display: none;
+  }
+  @media only screen and (min-width: 1024px) {
+    display: none;
+  }
+}
+
+.discover__box {
+  padding: 36px 0 0 0;
+  @media only screen and (max-width: 550px) {
+    padding: 36px 30px;
+  }
+}
+.discover__title__content {
+  margin: 0 12.5px;
+  .discover__title {
+    display: block;
+    padding: 36px 0;
+    text-align: center;
+    line-height: 35px;
+    font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    color: var(--title-color);
+    text-decoration: none;
+    font-variant: normal;
+    font-size: 2em;
+  }
+  .discover__text {
+    display: block;
+    font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
+    text-align: center;
+    line-height: 35px;
+    font-style: normal;
+    font-weight: 400;
+    color: var(--title-color);
+    text-decoration: none;
+    font-variant: normal;
+    font-size: 16px;
+  }
+  @media only screen and (max-width: 550px) {
+    .discover__title,
+    .discover__text {
+      text-align: left;
+    }
+    padding: 0 30px;
+  }
+}

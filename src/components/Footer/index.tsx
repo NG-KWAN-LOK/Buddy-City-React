@@ -2,23 +2,26 @@ import React from "react";
 import styles from "./style.module.scss";
 import Logo from "../Logo";
 
-import logo from "../../image/logo.png";
+import { useTranslation } from "react-i18next";
 
 const Footer: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <div className={styles.footer}>
       <div className={styles.footer__content}>
         <div className={styles.footer__content__weblogo}>
           <Logo className={styles.footer__content__weblogo__image} />
           <div className={styles.footer__content__weblogo__underText}>
-            BUDDY CITY觀光服務官方網站
+            {t("footer_content_weblogo_underText")}
           </div>
         </div>
         <div className={styles.footer__content__box}>
           <div className={styles.footer__content__text__adress}>
-            <p id='topFooterLang_fotterTitle'>BUDDY CITY旅遊局</p>
+            <p id='topFooterLang_fotterTitle'>
+              {t("topFooterLang_fotterTitle")}
+            </p>
             <p id='topFooterLang_fotterAddress'>
-              Buddy City大阪區本町通2號2樓2D01室
+              {t("topFooterLang_fotterAddress")}
             </p>
           </div>
           <div className={styles.footer__content__links}>
@@ -30,7 +33,7 @@ const Footer: React.FC = () => {
                 className={styles.footer__content__box__btn__text}
                 id='topFooterLang_fotterAbout'
               >
-                BUDDY CITY旅遊局紹介
+                {t("topFooterLang_fotterAbout")}
               </div>
             </a>
             <a
@@ -41,7 +44,7 @@ const Footer: React.FC = () => {
                 className={styles.footer__content__box__btn__text}
                 id='topFooterLang_fotterTNC'
               >
-                服務條款
+                {t("topFooterLang_fotterTNC")}
               </div>
             </a>
             <a
@@ -52,7 +55,7 @@ const Footer: React.FC = () => {
                 className={styles.footer__content__box__btn__text}
                 id='topFooterLang_fotterDynmap'
               >
-                Dynmap
+                {t("topFooterLang_fotterDynmap")}
               </div>
             </a>
           </div>
@@ -60,7 +63,7 @@ const Footer: React.FC = () => {
             className={styles.footer__content__box__copyright}
             id='topFooterLang_fotterCopyright'
           >
-            ©BUDDY CITY CONVENTION & TOURISM BUREAU
+            {t("topFooterLang_fotterCopyright")}
           </div>
         </div>
       </div>

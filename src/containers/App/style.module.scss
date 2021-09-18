@@ -1,6 +1,29 @@
 @import "../../utils/theme.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  min-height: 100vh;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
 .app {
   width: 100%;
+  background-color: var(--second-bg-color);
+  transition: 0.5s;
 }
 .content {
   width: 100%;

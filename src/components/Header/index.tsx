@@ -1,13 +1,17 @@
 import React, { useState, useCallback, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import styles from "./style.module.scss";
+import { useTranslation } from "react-i18next";
 
 import NavBar from "./NavBar";
 import ThemeSwitcher from "../ThemeSwitcher";
 import Logo from "../Logo";
 
-import logo from "../../image/logo.png";
 const Header = () => {
+  const { t, i18n } = useTranslation();
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+  };
   const displayNavTimeoutRef = useRef<any>();
   const [isNavBarDisplay, setIsNavBarDisplay] = useState(false);
   const [isHeaderDisplay, setIsHeaderDisplay] = useState(true);
@@ -61,7 +65,9 @@ const Header = () => {
                           aria-hidden='true'
                           className={styles["ion-android-arrow-dropdown"]}
                         ></i>
-                        <span id={styles.TopFooterLang_topHome}>回到主頁</span>
+                        <span id='topFooterLang_topHome'>
+                          {t("topFooterLang_topHome")}
+                        </span>
                       </Link>
                     </div>
                     <div className={styles.Top__nav__left_subtitle}>
@@ -73,8 +79,8 @@ const Header = () => {
                           aria-hidden='true'
                           className={styles["ion-android-arrow-dropdown"]}
                         ></i>
-                        <span id={styles.TopFooterLang_topOnlineMap}>
-                          網上地圖
+                        <span id='topFooterLang_topOnlineMap'>
+                          {t("topFooterLang_topOnlineMap")}
                         </span>
                       </a>
                     </div>
@@ -84,8 +90,8 @@ const Header = () => {
                           aria-hidden='true'
                           className={styles["ion-android-arrow-dropdown"]}
                         ></i>
-                        <span id={styles.TopFooterLang_topBulidingList}>
-                          城市建築物名冊
+                        <span id='topFooterLang_topBulidingList'>
+                          {t("topFooterLang_topBulidingList")}
                         </span>
                       </Link>
                     </div>
@@ -95,8 +101,8 @@ const Header = () => {
                           aria-hidden='true'
                           className={styles["ion-android-arrow-dropdown"]}
                         ></i>
-                        <span id={styles.TopFooterLang_topResidentList}>
-                          居民名冊
+                        <span id='topFooterLang_topResidentList'>
+                          {t("topFooterLang_topResidentList")}
                         </span>
                       </Link>
                     </div>
@@ -129,7 +135,7 @@ const Header = () => {
                     <div className={styles.Top__nav__left_subtitle}>
                       <div
                         className={styles.Top__nav__left_subtitle__text}
-                        onClick={() => {}}
+                        onClick={() => changeLanguage("zh-tw")}
                       >
                         正體中文
                       </div>
@@ -137,7 +143,7 @@ const Header = () => {
                     <div className={styles.Top__nav__left_subtitle}>
                       <div
                         className={styles.Top__nav__left_subtitle__text}
-                        onClick={() => {}}
+                        onClick={() => changeLanguage("en")}
                       >
                         English
                       </div>
@@ -145,7 +151,7 @@ const Header = () => {
                     <div className={styles.Top__nav__left_subtitle}>
                       <div
                         className={styles.Top__nav__left_subtitle__text}
-                        onClick={() => {}}
+                        onClick={() => changeLanguage("jp")}
                       >
                         日本語
                       </div>
@@ -166,9 +172,9 @@ const Header = () => {
                     <div className={styles.Top__nav__right_subtitle}>
                       <div
                         className={styles.Top__nav__right_subtitle__text}
-                        id={styles.TopFooterLang_topDarkMode}
+                        id='topFooterLang_topDarkMode'
                       >
-                        夜間模式
+                        {t("topFooterLang_topDarkMode")}
                       </div>
                       <ThemeSwitcher />
                     </div>
