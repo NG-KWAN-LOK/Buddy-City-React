@@ -1,0 +1,13 @@
+@import "../../utils/theme.scss";
+.app {
+  width: 100%;
+}
+.content {
+  width: 100%;
+}
+.PaddingTop {
+  line-height: 90px;
+  @media only screen and (max-width: 1024px) {
+    line-height: 60px;
+  }
+}
