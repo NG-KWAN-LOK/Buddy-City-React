@@ -1,6 +1,7 @@
 {
   "lang": "chi",
   "title": "Buddy-INFO Buddy市指南",
+  "page_not_found" :"404 找不到面頁",
 
   "topFooterLang_topHome": "回到主頁",
   "topFooterLang_topOnlineMap": "網上地圖",
@@ -142,6 +143,7 @@
   "residentPopUpLayer_data_table_participate_year": "入籍年份",
   "residentPopUpLayer_data_table_address": "地址",
   "residentPopUpLayer_data_table_project": "曾參與過建築項目",
+  "all_Text": "全部",
 
   "BCCTB_title": "Buddy市觀光局",
   "BCCTB__content__subTitle": "關於我們",

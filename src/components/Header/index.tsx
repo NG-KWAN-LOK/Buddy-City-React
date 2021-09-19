@@ -10,11 +10,13 @@ import Logo from "../Logo";
 const Header = () => {
   const { t, i18n } = useTranslation();
   const changeLanguage = (lng) => {
+    localStorage.setItem("language", lng);
     i18n.changeLanguage(lng);
   };
   const displayNavTimeoutRef = useRef<any>();
   const [isNavBarDisplay, setIsNavBarDisplay] = useState(false);
   const [isHeaderDisplay, setIsHeaderDisplay] = useState(true);
+  const [headerClass, setHeaderClass] = useState(styles.headerContainer_open);
   const navToggleOn = useCallback(() => {
     clearTimeout(displayNavTimeoutRef.current);
     setIsNavBarDisplay(true);
@@ -23,30 +25,52 @@ const Header = () => {
   const headerToggleOn = useCallback(() => setIsHeaderDisplay(true), []);
   const headerToggleOff = useCallback(() => setIsHeaderDisplay(false), []);
 
-  useEffect(() => {
-    const onScroll = () => {
-      headerToggleOn();
-      clearTimeout(displayNavTimeoutRef.current);
-      if (window.pageYOffset !== 0) {
-        displayNavTimeoutRef.current = setTimeout(headerToggleOff, 3000);
-      }
-    };
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
+  const onScroll = useCallback(() => {
+    headerToggleOn();
+    clearTimeout(displayNavTimeoutRef.current);
+    if (window.pageYOffset !== 0) {
+      displayNavTimeoutRef.current = setTimeout(headerToggleOff, 3000);
+    }
   }, []);
 
-  console.log(isHeaderDisplay);
+  useEffect(() => {
+    window.addEventListener("scroll", onScroll);
+    (document.querySelector("#header") as Element).addEventListener(
+      "mouseover",
+      onScroll
+    );
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      (document.querySelector("#header") as Element).removeEventListener(
+        "mouseover",
+        onScroll
+      );
+    };
+  }, [window, onScroll]);
+
+  const handleHeaderContainerClass = (onHover) => {
+    if ((onHover || isNavBarDisplay) && isHeaderDisplay) {
+      setHeaderClass(styles.headerContainer_open_nav);
+    } else if (isHeaderDisplay) {
+      setHeaderClass(styles.headerContainer_open);
+    } else {
+      setHeaderClass(styles.headerContainer_close);
+    }
+  };
+
+  useEffect(() => {
+    handleHeaderContainerClass(false);
+  }, [isHeaderDisplay, isNavBarDisplay]);
+
   return (
-    <header
-      className={
-        isHeaderDisplay
-          ? styles.headerContainer_open
-          : styles.headerContainer_close
-      }
-    >
+    <header className={headerClass} id='header'>
       <div className={styles.Top}>
         <div className={styles.Top__container}>
-          <div className={styles.Top__nav_container__menu}>
+          <div
+            className={styles.Top__nav_container__menu}
+            onMouseOver={() => handleHeaderContainerClass(true)}
+            onMouseOut={() => handleHeaderContainerClass(false)}
+          >
             <div className={styles.Top__nav} id='nav'>
               <ul className={styles.Top__nav__list}>
                 <li className={styles.Top__nav_col__left}>
@@ -85,7 +109,7 @@ const Header = () => {
                       </a>
                     </div>
                     <div className={styles.Top__nav__left_subtitle}>
-                      <Link to='building_list/'>
+                      <Link to='/building_list'>
                         <i
                           aria-hidden='true'
                           className={styles["ion-android-arrow-dropdown"]}
@@ -126,7 +150,11 @@ const Header = () => {
               <Logo />
             </Link>
           </div>
-          <div className={styles.Top__nav_container__language}>
+          <div
+            className={styles.Top__nav_container__language}
+            onMouseOver={() => handleHeaderContainerClass(true)}
+            onMouseOut={() => handleHeaderContainerClass(false)}
+          >
             <div className={styles.Top__nav} id='nav'>
               <ul className={styles.Top__nav__list}>
                 <li className={styles.Top__nav_col__left}>

@@ -15,6 +15,7 @@ const NavBar: React.FC<NavBarProps> = ({
   //console.log(setMobileNavOn);
   const { t, i18n } = useTranslation();
   const changeLanguage = (lng) => {
+    localStorage.setItem("language", lng);
     i18n.changeLanguage(lng);
   };
   return (
@@ -111,7 +112,9 @@ const NavBar: React.FC<NavBarProps> = ({
           <div className={styles.PhoneTop__mainnav__container__col__a}>
             <div
               className={styles.PhoneTop__mainnav__container__col__a__language}
-              onClick={() => changeLanguage("zh-tw")}
+              onClick={() => {
+                changeLanguage("zh-tw");
+              }}
             >
               正體中文
             </div>
@@ -119,7 +122,9 @@ const NavBar: React.FC<NavBarProps> = ({
           <div className={styles.PhoneTop__mainnav__container__col__a}>
             <div
               className={styles.PhoneTop__mainnav__container__col__a__language}
-              onClick={() => changeLanguage("en")}
+              onClick={() => {
+                changeLanguage("en");
+              }}
             >
               ENGLISH
             </div>
@@ -127,7 +132,9 @@ const NavBar: React.FC<NavBarProps> = ({
           <div className={styles.PhoneTop__mainnav__container__col__a}>
             <div
               className={styles.PhoneTop__mainnav__container__col__a__language}
-              onClick={() => changeLanguage("jp")}
+              onClick={() => {
+                changeLanguage("jp");
+              }}
             >
               日本語
             </div>

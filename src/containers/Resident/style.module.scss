@@ -1,0 +1,19 @@
+@import "../../utils/theme.scss";
+
+.container {
+  width: 100%;
+  justify-content: center;
+}
+
+.resident {
+  margin: 0 auto;
+  transition: 0.5s;
+}
+
+.sortNav {
+  display: flex;
+  width: 100%;
+  padding: 0 0 36px 0;
+  justify-content: center;
+  flex-wrap: wrap;
+}

@@ -1,6 +1,7 @@
 {
   "lang": "eng",
   "title": "Buddy-INFO Buddy Visitors' Guide",
+  "page_not_found" :"404 Page Not Found",
 
   "topFooterLang_topHome": "BACK HOME",
   "topFooterLang_topOnlineMap": "ONLINE MAP",
@@ -131,6 +132,7 @@
   "residentPopUpLayer_data_table_participate_year": "Year of entry",
   "residentPopUpLayer_data_table_address": "Address",
   "residentPopUpLayer_data_table_project": "The project(s) have took part before",
+  "all_Text": "All",
 
   "BCCTB_title": "BUDDY CITY CONVENTION & TOURISM BUREAU",
   "BCCTB__content__subTitle": "ABOUT US",

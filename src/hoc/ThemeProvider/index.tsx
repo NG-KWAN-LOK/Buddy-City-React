@@ -8,12 +8,19 @@ export const ThemeContext = createContext({
 });
 
 export const ThemeProvider = ({ children }) => {
-  const [themeMode, setThemeMode] = useState("");
+  if (localStorage.getItem("darkMode") === null) {
+    localStorage.setItem("darkMode", "");
+  }
+  const [themeMode, setThemeMode] = useState(
+    localStorage.getItem("darkMode") as string
+  );
   const toggleTheme = useCallback(() => {
     setThemeMode((prevState: string) => {
       if (prevState === "") {
+        localStorage.setItem("darkMode", "dark");
         return "dark";
       } else {
+        localStorage.setItem("darkMode", "");
         return "";
       }
     });

@@ -1,6 +1,7 @@
 {
   "lang": "jp",
   "title": "Buddy-INFO Buddy市観光情報",
+  "page_not_found" :"404 ページは見つかりません",
 
   "topFooterLang_topHome": "ホームページへ戻る",
   "topFooterLang_topOnlineMap": "オンラインマップ",
@@ -135,6 +136,7 @@
   "residentPopUpLayer_data_table_participate_year": "入籍時間",
   "residentPopUpLayer_data_table_address": "住所",
   "residentPopUpLayer_data_table_project": "この前にしていたの企画",
+  "all_Text": "全て",
 
   "BCCTB_title": "Buddy市観光局",
   "BCCTB__content__subTitle": "アバウトアス",

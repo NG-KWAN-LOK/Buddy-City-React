@@ -6,12 +6,13 @@ import { ThemeProvider } from "./hoc/ThemeProvider";
 import App from "./containers/App";
 import reportWebVitals from "./reportWebVitals";
 import "./i18n/index.js";
+import Loading from "./components/Loading";
 
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider>
       <Router>
-        <Suspense fallback={"loading"}>
+        <Suspense fallback={<Loading containersClassName={false} />}>
           <App />
         </Suspense>
       </Router>

@@ -9,7 +9,7 @@ const ThemeSwitcher = () => {
       <input
         type='checkbox'
         onClick={toggleTheme}
-        checked={themeMode === "" ? false : true}
+        defaultChecked={themeMode === "" ? false : true}
       />
       <span className={`${styles["slider"]} ${styles["round"]}`}></span>
     </label>

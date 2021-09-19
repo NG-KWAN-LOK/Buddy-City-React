@@ -127,8 +127,6 @@ const SwiperBanner: React.FC = () => {
         loop={true}
         navigation
         pagination={{ clickable: true }}
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log("slide change")}
         className={styles.pageContainer_TopContainer_banner_content}
       >
         {bannerImgList.map((data, index) => {

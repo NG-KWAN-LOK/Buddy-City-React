@@ -1,0 +1,12 @@
+@import "../../utils/theme.scss";
+
+.main__banner {
+  background-size: 100vw;
+  width: 100%;
+  height: calc(100vw / 3.49);
+  background-position: center;
+}
+
+.main__banner__img {
+  width: 100%;
+}

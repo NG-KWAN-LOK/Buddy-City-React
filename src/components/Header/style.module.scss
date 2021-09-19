@@ -15,8 +15,13 @@
 }
 .headerContainer_open {
   @extend .headerContainer;
+  opacity: 0.9;
+  transition: 0.5s;
+}
+.headerContainer_open_nav {
+  @extend .headerContainer;
   opacity: 1;
-  transition: 0.3s;
+  transition: 0.5s;
 }
 .headerContainer_close {
   @extend .headerContainer;

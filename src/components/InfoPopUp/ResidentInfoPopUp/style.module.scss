@@ -1,0 +1,113 @@
+@import "../../../utils/theme.scss";
+
+.residentPopUpLayer__container__data {
+  padding: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  .residentPopUpLayer__container__data__img {
+    position: fixed; /*固定位置定位*/
+    top: 30%; /*距離上方的位置*/
+    left: 25%; /*距離左方的位置*/
+    display: block;
+    width: 20%;
+    .data_face_img {
+      width: 60%;
+      height: 60%;
+    }
+  }
+
+  .residentPopUpLayer__container__data__table {
+    display: block;
+    position: relative;
+    padding: 0px;
+    left: 18%;
+    width: 65%;
+
+    .data__table {
+      line-height: 40px;
+      font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      color: var(--subtitle-bg);
+      font-variant: normal;
+      font-size: 20px;
+      width: 100%;
+      text-align: left;
+      vertical-align: top;
+      .data__table__datatitle {
+        border-right: 1px solid #b4b4b4;
+      }
+
+      .data__table__datainfo {
+        width: 60%;
+        height: 38.38px;
+        padding-left: 30px;
+      }
+      #data_project {
+        overflow: auto;
+        max-height: 10%;
+      }
+    }
+    @media only screen and (max-width: 1280px) {
+      .data__table {
+        font-size: 17px;
+      }
+    }
+    @media only screen and (max-width: 500px) {
+      .data__table {
+        font-size: 15px;
+        .data__table__datainfo {
+          padding-left: 10px;
+        }
+      }
+    }
+    @media only screen and (max-width: 400px) {
+      .data__table {
+        font-size: 13px;
+        .data__table__datainfo {
+          padding-left: 8px;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1280px) {
+  .residentPopUpLayer__container__error {
+    font-size: 50px;
+  }
+  .residentPopUpLayer__container__data {
+    .residentPopUpLayer__container__data__table {
+      padding: 0px;
+    }
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .residentPopUpLayer__container__error {
+    font-size: 40px;
+  }
+  .residentPopUpLayer__container__data {
+    padding: 0;
+    flex-direction: column;
+    .residentPopUpLayer__container__data__img {
+      position: relative;
+      top: 40%; /*距離上方的位置*/
+      left: 10%; /*距離左方的位置*/
+      display: block;
+      flex: 3 1 20%;
+      order: 1;
+      width: 40%;
+    }
+    .residentPopUpLayer__container__data__table {
+      display: block;
+      position: static;
+      left: 0%;
+      flex: 3 1 20%;
+      order: 2;
+      line-height: 20px;
+      width: 80%;
+    }
+  }
+}
