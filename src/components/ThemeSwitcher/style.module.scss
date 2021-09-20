@@ -7,6 +7,8 @@
   width: 60px;
   height: 34px;
   @media (min-width: 1024px) {
+    position: absolute;
+    left: 155px;
     ::after {
       display: block;
       content: " ";

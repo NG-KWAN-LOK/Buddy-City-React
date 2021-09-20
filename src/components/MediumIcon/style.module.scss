@@ -50,26 +50,19 @@
     bottom: 30px;
     color: var(--white-title-font-color);
     text-shadow: 0 0 1px rgba(0, 0, 0, 0.9), 0 0 4px rgba(0, 0, 0, 0.9);
-    text-align: center;
     font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
     font-size: 20px;
     font-weight: 700;
-    line-height: 15px;
     padding: 5px;
+    white-space: pre-line;
+    text-align: left;
+  }
+  @media only screen and (max-width: 550px) {
+    .district__image__box__toptext {
+      left: 50px;
+    }
   }
   &:hover {
-    .district__image__box__text {
-      position: absolute;
-      z-index: 1;
-      left: 20px;
-      bottom: 30px;
-      text-align: center;
-      font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
-      font-weight: 700;
-      line-height: 15px;
-      padding: 5px;
-      transition: 0.5s;
-    }
     .district__image__box__toptext {
       opacity: 1;
       top: 10px;
@@ -105,6 +98,7 @@
   }
   .district__image__box__text {
     left: 50px;
+    width: 80%;
   }
 }
 @media only screen and (min-width: 550px) {
@@ -147,5 +141,11 @@
   }
   .district__image__box__text {
     left: 20px;
+  }
+}
+@media only screen and (min-width: 530px) and (max-width: 1260px) {
+  .district__image__box__text {
+    font-size: 16px !important;
+    width: 90%;
   }
 }

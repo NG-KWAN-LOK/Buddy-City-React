@@ -140,6 +140,10 @@ const BuildingList = () => {
         <div className={styles.district__image}>
           {buildingData &&
             buildingData.map((data: any, index) => {
+              const id: string =
+                data.districtIndex < 10
+                  ? "0".concat(data.districtIndex)
+                  : data.districtIndex;
               return (
                 <MediumIcon
                   key={index}
@@ -150,12 +154,10 @@ const BuildingList = () => {
                       ? data.district_eng
                       : data.district_jp
                   }
-                  id={
-                    data.districtIndex < 10
-                      ? "0".concat(data.districtIndex)
-                      : data.districtIndex
-                  }
+                  id={id}
+                  to={`/building_list/${parseInt(id)}`}
                   topText={t("district_image_box_toptext")}
+                  imgSrc={`https://ng-kwan-lok.github.io/BuddyCityWeb/building_list/image/district${id}.jpg`}
                   setPopUpOn={PopUpToggleOn}
                 />
               );

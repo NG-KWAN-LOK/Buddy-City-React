@@ -1,5 +1,5 @@
 import React from "react";
-import { useLocation, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import styles from "./style.module.scss";
 
 import { useTranslation } from "react-i18next";
@@ -19,8 +19,6 @@ const InfoPopUp: React.FC<InfoPopUpProps> = ({
 }) => {
   const { t } = useTranslation();
   const history = useHistory();
-  const { pathname } = useLocation();
-  const firstPathName = pathname.split("/");
   return (
     <div className={styles.residentPopUpLayer} id='residentPopUpLayer'>
       <div className={styles.residentPopUpLayer__container}>

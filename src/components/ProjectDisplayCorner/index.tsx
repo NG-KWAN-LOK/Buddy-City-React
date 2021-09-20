@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./style.module.scss";
 
-import ProjectImgBox from "./projectImgBox";
+import MediumIcon from "../MediumIcon";
 
 import { useTranslation } from "react-i18next";
 
@@ -27,12 +27,15 @@ const ProjectDisplayCorner: React.FC<ProjectDisplayCornerProps> = ({
         <div className={styles.reality_project__image}>
           {imgData.map((data, index) => {
             return (
-              <ProjectImgBox
+              <MediumIcon
                 key={index}
-                title={t(data.title)}
-                title2={data.title2 == null ? null : t(data.title2)}
-                image1={data.image1}
-                image2={data.image2}
+                title={`${t(data.title)}${
+                  data.title2 != null ? "\n" + t(data.title2) : ""
+                }`}
+                imgSrc={data.image1}
+                topText={t("reality_project_zoom_in")}
+                to='/'
+                setPopUpOn={() => {}}
               />
             );
           })}
