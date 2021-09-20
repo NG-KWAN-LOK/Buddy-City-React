@@ -22,7 +22,7 @@ const ResidentInfoPopUp: React.FC<ResidentInfoPopUpProps> = ({ character }) => {
     project: null,
   };
   if (character != null) {
-    if (language === "zh-TW") {
+    if (language === "zh") {
       translatedInfo = {
         nickname: character.nickname_chi,
         address: character.address_CHI,

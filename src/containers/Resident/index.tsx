@@ -83,7 +83,7 @@ const Home = () => {
         <div className={styles.sortNav} id='sortNav'>
           {districtList &&
             Array.from(
-              language === "zh-TW"
+              language === "zh"
                 ? districtList.districtListZH
                 : language === "en"
                 ? districtList.districtListENG

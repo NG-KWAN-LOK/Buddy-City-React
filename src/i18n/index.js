@@ -4,7 +4,7 @@ import Backend from "i18next-http-backend";
 
 if (localStorage.getItem("language") === null) {
   console.log("hi");
-  localStorage.setItem("language", "zh-TW");
+  localStorage.setItem("language", "zh");
 }
 
 i18n
@@ -14,7 +14,7 @@ i18n
     backend: {
       loadPath: "/locales/{{lng}}/{{ns}}.json",
     },
-    fallbackLng: "zh-TW",
+    fallbackLng: "zh",
     lng: localStorage.getItem("language"),
     interpolation: {
       escapeValue: false,
