@@ -1,0 +1,128 @@
+@import "../../../../utils/theme.scss";
+
+.BCCTB__title__content {
+  .BCCTB__title {
+    display: block;
+    padding: 16px 0 15px 0;
+    text-align: left;
+    line-height: 55px;
+    font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    color: var(--title-color);
+    text-decoration: none;
+    font-variant: normal;
+    font-size: 2.5em;
+    border-bottom: 1px solid var(--border-bottom-color);
+    margin-bottom: 30px;
+  }
+  .BCCTB__title__banner {
+    width: 100%;
+  }
+  .BCCTB__title__banner_img {
+    width: 100%;
+    object-fit: cover;
+  }
+  @media only screen and (max-width: 550px) {
+    .BCCTB__title {
+      font-size: 2em;
+      text-align: left;
+    }
+    padding: 0 30px;
+  }
+}
+.BCCTB__content {
+  .BCCTB__content__subTitle {
+    display: block;
+    width: 100%;
+    line-height: 28px;
+    padding: 20px 0;
+    font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    color: var(--subtitle-bg);
+    text-decoration: none;
+    font-variant: normal;
+    font-size: 28px;
+  }
+  .BCCTB__content__text {
+    display: block;
+    font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
+    text-align: left;
+    line-height: 35px;
+    font-style: normal;
+    font-weight: 300;
+    color: var(--title-color);
+    text-decoration: none;
+    font-variant: normal;
+    font-size: 18px;
+  }
+  @media only screen and (max-width: 550px) {
+    .BCCTB__content__subTitle {
+      font-size: 23px;
+      padding: 15px 0px;
+    }
+    .BCCTB__content__text {
+      font-size: 16px;
+    }
+    padding: 0 30px;
+  }
+}
+
+.main__content__sideMenu__content {
+  width: 100%;
+  margin: 70px 0 0 30px;
+}
+.main__content__sideMenu__content__title {
+  display: block;
+  width: 100%;
+  line-height: 28px;
+  padding: 10px 0 5px 5px;
+  font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  color: var(--subtitle-bg);
+  text-decoration: none;
+  font-variant: normal;
+  font-size: 18px;
+}
+.main__content__sideMenu__content__btn {
+  display: flex;
+  padding: 4px 12px;
+  background-color: var(--border-bottom-color);
+  margin-bottom: 5px;
+  border-radius: 7px;
+  font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  color: var(--title-color);
+  text-decoration: none;
+  font-variant: normal;
+  font-size: 16px;
+  margin: 5px;
+  transition: 0.3s;
+  .ion-android-home {
+    padding-right: 5px;
+    content: "\f38f";
+  }
+  .ion-android-document {
+    padding-right: 5px;
+    ::before {
+      content: "\f381";
+    }
+  }
+  .ion-android-person {
+    padding-right: 5px;
+    ::before {
+      content: "\f3a0";
+    }
+  }
+  .main__content__sideMenu__content__btn__title {
+  }
+  &:hover {
+    color: var(--second-button-hover-color);
+    background-color: var(--subject-blue);
+    padding: 6px 12px;
+    margin: 0 0;
+  }
+}

@@ -3,8 +3,6 @@ import styles from "./style.module.scss";
 
 import { useTranslation } from "react-i18next";
 
-import SmallIconRow from "./SmallIconRow";
-
 interface SmallIconPageMenuPageProps {
   pageTitle: string;
   pageText: string;

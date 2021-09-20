@@ -18,7 +18,7 @@
     overflow-y: auto;
     background-color: var(--popup-bg-color);
     .data_username_title {
-      padding-top: 30px;
+      padding: 20px;
       text-align: center;
       font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
       font-style: normal;
@@ -31,7 +31,7 @@
       vertical-align: 0;
       text-transform: uppercase;
     }
-    @media only screen and (max-width: 320px) {
+    @media only screen and (max-width: 500px) {
       .data_username_title {
         font-size: 20px;
       }

@@ -129,6 +129,7 @@ const Home = () => {
               ? "error"
               : residentData[userIdFromPathName].user_name
           }
+          to='/resident'
         >
           <ResidentInfoPopUp
             character={

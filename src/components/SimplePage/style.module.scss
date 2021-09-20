@@ -1,0 +1,21 @@
+@import "../../utils/theme.scss";
+
+.main__content {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  padding: 20px 20px 30px 20px;
+}
+.bcctb {
+  display: block;
+  width: 100%;
+}
+.main__content__sideMenu {
+  display: flex;
+  min-width: 220px;
+  width: 38.2%;
+  padding: 70px 0 0 30px;
+  @media only screen and (max-width: 1024px) {
+    display: none;
+  }
+}

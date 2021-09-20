@@ -45,7 +45,7 @@ import image222 from "../image/photo/big/023.png";
 import image231 from "../image/photo/compress/024.jpg";
 import image232 from "../image/photo/big/024.png";
 
-const companyData = {
+const realityProjectData = {
   pageTitle: "reality_project_title",
   imgData: [
     {
@@ -189,4 +189,4 @@ const companyData = {
   ],
 };
 
-export default companyData;
+export default realityProjectData;

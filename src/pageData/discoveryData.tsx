@@ -23,7 +23,7 @@ import image62 from "../image/pword6_2.jpg";
 import image63 from "../image/pword6_3.jpg";
 import image64 from "../image/pword6_4.jpg";
 
-const companyData = {
+const discoveryData = {
   pageTitle: "discover_title_discover",
   pageText: "discover_text_discover",
   rowData: [
@@ -228,4 +228,4 @@ const companyData = {
   ],
 };
 
-export default companyData;
+export default discoveryData;

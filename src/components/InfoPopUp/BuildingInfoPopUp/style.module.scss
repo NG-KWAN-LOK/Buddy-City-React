@@ -1,0 +1,52 @@
+@import "../../../utils/theme.scss";
+
+.data__table {
+  line-height: 15px;
+  font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: var(--subtitle-bg);
+  font-variant: normal;
+  font-size: 17px;
+  vertical-align: inherit;
+  width: 100%;
+  text-align: center;
+  .data__table__datainfo {
+    width: 60%;
+    height: 38.38px;
+  }
+}
+
+.address__map {
+  display: block;
+  .address__map__title {
+    padding: 20px 0;
+    text-align: center;
+    line-height: 35px;
+    font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    color: var(--title-color);
+    background-color: transparent;
+    text-decoration: none;
+    font-variant: normal;
+    font-size: 30px;
+    vertical-align: 0;
+  }
+  .address__map__link {
+    text-align: center;
+    line-height: 15px;
+    font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    color: #5d5d5d;
+    font-variant: normal;
+    font-size: 15px;
+    vertical-align: 0;
+    transition: 0.5s;
+    &:hover {
+      color: #177cc4;
+      transition: 0.5s;
+    }
+  }
+}

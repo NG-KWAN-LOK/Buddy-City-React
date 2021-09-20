@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from "./style.module.scss";
 import Logo from "../Logo";
 
@@ -36,17 +37,14 @@ const Footer: React.FC = () => {
                 {t("topFooterLang_fotterAbout")}
               </div>
             </a>
-            <a
-              className={styles.footer__content__box__btn}
-              href='https://buddycityinfo.sgngs.com/page/tnc.html'
-            >
+            <Link className={styles.footer__content__box__btn} to='/tnc'>
               <div
                 className={styles.footer__content__box__btn__text}
                 id='topFooterLang_fotterTNC'
               >
                 {t("topFooterLang_fotterTNC")}
               </div>
-            </a>
+            </Link>
             <a
               className={styles.footer__content__box__btn}
               href='https://buddycityinfo.sgngs.com/map.html'

@@ -10,6 +10,9 @@ import Header from "../../components/Header";
 import Dashboard from "../Dashboard";
 import Footer from "../../components/Footer";
 import Resident from "../Resident";
+import BuildingList from "../BuildingList";
+import BCCTB from "../BCCTB";
+import TNC from "../TNC";
 
 function App() {
   const { themeMode } = useTheme();
@@ -18,10 +21,11 @@ function App() {
   const appName = t("title");
   useEffect(() => {
     if (pathname === "/") document.title = appName;
-    else if (pathname.includes("/building_list"))
-      document.title = findTitle([t("BuildingList_title")]) + appName;
+    else if (pathname.includes("/building_list")) return;
     else if (pathname.includes("/resident")) return;
-    else if (pathname === "/bcctb-about-us")
+    else if (pathname.includes("/bcctb-about-us"))
+      document.title = findTitle([t("BCCTB__content__subTitle")]) + appName;
+    else if (pathname.includes("/tnc"))
       document.title = findTitle([t("BCCTB_title")]) + appName;
     else document.title = findTitle([t("page_not_found")]) + appName;
   }, [pathname, i18n.language]);
@@ -40,6 +44,21 @@ function App() {
           </Route>
           <Route path='/resident/:userName'>
             <Resident />
+          </Route>
+          <Route path='/building_list'>
+            <BuildingList />
+          </Route>
+          <Route path='/building_list/:districtId'>
+            <BuildingList />
+          </Route>
+          <Route path='/building_list/:districtId:buildingId'>
+            <BuildingList />
+          </Route>
+          <Route path='/bcctb-about-us'>
+            <BCCTB />
+          </Route>
+          <Route path='/tnc'>
+            <TNC />
           </Route>
         </Switch>
         <Footer />

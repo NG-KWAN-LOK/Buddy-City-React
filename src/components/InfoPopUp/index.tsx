@@ -8,12 +8,14 @@ interface InfoPopUpProps {
   setPopUpOff: () => void;
   title: string;
   children?: React.ReactNode;
+  to: string;
 }
 
 const InfoPopUp: React.FC<InfoPopUpProps> = ({
   title,
   setPopUpOff,
   children,
+  to,
 }) => {
   const { t } = useTranslation();
   const history = useHistory();
@@ -25,7 +27,7 @@ const InfoPopUp: React.FC<InfoPopUpProps> = ({
         <div
           className={styles.residentPopUpLayer_closeLayer}
           onClick={() => {
-            history.push("/" + firstPathName[1]);
+            history.push(to);
             setPopUpOff();
           }}
         ></div>

@@ -1,0 +1,29 @@
+@import "../../../../utils/theme.scss";
+
+.main__content__sideMenu__content__btn {
+  display: flex;
+  padding: 4px 12px;
+  background-color: var(--border-bottom-color);
+  margin-bottom: 5px;
+  border-radius: 7px;
+  font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  color: var(--title-color);
+  text-decoration: none;
+  font-variant: normal;
+  font-size: 16px;
+  margin: 5px;
+  transition: 0.3s;
+
+  .main__content__sideMenu__content__btn__icon {
+    padding-right: 5px;
+  }
+
+  &:hover {
+    color: var(--second-button-hover-color);
+    background-color: var(--subject-blue);
+    padding: 6px 12px;
+    margin: 0 0;
+  }
+}

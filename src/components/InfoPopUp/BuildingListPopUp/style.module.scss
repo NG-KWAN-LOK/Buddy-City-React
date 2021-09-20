@@ -1,0 +1,27 @@
+@import "../../../utils/theme.scss";
+
+.district__building {
+  flex: 0 50%;
+  .district__building__name {
+    display: block;
+    z-index: 1;
+    color: var(--subtitle-bg);
+    font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 22px;
+    padding: 17px;
+    cursor: pointer;
+    transition: 0.5s;
+    &:hover {
+      color: #177cc4;
+      background-color: var(--second-bottom-hover-color);
+      transition: 0.5s;
+    }
+  }
+}
+@media only screen and (max-width: 550px) {
+  .district__building {
+    flex: 0 100%;
+  }
+}

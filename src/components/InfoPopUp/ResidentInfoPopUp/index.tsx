@@ -7,7 +7,7 @@ interface ResidentInfoPopUpProps {
   character?: any;
 }
 
-interface translatedInfo {
+interface ITranslatedInfo {
   nickname: string | null;
   address: string | null;
   project: string | null;
@@ -16,7 +16,7 @@ interface translatedInfo {
 const ResidentInfoPopUp: React.FC<ResidentInfoPopUpProps> = ({ character }) => {
   const { t, i18n } = useTranslation();
   const language = i18n.language;
-  let translatedInfo: translatedInfo = {
+  let translatedInfo: ITranslatedInfo = {
     nickname: null,
     address: null,
     project: null,
