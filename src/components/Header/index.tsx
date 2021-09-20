@@ -163,7 +163,7 @@ const Header = () => {
                     <div className={styles.Top__nav__left_subtitle}>
                       <div
                         className={styles.Top__nav__left_subtitle__text}
-                        onClick={() => changeLanguage("zh-tw")}
+                        onClick={() => changeLanguage("zh-TW")}
                       >
                         正體中文
                       </div>

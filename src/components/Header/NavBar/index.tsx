@@ -113,7 +113,7 @@ const NavBar: React.FC<NavBarProps> = ({
             <div
               className={styles.PhoneTop__mainnav__container__col__a__language}
               onClick={() => {
-                changeLanguage("zh-tw");
+                changeLanguage("zh-TW");
               }}
             >
               正體中文
