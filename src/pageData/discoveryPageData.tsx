@@ -1,7 +1,21 @@
 import discoveryIconData from "./discoveryIconData";
 import discoveryRowData from "./discoveryRowData";
 
-const discoveryPageData = {
+import { IRowIconData } from "./discoveryRowData";
+
+interface IDiscoveryPageData {
+  [index: string]: {
+    banner: string;
+    pageTitle: string;
+    pageText: string;
+    rowIconData: {
+      rowTitle: string;
+      rowIconData: IRowIconData[];
+    }[];
+  };
+}
+
+const discoveryPageData: IDiscoveryPageData = {
   discover: {
     banner: discoveryIconData.rowData[0].src,
     pageTitle: discoveryIconData.rowData[0].rowTitleAtoppadding,

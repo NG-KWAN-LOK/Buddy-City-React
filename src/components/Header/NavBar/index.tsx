@@ -12,7 +12,6 @@ const NavBar: React.FC<NavBarProps> = ({
   isNavBarDisplay,
   setMobileNavOff,
 }) => {
-  //console.log(setMobileNavOn);
   const { t, i18n } = useTranslation();
   const changeLanguage = (lng) => {
     localStorage.setItem("language", lng);
@@ -48,7 +47,7 @@ const NavBar: React.FC<NavBarProps> = ({
           </Link>
           <a
             className={styles.PhoneTop__mainnav__container__col__a}
-            href={`${process.env.DYNMAP_URL}/map.html`}
+            href={`${process.env.REACT_APP_DYNMAP_URL}/map.html`}
             target='_blank'
             onClick={setMobileNavOff}
           >

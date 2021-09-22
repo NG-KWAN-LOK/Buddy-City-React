@@ -26,9 +26,9 @@ const Footer: React.FC = () => {
             </p>
           </div>
           <div className={styles.footer__content__links}>
-            <a
+            <Link
               className={styles.footer__content__box__btn}
-              href='bcctb-about-us/'
+              to='/bcctb-about-us'
             >
               <div
                 className={styles.footer__content__box__btn__text}
@@ -36,7 +36,7 @@ const Footer: React.FC = () => {
               >
                 {t("topFooterLang_fotterAbout")}
               </div>
-            </a>
+            </Link>
             <Link className={styles.footer__content__box__btn} to='/tnc'>
               <div
                 className={styles.footer__content__box__btn__text}
@@ -47,7 +47,7 @@ const Footer: React.FC = () => {
             </Link>
             <a
               className={styles.footer__content__box__btn}
-              href={`${process.env.DYNMAP_URL}/map.html`}
+              href={`${process.env.REACT_APP_DYNMAP_URL}/map.html`}
             >
               <div
                 className={styles.footer__content__box__btn__text}

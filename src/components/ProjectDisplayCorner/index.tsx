@@ -5,9 +5,16 @@ import MediumIcon from "../MediumIcon";
 
 import { useTranslation } from "react-i18next";
 
+interface IImgData {
+  image1: string;
+  image2: string;
+  title: string;
+  title2: string | null;
+}
+
 interface ProjectDisplayCornerProps {
   pageTitle: string;
-  imgData: any;
+  imgData: IImgData[];
 }
 
 const ProjectDisplayCorner: React.FC<ProjectDisplayCornerProps> = ({

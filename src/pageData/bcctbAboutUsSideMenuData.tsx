@@ -1,3 +1,13 @@
+interface IbcctbAboutUsSideMenuData {
+  title: string;
+  buttonData: {
+    icon: string;
+    title: string;
+    to: string;
+    type: string;
+  }[];
+}
+
 const bcctbAboutUsSideMenuData = {
   title: "main__content__sideMenu__content__title",
   buttonData: [

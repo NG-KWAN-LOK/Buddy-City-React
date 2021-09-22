@@ -2,14 +2,14 @@ import React from "react";
 import styles from "./style.module.scss";
 
 interface FilterNavProps {
-  district: any;
+  district: string;
   checked: boolean;
-  id: any;
+  id: string;
   HandleChangeCurrentGroup: (district: string) => void;
 }
 
 const FilterNav: React.FC<FilterNavProps> = ({
-  district = "",
+  district,
   checked,
   id,
   HandleChangeCurrentGroup,

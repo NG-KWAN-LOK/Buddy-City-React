@@ -5,7 +5,7 @@ import SideMenuButton from "./SideMenuButton";
 import { useTranslation } from "react-i18next";
 
 interface SideMenuProps {
-  buttonData?: any;
+  buttonData: any;
 }
 
 const SideMenu: React.FC<SideMenuProps> = ({ buttonData }) => {

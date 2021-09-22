@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import styles from "./style.module.scss";
 import { useTranslation } from "react-i18next";
-import findTitle from "../../../utils/titleName";
+import { IBuilding } from "../../../containers/BuildingList/interface";
 
 interface BuildingInfoPopUpProps {
-  buildingData?: any;
+  buildingData: IBuilding;
 }
 
 interface ITranslatedInfo {
@@ -27,6 +27,7 @@ const BuildingInfoPopUp: React.FC<BuildingInfoPopUpProps> = ({
     inside: null,
     utilization: null,
   };
+  console.log(buildingData);
   if (buildingData != null) {
     if (language === "zh") {
       translatedInfo = {
@@ -57,61 +58,63 @@ const BuildingInfoPopUp: React.FC<BuildingInfoPopUpProps> = ({
   return (
     <>
       <table className={styles.data__table}>
-        <tr>
-          <td
-            className={styles.data__table__datatitle}
-            id='buildingPopUpLayer_data_table_buildingName'
-          >
-            {t("buildingPopUpLayer_data_table_buildingName")}
-          </td>
-          <td id='data_buildingName' className={styles.data__table__datainfo}>
-            {translatedInfo.name}
-          </td>
-        </tr>
-        <tr>
-          <td
-            className={styles.data__table__datatitle}
-            id='buildingPopUpLayer_data_table_district'
-          >
-            {t("buildingPopUpLayer_data_table_district")}
-          </td>
-          <td id='data_district' className={styles.data__table__datainfo}>
-            {translatedInfo.district}
-          </td>
-        </tr>
-        <tr>
-          <td
-            className={styles.data__table__datatitle}
-            id='buildingPopUpLayer_data_table_adress'
-          >
-            {t("buildingPopUpLayer_data_table_adress")}
-          </td>
-          <td className={styles.data__table__datainfo} id='data_adress'>
-            {translatedInfo.adress}
-          </td>
-        </tr>
-        <tr>
-          <td
-            className={styles.data__table__datatitle}
-            id='buildingPopUpLayer_data_table_Utilization'
-          >
-            {t("buildingPopUpLayer_data_table_Utilization")}
-          </td>
-          <td className={styles.data__table__datainfo} id='data_Utilization'>
-            {translatedInfo.utilization}
-          </td>
-        </tr>
-        <tr>
-          <td
-            className={styles.data__table__datatitle}
-            id='buildingPopUpLayer_data_table_inside'
-          >
-            {t("buildingPopUpLayer_data_table_inside")}
-          </td>
-          <td className={styles.data__table__datainfo} id='data_inside'>
-            {translatedInfo.inside}
-          </td>
-        </tr>
+        <tbody>
+          <tr>
+            <td
+              className={styles.data__table__datatitle}
+              id='buildingPopUpLayer_data_table_buildingName'
+            >
+              {t("buildingPopUpLayer_data_table_buildingName")}
+            </td>
+            <td id='data_buildingName' className={styles.data__table__datainfo}>
+              {translatedInfo.name}
+            </td>
+          </tr>
+          <tr>
+            <td
+              className={styles.data__table__datatitle}
+              id='buildingPopUpLayer_data_table_district'
+            >
+              {t("buildingPopUpLayer_data_table_district")}
+            </td>
+            <td id='data_district' className={styles.data__table__datainfo}>
+              {translatedInfo.district}
+            </td>
+          </tr>
+          <tr>
+            <td
+              className={styles.data__table__datatitle}
+              id='buildingPopUpLayer_data_table_adress'
+            >
+              {t("buildingPopUpLayer_data_table_adress")}
+            </td>
+            <td className={styles.data__table__datainfo} id='data_adress'>
+              {translatedInfo.adress}
+            </td>
+          </tr>
+          <tr>
+            <td
+              className={styles.data__table__datatitle}
+              id='buildingPopUpLayer_data_table_Utilization'
+            >
+              {t("buildingPopUpLayer_data_table_Utilization")}
+            </td>
+            <td className={styles.data__table__datainfo} id='data_Utilization'>
+              {translatedInfo.utilization}
+            </td>
+          </tr>
+          <tr>
+            <td
+              className={styles.data__table__datatitle}
+              id='buildingPopUpLayer_data_table_inside'
+            >
+              {t("buildingPopUpLayer_data_table_inside")}
+            </td>
+            <td className={styles.data__table__datainfo} id='data_inside'>
+              {translatedInfo.inside}
+            </td>
+          </tr>
+        </tbody>
       </table>
       <div id='address_map' className={styles.address__map}>
         <div className={styles.address__map__title}>MAP</div>
@@ -120,14 +123,14 @@ const BuildingInfoPopUp: React.FC<BuildingInfoPopUpProps> = ({
           className={styles.address__map__iframe}
           width='100%'
           height='440px'
-          src={`${process.env.DYNMAP_URL}/map.html?worldname=world&mapname=flat&zoom=6&x=${buildingData.x}&y=${buildingData.y}&z=${buildingData.z}`}
+          src={`${process.env.REACT_APP_DYNMAP_URL}/map.html?worldname=world&mapname=flat&zoom=6&x=${buildingData.x}&y=${buildingData.y}&z=${buildingData.z}`}
         ></iframe>
         {">"}
         <a
           className={styles.address__map__link}
           id='data_address_link'
           target='blank'
-          href={`${process.env.DYNMAP_URL}/map.html?worldname=world&mapname=flat&zoom=6&x=${buildingData.x}&y=${buildingData.y}&z=${buildingData.z}`}
+          href={`${process.env.REACT_APP_DYNMAP_URL}/map.html?worldname=world&mapname=flat&zoom=6&x=${buildingData.x}&y=${buildingData.y}&z=${buildingData.z}`}
         >
           網上地圖
         </a>

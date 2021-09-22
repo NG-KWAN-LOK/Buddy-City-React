@@ -45,7 +45,25 @@ import image222 from "../image/photo/big/023.png";
 import image231 from "../image/photo/compress/024.jpg";
 import image232 from "../image/photo/big/024.png";
 
-const realityProjectData = {
+interface IRealityProjectData {
+  pageTitle: string;
+  imgData: (
+    | {
+        title: string;
+        title2: null;
+        image1: string;
+        image2: string;
+      }
+    | {
+        title: string;
+        title2: string;
+        image1: string;
+        image2: string;
+      }
+  )[];
+}
+
+const realityProjectData: IRealityProjectData = {
   pageTitle: "reality_project_title",
   imgData: [
     {

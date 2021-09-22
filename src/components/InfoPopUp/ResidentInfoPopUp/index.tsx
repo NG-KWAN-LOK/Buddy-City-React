@@ -2,9 +2,10 @@ import React, { useEffect } from "react";
 import styles from "./style.module.scss";
 import { useTranslation } from "react-i18next";
 import findTitle from "../../../utils/titleName";
+import { ICharacter } from "../../../containers/Resident/interface";
 
 interface ResidentInfoPopUpProps {
-  character?: any;
+  character: ICharacter;
 }
 
 interface ITranslatedInfo {

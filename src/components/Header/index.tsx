@@ -96,7 +96,7 @@ const Header = () => {
                     </div>
                     <div className={styles.Top__nav__left_subtitle}>
                       <a
-                        href={`${process.env.DYNMAP_URL}/map.html`}
+                        href={`${process.env.REACT_APP_DYNMAP_URL}/map.html`}
                         target='_blank'
                       >
                         <i

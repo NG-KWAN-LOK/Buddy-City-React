@@ -23,13 +23,28 @@ import image62 from "../image/pword6_2.jpg";
 import image63 from "../image/pword6_3.jpg";
 import image64 from "../image/pword6_4.jpg";
 
-const discoveryRowData = {
+interface IDiscoveryRowData {
+  [index: string]: {
+    rowTitle: string;
+    rowIconData: IRowIconData[];
+  };
+}
+
+export interface IRowIconData {
+  type: "internal" | "external" | "pointer";
+  to: string;
+  src: string;
+  atoppadding: string;
+  apadding: string;
+}
+
+const discoveryRowData: IDiscoveryRowData = {
   discover: {
     rowTitle: "discover_subtitle_discover",
     rowIconData: [
       {
         type: "external",
-        to: `${process.env.DYNMAP_URL}/map.html`,
+        to: `${process.env.REACT_APP_DYNMAP_URL}/map.html`,
         src: image11,
         atoppadding: "discover_content_atoppadding_webMap",
         apadding: "discover_content_apadding_webMap",
@@ -193,29 +208,29 @@ const discoveryRowData = {
     rowTitle: "discover_subtitle_traffic",
     rowIconData: [
       {
-        type: "pointer",
-        to: "",
+        type: "internal",
+        to: "/subway-info/elevated-railway",
         src: image51,
         atoppadding: "discover_content_atoppadding_highway",
         apadding: "discover_content_apadding_highway",
       },
       {
-        type: "pointer",
-        to: "",
+        type: "internal",
+        to: "/subway-info/airport-express",
         src: image52,
         atoppadding: "discover_content_atoppadding_airportWay",
         apadding: "discover_content_apadding_airportWay",
       },
       {
-        type: "pointer",
-        to: "",
+        type: "internal",
+        to: "/subway-info/tramways",
         src: image53,
         atoppadding: "discover_content_atoppadding_mrt",
         apadding: "discover_content_apadding_mrt",
       },
       {
-        type: "pointer",
-        to: "",
+        type: "internal",
+        to: "/subway-info/municipal-subway",
         src: image54,
         atoppadding: "discover_content_atoppadding_downMrt",
         apadding: "discover_content_apadding_downMrt",

@@ -3,7 +3,6 @@ import { initReactI18next } from "react-i18next";
 import Backend from "i18next-http-backend";
 
 if (localStorage.getItem("language") === null) {
-  console.log("hi");
   localStorage.setItem("language", "zh");
 }
 

@@ -198,5 +198,46 @@
   "tnc_topic11":"11.本條款之變更",
   "tnc_topic11_text":"本團體會隨時變更服務條款及使用細則或附加條款。任何新版附加條款則將透過受其影響之服務或於受其影響之服務內向你提供。\n\n用戶暸解並同意，如用戶於服務條款及使用細則或附加條款變更日後使用本服務，本團體將視您為接受更新後之服務條款及使用細則。",
   "tnc_topic12":"12.法例",
-  "tnc_topic12_text":"本條款受中華民國法例監管。"
+  "tnc_topic12_text":"本條款受中華民國法例監管。",
+
+  "aet_title":"Buddy City暨Kai's 國際機場快速線路",
+  "aet_about_title":"機場快線簡介：",
+  "aet_about_text":"Buddy City暨Kai's 國際機場快速線路，簡稱機場快線。現由Buddy市運輸局暨Buddy City市營地下鐵路有限公司屬下之Buddy City暨Kai's 國際機場快速線路有限公司營運。係以Buddy市運輸局為主要股東之公營交通事業公司。\n\n機場快線原身為地下鐵路一線，是Buddy City 於2012年5月第一個興建於地下層的鐵路系統。由大眾高架鐵路運輸系統有限公司興建及營運。地下鐵路一線路線由鐵路總站至Buddy City 火箭發射中心。\n\n2017年5月因配合國際機場發展項目，將地下鐵路一線延伸成為現有線路，並改為由Buddy City暨Kai's 國際機場快速線路有限公司營運。\n\n2017年6月20日，機場快線第一期完工通車。\n\n2018年3月，Buddy City市營地下鐵路有限公司成立，Buddy City暨Kai's 國際機場快速線路有限公司轉由Buddy市運輸局暨Buddy City市營地下鐵路有限公司營運。成為市營地下鐵其中一條特別線路。\n\n2018年7月5日，配合市營地下鐵計劃，機場快線第二期東京沙漠、沙田、大阪延線完工通車。\n\n2018年7月15日，機場快線直通車正式通車。\n\n機場快線主要目的為建設由城市最北部通往到機場。路網涵蓋大阪區、沙田區、市中心、新市中心、東京區、沙漠區。為居民及旅客提供最快捷、方便進出機場的方法。",
+  "aet_route_about_title":"機場快線路線：",
+  "aet_route_about_subtitle":"機場快線分為普通車及直通車",
+  "aet_route_local_service_title":"普通車",
+  "aet_route_local_service_text":"2017年6月20日正式通車\n途經谷町四丁目、沙田、市中心、火箭發射中心前、沙漠東京及Buddy City暨Kai's 國際機場。",
+  "aet_route_express_service_title":"直通車",
+  "aet_route_express_service_text":"2018年7月15日正式通車\n只停站於谷町四丁目、市中心及Buddy City暨Kai's 國際機場。",
+
+  "bct_title":"Buddy City路面電車系統",
+  "bct_about_title":"路面電車簡介：",
+  "bct_about_text":"Buddy City路面電車系統，簡稱路面電車。現由Buddy City路面電車系統有限公司營運。為Buddy City 首個興建於路面且私營的環形線路鐵路系統。\n\n2013年由Buddy市觀光局計劃、Buddy市運輸局興建，於2017年5月第一期完工。原由Buddy市運輸局暨Buddy City路面電車有限公司營運。\n\n2017年6月，路面電車第二期Buddy City運動場及沙田區延展完工通車。\n\n2017年7月，路面電車第三期清水區延展完工通車。\n\n2018年2月，進行大型延展工程，期後私有化．由Buddy City路面電車系統有限公司營運。\n\n2018年3月3日，路面電車第四期港島區、能源區及跨海線路延展完工通車。\n\n2018年5月3日，路面電車第五期大阪區、目黑川及臺北區延展完工通車。\n\n2018年10月28日，路面電車第六期青衣區延展完工通車。\n\n路網範圍涵蓋整個Buddy City，已成為Buddy City線路最長、車站最多、覆蓋率最高鐵路系統。主要目的為旅遊觀光。",
+  "bct_route_about_title":"路面電車路線：",
+  "bct_route_about_subtitle":"路面電車由一條環形線路組成",
+  "bct_route_tramways_title":"路面電車",
+  "bct_route_tramways_text":"2017年5月正式通車\n城市內唯一環形線路，橫跨城中所有景點及地方。",
+
+  "ert_title":"大眾高架鐵路運輸系統",
+  "ert_about_title":"高架鐵路簡介：",
+  "ert_about_text":"大眾高架鐵路運輸系統，簡稱高架鐵路。為Buddy City 第一個鐵路運輸系統，現由Buddy市運輸局暨大眾高架鐵路運輸系統有限公司營運。係以Buddy市運輸局為主要股東之公營交通事業公司。\n\n高架鐵路於2012年由Buddy市運輸局興建，2012年4月高架鐵路一線第一期完工後成立Buddy市運輸局暨大眾高架鐵路運輸系統有限公司營運高架鐵路。\n\n2012年5月，Buddy City電視城落成。於同月高架鐵路二線第一期完工通車。\n\n2013年5月，高架鐵路一線第二期Super Restaurant延線完工通車。\n\n2017手5月，高架鐵路一線第三期電車總站延線完工通車。\n\n路網範圍涵蓋市中心、新市中心及Buddy山區及青衣區 (部份區域) 。",
+  "ert_route_about_title":"高架鐵路路線：",
+  "ert_route_about_subtitle":"高架鐵路由兩條線路組成",
+  "ert_route_line1_title":"高架鐵路一線",
+  "ert_route_line1_text":"2012年4月正式通車\n途經各個城市開荒建築師之住所。",
+  "ert_route_line2_title":"高架鐵路二線",
+  "ert_route_line2_text":"2012年5月正式通車\n前往Buddy City電視城唯一交通。",
+
+  "mst_title":"Buddy City市營地下鐵路運輸系統",
+  "mst_about_title":"市營地下鐵簡介：",
+  "mst_about_text":"Buddy City市營地下鐵路運輸系統，簡稱市營地下鐵。為Buddy City 地下鐵路運輸系統，現由Buddy市運輸局暨Buddy City市營地下鐵路有限公司營運。係以Buddy市運輸局為主要股東之公營交通事業公司。\n\n2018年3月，城市開發急速。配合城市交通發展，Buddy市運輸局暨Buddy City市營地下鐵路有限公司成立。同月接手Buddy City暨Kai's 國際機場快速線路有限公司，營運機場快線。\n\n2018年4月，開始計劃興建市營地下鐵。同年5月第一期全面建成，5月3日全面正式通車。\n\n路網範圍涵蓋整個Buddy City。為居民及遊客一個最快速通勤交通系統。",
+  "mst_route_about_title":"市營地下鐵路線",
+  "mst_route_about_subtitle":"市營地下鐵由三條線路組成",
+  "mst_route_central_line_title":"市營地下鐵中央線",
+  "mst_route_central_line_text":"2018年5月3日正式通車\nBuddy City由北至南主要幹線。途經大阪區、沙田區、市中心、新市中心、東京區 (部份區域) 、沙漠區 (部份區域) 、港島區、臺北區及能源區。",
+  "mst_route_hangen_line_title":"市營地下鐵阪源線",
+  "mst_route_hangen_line_text":"2018年5月3日正式通車\nBuddy City由東至西主要幹線。途經大阪區、清水區、東京區、Buddy 山區、青衣區、校園區、臺北區及能源區。",
+  "mst_route_koyo_mizu_sha_Tin_Line_title":"市營地下鐵清水沙田線",
+  "mst_route_koyo_mizu_sha_Tin_Line_text":"2018年5月3日正式通車\nBuddy City由東至西支線。途經清水區東京區、Buddy 山區及沙田區。"
+
 }

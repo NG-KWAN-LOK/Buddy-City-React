@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Route, Switch, useLocation } from "react-router-dom";
+import { Route, Switch, useLocation, Redirect } from "react-router-dom";
 import styles from "./style.module.scss";
 import useTheme from "../../hoc/ThemeProvider";
 
@@ -19,6 +19,7 @@ import BCCTBContainer from "../../components/SimplePage/Container/BCCTBContainer
 
 import bcctbAboutUsSideMenuData from "../../pageData/bcctbAboutUsSideMenuData";
 import DiscoveryPage from "../DiscoveryPage";
+import SubwayInfoPageContainer from "../SubwayInfoPageContainer";
 
 function App() {
   const { themeMode } = useTheme();
@@ -29,11 +30,15 @@ function App() {
     if (pathname === "/") document.title = appName;
     else if (pathname.includes("/building_list")) return;
     else if (pathname.includes("/resident")) return;
+    else if (pathname.includes("/page")) return;
+    else if (pathname.includes("/subway-info")) return;
     else if (pathname.includes("/bcctb-about-us"))
       document.title = findTitle([t("BCCTB__content__subTitle")]) + appName;
     else if (pathname.includes("/tnc"))
       document.title = findTitle([t("BCCTB_title")]) + appName;
-    else document.title = findTitle([t("page_not_found")]) + appName;
+    else {
+      document.title = findTitle([t("page_not_found")]) + appName;
+    }
     window.scrollTo(0, 0);
   }, [pathname, i18n.language]);
 
@@ -46,19 +51,16 @@ function App() {
           <Route exact path='/'>
             <Dashboard />
           </Route>
-          <Route path='/resident/:username'>
+          <Route path={["/resident/:username", "/resident"]}>
             <Resident />
           </Route>
-          <Route path='/resident'>
-            <Resident />
-          </Route>
-          <Route path='/building_list/:districtid/:buildingid'>
-            <BuildingList />
-          </Route>
-          <Route path='/building_list/:districtid/'>
-            <BuildingList />
-          </Route>
-          <Route path='/building_list'>
+          <Route
+            path={[
+              "/building_list/:districtid/:buildingid",
+              "/building_list/:districtid/",
+              "/building_list",
+            ]}
+          >
             <BuildingList />
           </Route>
           <Route path='/bcctb-about-us'>
@@ -75,6 +77,14 @@ function App() {
           </Route>
           <Route path='/page/:pagename'>
             <DiscoveryPage />
+          </Route>
+          <Route path='/subway-info/:pagename'>
+            <SubwayInfoPageContainer
+              sideMenu={<SideMenu buttonData={bcctbAboutUsSideMenuData} />}
+            />
+          </Route>
+          <Route path={["/page", "/subway-info"]}>
+            <Redirect to='/' />
           </Route>
         </Switch>
         <Footer />

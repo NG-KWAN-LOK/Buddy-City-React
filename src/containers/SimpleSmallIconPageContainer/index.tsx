@@ -5,25 +5,20 @@ import StaticBigBanner from "../../components/StaticBigBanner";
 import SmallIconPageMenuPage from "../../components/SmallIconPageMenuPage";
 import SmallIconRow from "../../components/SmallIconPageMenuPage/SmallIconRow";
 
+import { IRowIconData } from "../../pageData/discoveryRowData";
+
 interface SimpleSmallIconPageContainerProps {
   banner: string;
   pageTitle: string;
   pageText: string;
   discoveryData: {
     rowTitle: string;
-    rowIconData: {
-      type: string;
-      to: string;
-      src: string;
-      atoppadding: string;
-      apadding: string;
-    }[];
+    rowIconData: IRowIconData[];
   }[];
 }
 
 const SimpleSmallIconPageContainer: React.FC<SimpleSmallIconPageContainerProps> =
   ({ banner, pageTitle, pageText, discoveryData }) => {
-    console.log(discoveryData);
     return (
       <div className={styles.container}>
         <StaticBigBanner src={banner} />

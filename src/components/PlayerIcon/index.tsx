@@ -1,10 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./style.module.scss";
+import { ICharacter } from "../../containers/Resident/interface";
 
 interface PlayerIconProps {
   setPopUpOn: () => void;
-  character: any;
+  character: ICharacter;
 }
 
 const PlayerIcon: React.FC<PlayerIconProps> = ({ character, setPopUpOn }) => {

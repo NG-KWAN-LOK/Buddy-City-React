@@ -2,16 +2,9 @@
 
 .BCCTB__title__content {
   .BCCTB__title {
-    display: block;
     padding: 16px 0 15px 0;
-    text-align: left;
-    line-height: 55px;
-    font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
-    font-style: normal;
     font-weight: 500;
     color: var(--title-color);
-    text-decoration: none;
-    font-variant: normal;
     font-size: 2.5em;
     border-bottom: 1px solid var(--border-bottom-color);
     margin-bottom: 30px;
@@ -28,7 +21,6 @@
       font-size: 2em;
       text-align: left;
     }
-    padding: 0 30px;
   }
 }
 .BCCTB__content {
@@ -65,7 +57,6 @@
     .BCCTB__content__text {
       font-size: 16px;
     }
-    padding: 0 30px;
   }
 }
 

@@ -15,9 +15,20 @@ import { getResidentData } from "../../utils/firebase";
 import { onValue } from "firebase/database";
 import InfoPopUp from "../../components/InfoPopUp";
 import ResidentInfoPopUp from "../../components/InfoPopUp/ResidentInfoPopUp";
+import { ICharacter } from "./interface";
 
 interface IResidentParms {
   username: string;
+}
+
+interface IDataList {
+  [index: number]: ICharacter[];
+}
+
+interface IDistrictList {
+  districtListZH: Set<string>;
+  districtListENG: Set<string>;
+  districtListJP: Set<string>;
 }
 
 const Resident = () => {
@@ -25,9 +36,9 @@ const Resident = () => {
   const language = i18n.language;
   const { pathname } = useLocation();
   const { username } = useParams<IResidentParms>();
-  const [residentData, setResidentData] = useState([]);
+  const [residentData, setResidentData] = useState<Array<IDataList>>([]);
   const [isPopUpDisplay, setIsPopUpDisplay] = useState(false);
-  const [districtList, setDistrictList] = useState({
+  const [districtList, setDistrictList] = useState<IDistrictList>({
     districtListZH: new Set(),
     districtListENG: new Set(),
     districtListJP: new Set(),
@@ -42,7 +53,7 @@ const Resident = () => {
 
   const fetchData = useCallback(() => {
     onValue(getResidentData, (snapshot) => {
-      let dataList: any = [];
+      let dataList: IDataList[] = [];
       snapshot.val().forEach((data, index) => {
         districtList.districtListZH.add(data.district_CHI);
         districtList.districtListENG.add(data.district_ENG);

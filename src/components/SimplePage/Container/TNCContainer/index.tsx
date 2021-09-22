@@ -1,8 +1,5 @@
 import React from "react";
 import styles from "./style.module.scss";
-
-import banner from "../../../../image/bbcctb-about-us/001.jpg";
-
 import { useTranslation } from "react-i18next";
 
 const TNCContainer: React.FC = () => {

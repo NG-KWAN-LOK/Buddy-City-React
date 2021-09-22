@@ -16,6 +16,8 @@ import MediumIcon from "../../components/MediumIcon";
 import BuildingListPopUp from "../../components/InfoPopUp/BuildingListPopUp";
 import BuildingInfoPopUp from "../../components/InfoPopUp/BuildingInfoPopUp";
 
+import { IBuilding } from "./interface";
+
 interface IBuildingListParms {
   districtid: string;
   buildingid: string;
@@ -36,6 +38,7 @@ const BuildingList = () => {
       let dataList: any = [];
       Object.values(snapshot.val()).forEach(
         (buildingData: any, districtIndex) => {
+          console.log(buildingData);
           dataList.push({
             districtIndex,
             district_chi: buildingData[0].district_chi,
@@ -89,7 +92,7 @@ const BuildingList = () => {
     } else {
       document.title = findTitle([t("page_not_found")]) + t("title");
     }
-  }, [pathNameSplitNumber, i18n.language]);
+  }, [pathNameSplitNumber, i18n.language, buildingData]);
   useEffect(() => {
     fetchData();
   }, []);

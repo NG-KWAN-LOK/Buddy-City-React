@@ -3,10 +3,12 @@ import styles from "./style.module.scss";
 
 import { useTranslation } from "react-i18next";
 
+import { IRowIconData } from "../../../pageData/discoveryRowData";
+
 import HyperContentCard from "../HyperContentCard";
 interface SmallIconRowProps {
   rowTitle: string;
-  rowIconData: any;
+  rowIconData: IRowIconData[];
 }
 
 const SmallIconRow: React.FC<SmallIconRowProps> = ({
