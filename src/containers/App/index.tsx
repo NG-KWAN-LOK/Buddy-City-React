@@ -11,8 +11,14 @@ import Dashboard from "../Dashboard";
 import Footer from "../../components/Footer";
 import Resident from "../Resident";
 import BuildingList from "../BuildingList";
-import BCCTB from "../BCCTB";
-import TNC from "../TNC";
+import SimplePageContainer from "../SimplePageContainer";
+import SideMenu from "../../components/SimplePage/SideMenu";
+
+import TNCContainer from "../../components/SimplePage/Container/TNCContainer";
+import BCCTBContainer from "../../components/SimplePage/Container/BCCTBContainer";
+
+import bcctbAboutUsSideMenuData from "../../pageData/bcctbAboutUsSideMenuData";
+import DiscoveryPage from "../DiscoveryPage";
 
 function App() {
   const { themeMode } = useTheme();
@@ -28,6 +34,7 @@ function App() {
     else if (pathname.includes("/tnc"))
       document.title = findTitle([t("BCCTB_title")]) + appName;
     else document.title = findTitle([t("page_not_found")]) + appName;
+    window.scrollTo(0, 0);
   }, [pathname, i18n.language]);
 
   return (
@@ -39,26 +46,35 @@ function App() {
           <Route exact path='/'>
             <Dashboard />
           </Route>
+          <Route path='/resident/:username'>
+            <Resident />
+          </Route>
           <Route path='/resident'>
             <Resident />
           </Route>
-          <Route path='/resident/:userName'>
-            <Resident />
+          <Route path='/building_list/:districtid/:buildingid'>
+            <BuildingList />
+          </Route>
+          <Route path='/building_list/:districtid/'>
+            <BuildingList />
           </Route>
           <Route path='/building_list'>
             <BuildingList />
           </Route>
-          <Route path='/building_list/:districtId'>
-            <BuildingList />
-          </Route>
-          <Route path='/building_list/:districtId:buildingId'>
-            <BuildingList />
-          </Route>
           <Route path='/bcctb-about-us'>
-            <BCCTB />
+            <SimplePageContainer
+              contain={<BCCTBContainer />}
+              sideMenu={<SideMenu buttonData={bcctbAboutUsSideMenuData} />}
+            />
           </Route>
           <Route path='/tnc'>
-            <TNC />
+            <SimplePageContainer
+              contain={<TNCContainer />}
+              sideMenu={<SideMenu buttonData={bcctbAboutUsSideMenuData} />}
+            />
+          </Route>
+          <Route path='/page/:pagename'>
+            <DiscoveryPage />
           </Route>
         </Switch>
         <Footer />

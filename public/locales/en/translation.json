@@ -22,7 +22,10 @@
   "topFooterLang_fotterCopyright": "©BUDDY CITY CONVENTION & TOURISM BUREAU",
 
   "discover_title_discover": "DISCOVERY",
+  "discover_content_toptext":"Check More",
   "discover_text_discover": "What kind of place is BUDDY City? The basic information, the civic life, activities on the city, transportation, waiting for you to explore.",
+  "discover_row_title_discover":"Tourist Information For All Visitor",
+  "discover_row_subtitle_discover":"We've collected useful information for visiting in BUDDY City, such as Map, Pamphlet, methods of transport and so on. We hope they help you have a convenient and pleasant stay in BUDDY City.",
   "discover_subtitle_discover": "WATCH THIS CITY",
   "discover_content_atoppadding_webMap": "ONLINE MAP",
   "discover_content_apadding_webMap": "Click to open online map",
@@ -33,6 +36,8 @@
   "discover_content_atoppadding_gps": "GPS",
   "discover_content_apadding_gps": "Pick-up from the sign in front of the Former Kowloon-Canton Railway Clock Tower",
 
+  "discover_row_title_basic":"About BUDDY City",
+  "discover_row_subtitle_basic":"We've collected the basic information about Osaka, such as places, history, features, and transportation.",
   "discover_subtitle_basic": "BASIC INFORMATION",
   "discover_content_atoppadding_place": "WAHT KIND OF BUDDY CITY?",
   "discover_content_apadding_place": "The dream world and paradise for all residents and tourism",
@@ -43,6 +48,8 @@
   "discover_content_atoppadding_view": "VIEW",
   "discover_content_apadding_view": "Check it in the online map",
 
+  "discover_row_title_do":"Itineraries",
+  "discover_row_subtitle_do":"BUDDY City have many different events, We hope they help you in your travels.",
   "discover_subtitle_do": "YOU CAN DO",
   "discover_content_atoppadding_dream": "BUILD",
   "discover_content_apadding_dream": "Residents can build their lovely house and enjoy their peace life",
@@ -53,7 +60,9 @@
   "discover_content_atoppadding_creatWorld": "CREATE",
   "discover_content_apadding_creatWorld": "Become an architect in Buddy City and build our dream city.",
 
-  "discover_subtitle_activity": "ACTIVITY",
+  "discover_row_title_activity":"Nature & Outdoors",
+  "discover_row_subtitle_activity":"BUDDY City is no shortage of beautifully maintained spots where you can experience some outdoor fun in the heart of the city.",
+  "discover_subtitle_activity": "NATURE & OUTDOORS ACTIVITY",
   "discover_content_atoppadding_playaround": "TRAVEL",
   "discover_content_apadding_playaround": "Explore this city",
   "discover_content_atoppadding_flower": "OUTDOOR EXCURSIONS",
@@ -63,12 +72,16 @@
   "discover_content_atoppadding_firework": "FIREWORKS",
   "discover_content_apadding_firework": "There will launch the firework at night in random time.",
 
+  "discover_row_title_method":"Visit BUDDY City",
+  "discover_row_subtitle_method":"There are so many fast and convenient ways to get to BUDDY City.",
   "discover_subtitle_method": "ARRIVE TO BUDDY CITY",
   "discover_content_atoppadding_airport": "AIRPORT",
   "discover_content_atoppadding_dock": "PIER",
   "discover_content_atoppadding_land": "LAND-BASED",
   "discover_content_atoppadding_portal": "PORTAL",
 
+  "discover_row_title_traffic":"Getting Around BUDDY City",
+  "discover_row_subtitle_traffic":"BUDDY City is divided into 14 areas. Depending upon your destination, you can travel through the city using the pubilc transport, which goes all throughout the city.",
   "discover_subtitle_traffic": "TRANSPORTATION",
   "discover_content_atoppadding_highway": "ELEVATED RAILWAY",
   "discover_content_apadding_highway": "A public transport which in front of the most of residential",

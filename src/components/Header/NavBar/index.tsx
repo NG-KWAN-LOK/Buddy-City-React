@@ -48,7 +48,7 @@ const NavBar: React.FC<NavBarProps> = ({
           </Link>
           <a
             className={styles.PhoneTop__mainnav__container__col__a}
-            href='https://buddycityinfo.sgngs.com/map.html'
+            href={`${process.env.DYNMAP_URL}/map.html`}
             target='_blank'
             onClick={setMobileNavOff}
           >

@@ -47,7 +47,7 @@ const Footer: React.FC = () => {
             </Link>
             <a
               className={styles.footer__content__box__btn}
-              href='https://buddycityinfo.sgngs.com/map.html'
+              href={`${process.env.DYNMAP_URL}/map.html`}
             >
               <div
                 className={styles.footer__content__box__btn__text}

@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useCallback } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import styles from "./style.module.scss";
 import { useTranslation } from "react-i18next";
 import findTitle from "../../utils/titleName";
@@ -16,11 +16,15 @@ import { onValue } from "firebase/database";
 import InfoPopUp from "../../components/InfoPopUp";
 import ResidentInfoPopUp from "../../components/InfoPopUp/ResidentInfoPopUp";
 
-const Home = () => {
+interface IResidentParms {
+  username: string;
+}
+
+const Resident = () => {
   const { t, i18n } = useTranslation();
   const language = i18n.language;
   const { pathname } = useLocation();
-  const userIdFromPathName = pathname.substring(pathname.lastIndexOf("/") + 1);
+  const { username } = useParams<IResidentParms>();
   const [residentData, setResidentData] = useState([]);
   const [isPopUpDisplay, setIsPopUpDisplay] = useState(false);
   const [districtList, setDistrictList] = useState({
@@ -49,7 +53,7 @@ const Home = () => {
         });
       });
       setResidentData(dataList);
-      if (userIdFromPathName != "resident") {
+      if (username) {
         PopUpToggleOn();
       }
     });
@@ -61,9 +65,9 @@ const Home = () => {
     else
       document.title =
         findTitle([
-          typeof residentData[userIdFromPathName] === "undefined"
+          typeof residentData[username] === "undefined"
             ? t("page_not_found")
-            : residentData[userIdFromPathName].user_name,
+            : residentData[username].user_name,
           t("ResidentList_title"),
         ]) + t("title");
   }, [pathname]);
@@ -125,17 +129,17 @@ const Home = () => {
         <InfoPopUp
           setPopUpOff={() => PopUpToggleOff()}
           title={
-            typeof residentData[userIdFromPathName] === "undefined"
+            typeof residentData[username] === "undefined"
               ? "error"
-              : residentData[userIdFromPathName].user_name
+              : residentData[username].user_name
           }
           to='/resident'
         >
           <ResidentInfoPopUp
             character={
-              typeof residentData[userIdFromPathName] === "undefined"
+              typeof residentData[username] === "undefined"
                 ? ""
-                : residentData[userIdFromPathName]
+                : residentData[username]
             }
           />
         </InfoPopUp>
@@ -144,4 +148,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Resident;

@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useCallback } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import styles from "./style.module.scss";
 import { useTranslation } from "react-i18next";
 import findTitle from "../../utils/titleName";
@@ -16,13 +16,17 @@ import MediumIcon from "../../components/MediumIcon";
 import BuildingListPopUp from "../../components/InfoPopUp/BuildingListPopUp";
 import BuildingInfoPopUp from "../../components/InfoPopUp/BuildingInfoPopUp";
 
+interface IBuildingListParms {
+  districtid: string;
+  buildingid: string;
+}
+
 const BuildingList = () => {
+  const { districtid, buildingid } = useParams<IBuildingListParms>();
+  const { pathname } = useLocation();
+  const pathNameSplitNumber = Object.keys(useParams()).length;
   const { t, i18n } = useTranslation();
   const language = i18n.language;
-  const { pathname } = useLocation();
-  const pathNameSplit = pathname.split("/");
-  const districtIdFromPathName = pathNameSplit[2];
-  const buildingIdFromPathName = pathNameSplit[3];
   const [buildingData, setBuildingData] = useState([]);
   const [isPopUpDisplay, setIsPopUpDisplay] = useState(false);
   const PopUpToggleOn = useCallback(() => setIsPopUpDisplay(true), []);
@@ -42,7 +46,7 @@ const BuildingList = () => {
         }
       );
       setBuildingData(dataList);
-      if (pathname != "/building_list") {
+      if (districtid) {
         PopUpToggleOn();
       }
     });
@@ -52,84 +56,67 @@ const BuildingList = () => {
     if (pathname === "/building_list")
       document.title = findTitle([t("BuildingList_title")]) + t("title");
     else if (
-      typeof buildingData[districtIdFromPathName] != "undefined" &&
-      pathNameSplit.length == 3
+      typeof buildingData[districtid] != "undefined" &&
+      pathNameSplitNumber == 1
     ) {
       document.title =
         findTitle([
           language === "zh"
-            ? buildingData[districtIdFromPathName].district_chi
+            ? buildingData[districtid].district_chi
             : language === "en"
-            ? buildingData[districtIdFromPathName].district_eng
-            : buildingData[districtIdFromPathName].district_jp,
+            ? buildingData[districtid].district_eng
+            : buildingData[districtid].district_jp,
           t("BuildingList_title"),
         ]) + t("title");
     } else if (
-      typeof buildingData[districtIdFromPathName] != "undefined" &&
-      typeof buildingData[districtIdFromPathName].buildingData[
-        buildingIdFromPathName
-      ] != "undefined"
+      typeof buildingData[districtid] != "undefined" &&
+      typeof buildingData[districtid].buildingData[buildingid] != "undefined"
     ) {
       document.title =
         findTitle([
           language === "zh"
-            ? buildingData[districtIdFromPathName].buildingData[
-                buildingIdFromPathName
-              ].name_chi
+            ? buildingData[districtid].buildingData[buildingid].name_chi
             : language === "en"
-            ? buildingData[districtIdFromPathName].buildingData[
-                buildingIdFromPathName
-              ].name_eng
-            : buildingData[districtIdFromPathName].buildingData[
-                buildingIdFromPathName
-              ].name_jp,
+            ? buildingData[districtid].buildingData[buildingid].name_eng
+            : buildingData[districtid].buildingData[buildingid].name_jp,
           language === "zh"
-            ? buildingData[districtIdFromPathName].district_chi
+            ? buildingData[districtid].district_chi
             : language === "en"
-            ? buildingData[districtIdFromPathName].district_eng
-            : buildingData[districtIdFromPathName].district_jp,
+            ? buildingData[districtid].district_eng
+            : buildingData[districtid].district_jp,
           t("BuildingList_title"),
         ]) + t("title");
     } else {
       document.title = findTitle([t("page_not_found")]) + t("title");
     }
-  }, [pathNameSplit, i18n.language]);
+  }, [pathNameSplitNumber, i18n.language]);
   useEffect(() => {
     fetchData();
   }, []);
 
   const getTitle = () => {
     if (
-      typeof buildingData[districtIdFromPathName] != "undefined" &&
-      pathNameSplit.length == 3
+      typeof buildingData[districtid] != "undefined" &&
+      pathNameSplitNumber == 1
     ) {
       return language === "zh"
-        ? buildingData[districtIdFromPathName].district_chi
+        ? buildingData[districtid].district_chi
         : language === "en"
-        ? buildingData[districtIdFromPathName].district_eng
-        : buildingData[districtIdFromPathName].district_jp;
+        ? buildingData[districtid].district_eng
+        : buildingData[districtid].district_jp;
     } else if (
-      typeof buildingData[districtIdFromPathName] != "undefined" &&
-      typeof buildingData[districtIdFromPathName].buildingData[
-        buildingIdFromPathName
-      ] != "undefined"
+      typeof buildingData[districtid] != "undefined" &&
+      typeof buildingData[districtid].buildingData[buildingid] != "undefined"
     ) {
       return language === "zh"
-        ? buildingData[districtIdFromPathName].buildingData[
-            buildingIdFromPathName
-          ].name_chi
+        ? buildingData[districtid].buildingData[buildingid].name_chi
         : language === "en"
-        ? buildingData[districtIdFromPathName].buildingData[
-            buildingIdFromPathName
-          ].name_eng
-        : buildingData[districtIdFromPathName].buildingData[
-            buildingIdFromPathName
-          ].name_jp;
+        ? buildingData[districtid].buildingData[buildingid].name_eng
+        : buildingData[districtid].buildingData[buildingid].name_jp;
     } else {
       return "error";
     }
   };
-  // console.log(buildingData[districtIdFromPathName]);
   return (
     <div className={styles.container}>
       <StaticBigBanner src={banner} />
@@ -170,40 +157,32 @@ const BuildingList = () => {
           title={getTitle()}
           to='/building_list'
         >
-          {typeof buildingData[districtIdFromPathName] != "undefined" &&
-            pathNameSplit.length == 3 && (
+          {typeof buildingData[districtid] != "undefined" &&
+            pathNameSplitNumber == 1 && (
               <div id='building' className={styles.districtData}>
-                {buildingData[districtIdFromPathName].buildingData.map(
-                  (data, index) => {
-                    console.log(data);
-                    return (
-                      <BuildingListPopUp
-                        key={index}
-                        buildingName={
-                          language === "zh"
-                            ? data.name_chi
-                            : language === "en"
-                            ? data.name_eng
-                            : data.name_jp
-                        }
-                        districtId={districtIdFromPathName}
-                        buildingId={index}
-                      />
-                    );
-                  }
-                )}
+                {buildingData[districtid].buildingData.map((data, index) => {
+                  return (
+                    <BuildingListPopUp
+                      key={index}
+                      buildingName={
+                        language === "zh"
+                          ? data.name_chi
+                          : language === "en"
+                          ? data.name_eng
+                          : data.name_jp
+                      }
+                      districtId={districtid}
+                      buildingId={index}
+                    />
+                  );
+                })}
               </div>
             )}
-          {typeof buildingData[districtIdFromPathName] != "undefined" &&
-            typeof buildingData[districtIdFromPathName].buildingData[
-              buildingIdFromPathName
-            ] != "undefined" && (
+          {typeof buildingData[districtid] != "undefined" &&
+            typeof buildingData[districtid].buildingData[buildingid] !=
+              "undefined" && (
               <BuildingInfoPopUp
-                buildingData={
-                  buildingData[districtIdFromPathName].buildingData[
-                    buildingIdFromPathName
-                  ]
-                }
+                buildingData={buildingData[districtid].buildingData[buildingid]}
               />
             )}
         </InfoPopUp>

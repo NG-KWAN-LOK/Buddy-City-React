@@ -24,6 +24,9 @@
   "discover_title_discover": "DISCOVERY",
   "discover_text_discover":
     "BUDDY 市是怎麼樣的？基本資料、市民的生活、城市的活動、交通等資料等您來探索。",
+  "discover_content_toptext":"閱讀更多",
+  "discover_row_title_discover":"致觀光來訪的各位",
+  "discover_row_subtitle_discover":"這裡提供各種有用的情報，地圖、小冊子、交通方式等各種BUDDY市當地資訊，希望能派上用場。",
   "discover_subtitle_discover": "能透過這些來觀摩這個城市",
   "discover_content_atoppadding_webMap": "網頁地圖",
   "discover_content_apadding_webMap": "點擊開啟網上地圖",
@@ -35,6 +38,8 @@
   "discover_content_atoppadding_gps": "GPS全球定位",
   "discover_content_apadding_gps": "在前九廣鐵路鐘樓門前告示牌領取",
 
+  "discover_row_title_basic":"關於Buddy市",
+  "discover_row_subtitle_basic":"我們彙整出各種基本消息，包括Buddy市是什麼樣的地方、Buddy市的歷史、各地及特色、交通方式等。",
   "discover_subtitle_basic": "BUDDY市的基本",
   "discover_content_atoppadding_place": "這裡是什麼地方？",
   "discover_content_apadding_place": "居民、遊客們的夢想世界、夢想天堂",
@@ -47,6 +52,8 @@
   "discover_content_atoppadding_view": "BUDDY市的樣子",
   "discover_content_apadding_view": "透過網上地圖中看這裡的風光",
 
+  "discover_row_title_do":"行程",
+  "discover_row_subtitle_do":"BUDDY市有各式各樣的活動，能協助你規劃精彩豐富的旅程。",
   "discover_subtitle_do": "在BUDDY市能做的事",
   "discover_content_atoppadding_dream": "建立夢想家園",
   "discover_content_apadding_dream":
@@ -61,7 +68,9 @@
   "discover_content_apadding_creatWorld":
     "成為Buddy市的建築師，一起建造自己夢想中的城市。",
 
-  "discover_subtitle_activity": "活動",
+  "discover_row_title_activity":"自然與戶外",
+  "discover_row_subtitle_activity":"在BUDDY市有許多美麗的景點，不用遠遊，隨時都能在城市中享受戶外活動的樂趣。",
+  "discover_subtitle_activity": "自然與戶外活動",
   "discover_content_atoppadding_playaround": "遊歷",
   "discover_content_apadding_playaround": "探索這個城市",
   "discover_content_atoppadding_flower": "花·自然",
@@ -72,12 +81,16 @@
   "discover_content_atoppadding_firework": "煙花",
   "discover_content_apadding_firework": "隨機時間在晚上發放煙花",
 
+  "discover_row_title_method":"到訪BUDDY市",
+  "discover_row_subtitle_method":"這裡有很多快捷、方便的途徑到抵達BUDDY市。",
   "discover_subtitle_method": "到達BUDDY市的方法",
   "discover_content_atoppadding_airport": "機場",
   "discover_content_atoppadding_dock": "碼頭",
   "discover_content_atoppadding_land": "陸路",
   "discover_content_atoppadding_portal": "傳送門",
 
+  "discover_row_title_traffic":"BUDDY市便利的交通方式",
+  "discover_row_subtitle_traffic":"BUDDY市分為14個區。無論在哪裡，都能乘坐非常便利的工具交通工具，遊走於市內各處。",
   "discover_subtitle_traffic": "BUDDY市內的交通",
   "discover_content_atoppadding_highway": "高架鐵路",
   "discover_content_apadding_highway": "在大部分居民門口的交通工具",

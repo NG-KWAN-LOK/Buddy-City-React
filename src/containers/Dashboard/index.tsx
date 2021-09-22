@@ -1,31 +1,37 @@
 import styles from "./style.module.scss";
+import { useTranslation } from "react-i18next";
 
-import discoveryData from "../../pageData/discoveryData";
+import discoveryData from "../../pageData/discoveryIconData";
 import realityProjectData from "../../pageData/realityProjectData";
 
 import SwiperBanner from "../../components/SwiperBanner";
-import SmallIconPageMenuPage from "../../components/SmallIconPageMenuPage";
-import SmallIconRow from "../../components/SmallIconPageMenuPage/SmallIconRow";
+import BigIconPageMenuPage from "../../components/BigIconPageMenuPage";
+import HyperContentCard from "../../components/BigIconPageMenuPage/HyperContentCard";
 import ProjectDisplayCorner from "../../components/ProjectDisplayCorner";
 
-const Home = () => {
+const Dashboard = () => {
+  const { t } = useTranslation();
   return (
     <div className={styles.container}>
       <SwiperBanner />
-      <SmallIconPageMenuPage
+      <BigIconPageMenuPage
         pageTitle={discoveryData.pageTitle}
         pageText={discoveryData.pageText}
       >
         {discoveryData.rowData.map((data, index) => {
           return (
-            <SmallIconRow
+            <HyperContentCard
               key={index}
-              rowTitle={data.rowTitle}
-              rowIconData={data.rowIconData}
+              type={data.type}
+              to={data.to}
+              src={data.src}
+              topText={t(data.topText)}
+              atoppadding={t(data.rowTitleAtoppadding)}
+              apadding={t(data.rowTitleApadding)}
             />
           );
         })}
-      </SmallIconPageMenuPage>
+      </BigIconPageMenuPage>
       <ProjectDisplayCorner
         pageTitle={realityProjectData.pageTitle}
         imgData={realityProjectData.imgData}
@@ -34,4 +40,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Dashboard;

@@ -120,14 +120,14 @@ const BuildingInfoPopUp: React.FC<BuildingInfoPopUpProps> = ({
           className={styles.address__map__iframe}
           width='100%'
           height='440px'
-          src={`https://buddycityinfo.sgngs.com/map.html?worldname=world&mapname=flat&zoom=6&x=${buildingData.x}&y=${buildingData.y}&z=${buildingData.z}`}
+          src={`${process.env.DYNMAP_URL}/map.html?worldname=world&mapname=flat&zoom=6&x=${buildingData.x}&y=${buildingData.y}&z=${buildingData.z}`}
         ></iframe>
         {">"}
         <a
           className={styles.address__map__link}
           id='data_address_link'
           target='blank'
-          href={`https://buddycityinfo.sgngs.com/map.html?worldname=world&mapname=flat&zoom=6&x=${buildingData.x}&y=${buildingData.y}&z=${buildingData.z}`}
+          href={`${process.env.DYNMAP_URL}/map.html?worldname=world&mapname=flat&zoom=6&x=${buildingData.x}&y=${buildingData.y}&z=${buildingData.z}`}
         >
           網上地圖
         </a>

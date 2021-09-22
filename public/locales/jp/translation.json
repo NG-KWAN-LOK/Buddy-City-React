@@ -23,7 +23,10 @@
 
 
   "discover_title_discover": "DISCOVERY",
+  "discover_content_toptext":"更に表示",
   "discover_text_discover": "BUDDY市とはどんなところでしょうか？居住者の生活、イベント、交通手段など基本情報をみんなは探索して欲しいです。",
+  "discover_row_title_discover":"観光で訪れるみなさんへ",
+  "discover_row_subtitle_discover":"マップ、小冊子などBUDDY市を旅する上で役立つ情報をまとめました。あなたの大阪滞在を、便利で快適にするために役立てて下さい。",
   "discover_subtitle_discover": "この下の手段は都市参観できます",
   "discover_content_atoppadding_webMap": "オンライン マップ",
   "discover_content_apadding_webMap": "クリックしでオンライン　マップを開る",
@@ -34,7 +37,8 @@
   "discover_content_atoppadding_gps": "GPS全地球測位",
   "discover_content_apadding_gps": "前九広鉄路鐘楼前のサインでご提供しています",
 
-
+  "discover_row_title_basic":"BUDDY市について",
+  "discover_row_subtitle_basic":"BUDDY市の場所や特徴、歴史、交通手段など基本情報をまとめました。",
   "discover_subtitle_basic": "BUDDY市の基本",
   "discover_content_atoppadding_place": "どんなところですか？",
   "discover_content_apadding_place": "居住者と観光客の夢の世界、夢の天国",
@@ -45,7 +49,8 @@
   "discover_content_atoppadding_view": "BUDDY市とはどうですか？",
   "discover_content_apadding_view": "オンライン マップにここで見られます",
 
-
+  "discover_row_title_do":"コース",
+  "discover_row_subtitle_do":"BUDDY市は多くのすることがあります、ピックアップした記事、特集を用意しています。",
   "discover_subtitle_do": "BUDDY市でできること",
   "discover_content_atoppadding_dream": "夢の家建って",
   "discover_content_apadding_dream": "居住者は市内に自分の家を建てる、生活は幸せに暮らす",
@@ -56,7 +61,8 @@
   "discover_content_atoppadding_creatWorld": "世界を造る",
   "discover_content_apadding_creatWorld": "Buddy市の建築家になる、一緒に自分の夢の都市立とう",
 
-
+  "discover_row_title_activity":"自然とアウトドア",
+  "discover_row_subtitle_activity":"BUDDY市はいくつもの美しい自然やスポットがあります。遠出をしなくても、街中でもアウトドアを楽しめます。",
   "discover_subtitle_activity": "イベント",
   "discover_content_atoppadding_playaround": "探察",
   "discover_content_apadding_playaround": "この都市を探察する",
@@ -67,17 +73,21 @@
   "discover_content_atoppadding_firework": "花火",
   "discover_content_apadding_firework": "任意時刻で夜に花火を打ち上げています",
 
-  "discover_subtitle_method": "BUDDY市の到着する方",
+  "discover_row_title_method":"BUDDY市を訪れる",
+  "discover_row_subtitle_method":"ここはいくつの快適、便利なつく方法があります。",
+  "discover_subtitle_method": "BUDDY市をつく方",
   "discover_content_atoppadding_airport": "空港",
   "discover_content_atoppadding_dock": "埠頭",
   "discover_content_atoppadding_land": "地上配備",
   "discover_content_atoppadding_portal": "ポータル",
 
+  "discover_row_title_traffic":"BUDDY市での便利な交通手段",
+  "discover_row_subtitle_traffic":"BUDDY市は分けて１２つの区に分かれます。BUDDY市内ならどこにいても、非常に便利な公共交通機関に乗って、市内のあちこちを見て回れます。",
   "discover_subtitle_traffic": "BUDDY市內の交通",
   "discover_content_atoppadding_highway": "高架鉄道",
   "discover_content_apadding_highway": "たいていの居住者のドア前に置いたの交通",
   "discover_content_atoppadding_airportWay": "空港快線",
-  "discover_content_apadding_airportWay": "最速、安全な空港に到着するの方",
+  "discover_content_apadding_airportWay": "快適、安全な空港に到着するの方",
   "discover_content_atoppadding_mrt": "路面電車",
   "discover_content_apadding_mrt": "誰でも簡単に市内で遊覧する",
   "discover_content_atoppadding_downMrt": "市営地下鉄",
