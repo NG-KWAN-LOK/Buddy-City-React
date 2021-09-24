@@ -27,6 +27,7 @@ function App() {
   const { t, i18n } = useTranslation();
   const appName = t("title");
   useEffect(() => {
+    window.scrollTo(0, 0);
     if (pathname === "/") document.title = appName;
     else if (pathname.includes("/building_list")) return;
     else if (pathname.includes("/resident")) return;
@@ -39,7 +40,6 @@ function App() {
     else {
       document.title = findTitle([t("page_not_found")]) + appName;
     }
-    window.scrollTo(0, 0);
   }, [pathname, i18n.language]);
 
   return (
