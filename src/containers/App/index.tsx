@@ -20,6 +20,7 @@ import BCCTBContainer from "../../components/SimplePage/Container/BCCTBContainer
 import bcctbAboutUsSideMenuData from "../../pageData/bcctbAboutUsSideMenuData";
 import DiscoveryPage from "../DiscoveryPage";
 import SubwayInfoPageContainer from "../SubwayInfoPageContainer";
+import RailwayHistoryPageContainer from "../RailwayHistoryPageContainer";
 
 function App() {
   const { themeMode } = useTheme();
@@ -33,6 +34,7 @@ function App() {
     else if (pathname.includes("/resident")) return;
     else if (pathname.includes("/page")) return;
     else if (pathname.includes("/subway-info")) return;
+    else if (pathname.includes("/history")) return;
     else if (pathname.includes("/bcctb-about-us"))
       document.title = findTitle([t("BCCTB__content__subTitle")]) + appName;
     else if (pathname.includes("/tnc"))
@@ -83,7 +85,12 @@ function App() {
               sideMenu={<SideMenu buttonData={bcctbAboutUsSideMenuData} />}
             />
           </Route>
-          <Route path={["/page", "/subway-info"]}>
+          <Route path='/history/railway-history'>
+            <RailwayHistoryPageContainer
+              sideMenu={<SideMenu buttonData={bcctbAboutUsSideMenuData} />}
+            />
+          </Route>
+          <Route path={["/page", "/subway-info", "/history"]}>
             <Redirect to='/' />
           </Route>
         </Switch>

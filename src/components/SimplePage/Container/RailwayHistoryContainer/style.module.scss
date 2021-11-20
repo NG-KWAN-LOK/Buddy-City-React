@@ -1,0 +1,330 @@
+@import "../../../../utils/theme.scss";
+
+.railwayHistroy__title__content {
+  .railwayHistroy__title {
+    padding: 16px 0 15px 0;
+    font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    color: var(--title-color);
+    text-decoration: none;
+    font-variant: normal;
+    font-size: 2.5em;
+    border-bottom: 1px solid var(--border-bottom-color);
+    margin-bottom: 30px;
+  }
+  .railwayHistroy__subTitle {
+    color: var(--title-color);
+    font-weight: 300;
+    font-size: 18px;
+    vertical-align: 0;
+    border-bottom: 1px solid var(--border-bottom-color);
+    padding-bottom: 30px;
+  }
+  .railwayHistroy__title__map {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+  .railwayHistroy__title__map_name {
+    width: 100%;
+    text-align: center;
+    line-height: 28px;
+    padding: 20px 0;
+    font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
+    font-weight: 500;
+    color: var(--subtitle-bg);
+    font-size: 28px;
+  }
+  .railwayHistroy__title__map__banner {
+    position: relative;
+    display: flex;
+
+    width: 100%;
+    max-width: 750px;
+    display: flex;
+    justify-content: center;
+  }
+  .railwayHistroy__title__map__banner_container {
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+    max-width: 750px;
+  }
+  .railwayHistroy__title__map__banner_container_img {
+    position: absolute;
+    width: 100%;
+    object-fit: cover;
+    top: 0;
+  }
+  @media only screen and (max-width: 550px) {
+    .railwayHistroy__title {
+      font-size: 2em;
+      text-align: left;
+    }
+  }
+}
+.railwayHistroy__content {
+  .railwayHistroy__content__subTitle {
+    width: 100%;
+    line-height: 28px;
+    padding: 20px 0;
+    font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
+    font-weight: 500;
+    color: var(--subtitle-bg);
+    font-size: 28px;
+  }
+  .railwayHistroy__content__text {
+    font-weight: 300;
+    color: var(--title-color);
+    font-size: 18px;
+    white-space: pre-wrap;
+    margin-top: 15px;
+  }
+  @media only screen and (max-width: 550px) {
+    .railwayHistroy__content__subTitle {
+      font-size: 23px;
+      padding: 15px 0px;
+    }
+    .railwayHistroy__content__text {
+      font-size: 16px;
+    }
+  }
+}
+.line {
+  width: 100%;
+  hr {
+    border: 0;
+    border-top: rgba(0, 0, 0, 0.18) 1px solid;
+    margin: 2em 0 !important;
+  }
+}
+
+.railwayHistroy__content__route_container {
+  width: 100%;
+  .line {
+    width: 100%;
+    hr {
+      border: 0;
+      border-top: rgba(0, 0, 0, 0.18) 1px solid;
+      margin: 2em 0 !important;
+    }
+    &:last-child {
+      display: none;
+    }
+  }
+}
+.railwayHistroy__content__route {
+  display: flex;
+  width: 100%;
+  margin-top: 30px;
+  align-items: center;
+  .railwayHistroy__content__route_left {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 128px;
+    margin-right: 10px;
+    .railwayHistroy__content__route_left_logo {
+      object-fit: cover;
+    }
+  }
+  .railwayHistroy__content__route_right {
+    .railwayHistroy__content__route_right_subTitle {
+      width: 100%;
+      line-height: 28px;
+      font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
+      font-weight: 500;
+      color: var(--subtitle-bg);
+      font-size: 23px;
+    }
+    .railwayHistroy__content__route_right_text {
+      font-weight: 300;
+      color: var(--title-color);
+      font-size: 18px;
+      white-space: pre-wrap;
+      margin-top: 15px;
+    }
+    @media only screen and (max-width: 550px) {
+      margin-top: 20px;
+      .railwayHistroy__content__route_right_subTitle {
+        font-size: 23px;
+      }
+      .railwayHistroy__content__route_right_text {
+        font-size: 16px;
+      }
+    }
+  }
+  @media only screen and (max-width: 550px) {
+    display: block;
+  }
+}
+
+.railwayHistroy__timeLine {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.railwayHistroy__timeLine__leftArrow {
+  cursor: pointer;
+  min-width: 50px;
+  min-height: 50px;
+  border-radius: 100%;
+  background: var(--subject-blue);
+  &:hover {
+    opacity: 0.8;
+  }
+}
+.railwayHistroy__timeLine__leftArrow::after {
+  content: "";
+  display: inline-block;
+  margin-top: 15px;
+  margin-left: 18px;
+  width: 15px;
+  height: 15px;
+  border-top: 5px solid var(--primary-button-title-color);
+  border-right: 5px solid var(--primary-button-title-color);
+  transform: rotate(-135deg);
+}
+.railwayHistroy__timeLine__rightArrow {
+  cursor: pointer;
+  min-width: 50px;
+  min-height: 50px;
+  border-radius: 100%;
+  background: var(--subject-blue);
+  &:hover {
+    opacity: 0.8;
+  }
+}
+.railwayHistroy__timeLine__rightArrow::after {
+  content: "";
+  display: inline-block;
+  margin-top: 15px;
+  margin-left: 12px;
+  width: 15px;
+  height: 15px;
+  border-top: 5px solid var(--primary-button-title-color);
+  border-right: 5px solid var(--primary-button-title-color);
+  transform: rotate(45deg);
+}
+
+@mixin rangeThumb {
+  width: 18px;
+  height: 18px;
+  margin: -8px 0 0;
+  border-radius: 50%;
+  background: var(--subject-blue);
+  cursor: pointer;
+  border: 0 !important;
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+@mixin rangeTrack {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  background: #b2b2b2;
+}
+
+.range {
+  position: relative;
+  width: 100%;
+  height: 5px;
+  margin: 0 10px;
+}
+
+.range input {
+  width: 100%;
+  position: absolute;
+  top: 2px;
+  height: 0;
+  -webkit-appearance: none;
+
+  // Thumb
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none; // needed again for Chrome & Safari
+    @include rangeThumb;
+  }
+
+  &::-moz-range-thumb {
+    @include rangeThumb;
+  }
+
+  &::-ms-thumb {
+    @include rangeThumb;
+  }
+
+  // Track
+  &::-webkit-slider-runnable-track {
+    @include rangeTrack;
+  }
+
+  &::-moz-range-track {
+    @include rangeTrack;
+  }
+
+  &::-ms-track {
+    @include rangeTrack;
+  }
+
+  &:focus {
+    // override outline/background on focus
+    background: none;
+    outline: none;
+  }
+
+  &::-ms-track {
+    // A little somethin' somethin' for IE
+    width: 100%;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+  }
+}
+
+// Labels below slider
+.range_labels {
+  margin: 18px -41px 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    position: relative;
+    float: left;
+    width: 52px;
+    text-align: center;
+    color: #b2b2b2;
+    font-size: 14px;
+    cursor: pointer;
+
+    &::before {
+      position: absolute;
+      top: -25px;
+      right: 0;
+      left: 0;
+      content: "";
+      margin: 0 auto;
+      width: 9px;
+      height: 9px;
+      background: #b2b2b2;
+      border-radius: 50%;
+    }
+  }
+
+  .active {
+    color: var(--subject-blue);
+  }
+
+  .selected::before {
+    background: var(--subject-blue);
+  }
+
+  .active.selected::before {
+    display: none;
+  }
+}

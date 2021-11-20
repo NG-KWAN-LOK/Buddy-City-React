@@ -31,6 +31,7 @@ const discoveryPageData: IDiscoveryPageData = {
     pageText: discoveryIconData.rowData[1].rowTitleApadding,
     rowIconData: [
       discoveryRowData["basic"],
+      discoveryRowData["history"],
       discoveryRowData["how-to-visit"],
       discoveryRowData["pubilc-transportation"],
     ],
@@ -57,7 +58,10 @@ const discoveryPageData: IDiscoveryPageData = {
     banner: discoveryIconData.rowData[5].src,
     pageTitle: discoveryIconData.rowData[5].rowTitleAtoppadding,
     pageText: discoveryIconData.rowData[5].rowTitleApadding,
-    rowIconData: [discoveryRowData["pubilc-transportation"]],
+    rowIconData: [
+      discoveryRowData["pubilc-transportation"],
+      discoveryRowData["railway-history"],
+    ],
   },
 };
 

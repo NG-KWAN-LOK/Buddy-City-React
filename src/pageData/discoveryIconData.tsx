@@ -1,9 +1,9 @@
-import image11 from "../image/pword1_1.jpg";
-import image21 from "../image/pword2_1.jpg";
-import image31 from "../image/pword3_1.jpg";
-import image41 from "../image/pword4_1.jpg";
-import image51 from "../image/pword5_1.jpg";
-import image61 from "../image/pword6_1.jpg";
+import image11 from "../image/photo/homepage/001.jpg";
+import image21 from "../image/photo/homepage/002.jpg";
+import image31 from "../image/photo/homepage/003.jpg";
+import image41 from "../image/photo/homepage/004.jpg";
+import image51 from "../image/photo/homepage/005.jpg";
+import image61 from "../image/photo/homepage/006.jpg";
 
 interface IDiscoveryDataRowData {
   pageTitle: string;

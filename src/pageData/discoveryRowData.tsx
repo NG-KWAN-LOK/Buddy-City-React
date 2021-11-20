@@ -22,6 +22,7 @@ import image61 from "../image/pword6_1.jpg";
 import image62 from "../image/pword6_2.jpg";
 import image63 from "../image/pword6_3.jpg";
 import image64 from "../image/pword6_4.jpg";
+import image71 from "../image/pword7_1.jpg";
 
 interface IDiscoveryRowData {
   [index: string]: {
@@ -234,6 +235,30 @@ const discoveryRowData: IDiscoveryRowData = {
         src: image54,
         atoppadding: "discover_content_atoppadding_downMrt",
         apadding: "discover_content_apadding_downMrt",
+      },
+    ],
+  },
+  history: {
+    rowTitle: "discover_row_title_history",
+    rowIconData: [
+      {
+        type: "internal",
+        to: "/history/railway-history",
+        src: image71,
+        atoppadding: "discover_content_atoppadding_railway_history",
+        apadding: "discover_content_apadding_railway_history",
+      },
+    ],
+  },
+  "railway-history": {
+    rowTitle: "discover_row_title_railway_history",
+    rowIconData: [
+      {
+        type: "internal",
+        to: "/history/railway-history",
+        src: image71,
+        atoppadding: "discover_content_atoppadding_railway_history",
+        apadding: "discover_content_apadding_railway_history",
       },
     ],
   },
