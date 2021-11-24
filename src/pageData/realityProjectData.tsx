@@ -116,13 +116,13 @@ const realityProjectData: IRealityProjectData = {
     },
     {
       title: "reality_project_Buddy_City_Sport_Ground",
-      title2: "reality_project_Buddy_City_Sport_Ground_sub",
+      title2: null,
       image1: image91,
       image2: image92,
     },
     {
       title: "reality_project_Buddy_Christianity_Hospital",
-      title2: "reality_project_Buddy_Christianity_Hospital_sub",
+      title2: null,
       image1: image101,
       image2: image102,
     },
@@ -134,7 +134,7 @@ const realityProjectData: IRealityProjectData = {
     },
     {
       title: "reality_project_Buddy_City_Government_Office",
-      title2: "reality_project_Buddy_City_Government_Office_sub",
+      title2: null,
       image1: image121,
       image2: image122,
     },
@@ -146,19 +146,19 @@ const realityProjectData: IRealityProjectData = {
     },
     {
       title: "reality_project_Buddy_City_Police_Department_Headquarters",
-      title2: "reality_project_Buddy_City_Police_Department_Headquarters_sub",
+      title2: null,
       image1: image141,
       image2: image142,
     },
     {
       title: "reality_project_Buddy_City_Fire_Department_Headquarters",
-      title2: "reality_project_Buddy_City_Fire_Department_Headquarters_sub",
+      title2: null,
       image1: image151,
       image2: image152,
     },
     {
       title: "reality_project_Buddy_City_Pier",
-      title2: "reality_project_Buddy_City_Pier_sub",
+      title2: null,
       image1: image161,
       image2: image162,
     },
@@ -170,7 +170,7 @@ const realityProjectData: IRealityProjectData = {
     },
     {
       title: "reality_project_Buddy_City_Nuclear_Disaster",
-      title2: "reality_project_Buddy_City_Nuclear_Disaster_sub",
+      title2: null,
       image1: image181,
       image2: image182,
     },
@@ -188,7 +188,7 @@ const realityProjectData: IRealityProjectData = {
     },
     {
       title: "reality_project_Buddy_City_Space_Center",
-      title2: "reality_project_Buddy_City_Space_Center_sub",
+      title2: null,
       image1: image211,
       image2: image212,
     },

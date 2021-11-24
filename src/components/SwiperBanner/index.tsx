@@ -1,6 +1,8 @@
 import React from "react";
 import styles from "./style.module.scss";
 
+import { useTranslation } from "react-i18next";
+
 import banner1 from "../../image/photo/001.jpg";
 import banner2 from "../../image/photo/002.jpg";
 import banner3 from "../../image/photo/003.jpg";
@@ -41,79 +43,103 @@ import "swiper/components/pagination/pagination.scss";
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay]);
 
 const SwiperBanner: React.FC = () => {
+  const { t } = useTranslation();
   let bannerImgList = [
     {
-      //url : "../../image/banner/1608418919930.jpg"
       url: banner1,
+      place: "",
     },
     {
       url: banner2,
+      place: "reality_project_osaka_castle_park",
     },
     {
       url: banner3,
+      place: "reality_project_Tokyo_Tower",
     },
     {
       url: banner4,
+      place: "reality_project_Bank_of_China_(HK)_Building",
     },
     {
       url: banner5,
+      place: "reality_project_Teipei_101",
     },
     {
       url: banner6,
+      place: "reality_project_paletteTown",
     },
     {
       url: banner7,
+      place: "reality_project_Megurogawa",
     },
     {
       url: banner8,
+      place: "reality_project_Kiyomizu_Temple_by_RoyHo",
     },
     {
       url: banner9,
+      place: "reality_project_Tsing_Ma_Bridge",
     },
     {
       url: banner10,
+      place: "reality_project_Buddy_City_Sport_Ground",
     },
     {
       url: banner11,
+      place: "reality_project_LCW",
     },
     {
       url: banner12,
+      place: "reality_project_Hong_Kong_Central_Library",
     },
     {
       url: banner13,
+      place: "reality_project_Buddy_City_Government_Office",
     },
     {
       url: banner14,
+      place: "reality_project_Buddy_Christianity_Hospital",
     },
     {
       url: banner15,
+      place: "reality_project_Buddy_City_Police_Department_Headquarters",
     },
     {
       url: banner16,
+      place: "reality_project_Buddy_City_Fire_Department_Headquarters",
     },
     {
       url: banner17,
+      place: "reality_project_Buddy_City_Pier",
     },
     {
       url: banner18,
+      place: "reality_project_City_One",
     },
     {
       url: banner19,
+      place: "reality_project_Buddy_City_Nuclear_Disaster",
     },
     {
       url: banner20,
+      place: "reality_project_Former_Kowloon-Canton_Railway_Clock_Tower",
     },
     {
       url: banner21,
+      place: "reality_project_Gallant_Garden",
     },
     {
       url: banner22,
+      place: "reality_project_Buddy_City_Space_Center",
     },
     {
       url: banner23,
+      place: "reality_project_Tivoli_Garden",
     },
     {
       url: banner24,
+      place: "reality_project_Tsing_Yi_Municipal_Services_Building",
     },
   ];
   return (
@@ -139,7 +165,14 @@ const SwiperBanner: React.FC = () => {
                       styles.pageContainer_TopContainer_banner_slide_img
                     }
                     src={data.url}
-                  ></img>
+                  />
+                  <div
+                    className={
+                      styles.pageContainer_TopContainer_banner_slide_locationName
+                    }
+                  >
+                    {t(data.place)}
+                  </div>
                 </div>
               }
             </SwiperSlide>
