@@ -5,14 +5,10 @@
 
   "topFooterLang_topHome": "回到主頁",
   "topFooterLang_topOnlineMap": "網上地圖",
+  "topFooterLang_topGPSMap": "GPS實時地圖",
   "topFooterLang_topBulidingList": "城市建築物名冊",
   "topFooterLang_topResidentList": "居民名冊",
   "topFooterLang_topDarkMode": "夜間模式",
-  "topFooterLang_phoneHome": "回到主頁",
-  "topFooterLang_phoneOnlineMap": "網上地圖",
-  "topFooterLang_phoneBulidingList": "城市建築物名冊",
-  "topFooterLang_phoneResidentList": "居民名冊",
-  "topFooterLang_phoneDarkMode": "夜間模式",
   "footer_content_weblogo_underText": "BUDDY CITY觀光服務官方網站",
   "topFooterLang_fotterTitle": "BUDDY CITY旅遊局",
   "topFooterLang_fotterAddress": "Buddy City大阪區本町通2號2樓2D01室",
@@ -36,7 +32,7 @@
   "discover_content_atoppadding_areaMap": "區域地圖",
   "discover_content_apadding_areaMap": "在前九廣鐵路鐘樓門前告示牌領取",
   "discover_content_atoppadding_gps": "GPS全球定位",
-  "discover_content_apadding_gps": "在前九廣鐵路鐘樓門前告示牌領取",
+  "discover_content_apadding_gps": "點擊開啟GPS實時地圖",
 
   "discover_row_title_basic":"關於Buddy市",
   "discover_row_subtitle_basic":"我們彙整出各種基本消息，包括Buddy市是什麼樣的地方、Buddy市的歷史、各地及特色、交通方式等。",
@@ -287,5 +283,11 @@
   "railway_history_map11_service_area":"佔當時全市65%，覆蓋：市中心、新市中心、BUDDY山、沙漠區、東京區、機場管轄區、沙田區、青衣區、校園區、清水區、港島區、樂園區、能源區、大阪區、臺北區",
   "railway_history_map12_service_area":"佔當時全市80%，覆蓋：市中心、新市中心、BUDDY山、沙漠區、東京區、機場管轄區、沙田區、青衣區、校園區、清水區、港島區、樂園區、能源區、大阪區、臺北區",
   "railway_history_map13_service_area":"佔當時全市90%，覆蓋：市中心、新市中心、BUDDY山、沙漠區、東京區、機場管轄區、沙田區、青衣區、校園區、清水區、港島區、樂園區、能源區、大阪區、臺北區",
-  "railway_history_map14_service_area":"佔全市90%，覆蓋：市中心、新市中心、BUDDY山、沙漠區、東京區、機場管轄區、沙田區、青衣區、校園區、清水區、港島區、樂園區、能源區、大阪區、臺北區"
+  "railway_history_map14_service_area":"佔全市90%，覆蓋：市中心、新市中心、BUDDY山、沙漠區、東京區、機場管轄區、沙田區、青衣區、校園區、清水區、港島區、樂園區、能源區、大阪區、臺北區",
+
+  "online_map_title":"線上地圖",
+  "online_map_spwan_point":"出生點",
+  "online_map_footer_image_rendering":"圖像渲染 ©2021",
+  "online_map_footer_imagery_other":"圖像 ©2021 行使衛星, 地圖資料 ©2021 Buddy市發展局轄下地政總署"
+
 }

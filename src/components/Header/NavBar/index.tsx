@@ -41,10 +41,26 @@ const NavBar: React.FC<NavBarProps> = ({
                 className={styles["ion-android-arrow-dropdown"]}
               ></i>
               <span id='topFooterLang_phoneHome'>
-                {t("topFooterLang_phoneHome")}
+                {t("topFooterLang_topHome")}
               </span>
             </div>
           </Link>
+          <a
+            className={styles.PhoneTop__mainnav__container__col__a}
+            href='/online-map'
+            target='_blank'
+            onClick={setMobileNavOff}
+          >
+            <div className={styles.PhoneTop__mainnav__container__col__a__menu}>
+              <i
+                aria-hidden='true'
+                className={styles["ion-android-arrow-dropdown"]}
+              ></i>
+              <span id='topFooterLang_phoneOnlineMap'>
+                {t("topFooterLang_topOnlineMap")}
+              </span>
+            </div>
+          </a>
           <a
             className={styles.PhoneTop__mainnav__container__col__a}
             href={`${process.env.REACT_APP_DYNMAP_URL}/map.html`}
@@ -57,7 +73,7 @@ const NavBar: React.FC<NavBarProps> = ({
                 className={styles["ion-android-arrow-dropdown"]}
               ></i>
               <span id='topFooterLang_phoneOnlineMap'>
-                {t("topFooterLang_phoneOnlineMap")}
+                {t("topFooterLang_topGPSMap")}
               </span>
             </div>
           </a>
@@ -72,7 +88,7 @@ const NavBar: React.FC<NavBarProps> = ({
                 className={styles["ion-android-arrow-dropdown"]}
               ></i>
               <span id='topFooterLang_phoneBulidingList'>
-                {t("topFooterLang_phoneBulidingList")}
+                {t("topFooterLang_topBulidingList")}
               </span>
             </div>
           </Link>
@@ -90,7 +106,7 @@ const NavBar: React.FC<NavBarProps> = ({
                 className={styles["ion-android-arrow-dropdown"]}
               ></i>
               <span id='topFooterLang_phoneResidentList'>
-                {t("topFooterLang_phoneResidentList")}
+                {t("topFooterLang_topResidentList")}
               </span>
             </div>
           </Link>
@@ -149,7 +165,7 @@ const NavBar: React.FC<NavBarProps> = ({
               }
               id='topFooterLang_phoneDarkMode'
             >
-              {t("topFooterLang_phoneDarkMode")}
+              {t("topFooterLang_topDarkMode")}
             </div>
             <ThemeSwitcher />
           </div>

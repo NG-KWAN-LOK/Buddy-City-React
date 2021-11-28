@@ -95,6 +95,17 @@ const Header = () => {
                       </Link>
                     </div>
                     <div className={styles.Top__nav__left_subtitle}>
+                      <a href='/online-map' target='_blank'>
+                        <i
+                          aria-hidden='true'
+                          className={styles["ion-android-arrow-dropdown"]}
+                        ></i>
+                        <span id='topFooterLang_topOnlineMap'>
+                          {t("topFooterLang_topOnlineMap")}
+                        </span>
+                      </a>
+                    </div>
+                    <div className={styles.Top__nav__left_subtitle}>
                       <a
                         href={`${process.env.REACT_APP_DYNMAP_URL}/map.html`}
                         target='_blank'
@@ -104,7 +115,7 @@ const Header = () => {
                           className={styles["ion-android-arrow-dropdown"]}
                         ></i>
                         <span id='topFooterLang_topOnlineMap'>
-                          {t("topFooterLang_topOnlineMap")}
+                          {t("topFooterLang_topGPSMap")}
                         </span>
                       </a>
                     </div>

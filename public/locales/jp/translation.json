@@ -5,14 +5,10 @@
 
   "topFooterLang_topHome": "ホームページへ戻る",
   "topFooterLang_topOnlineMap": "オンラインマップ",
+  "topFooterLang_topGPSMap": "GPS ライブマップ",
   "topFooterLang_topBulidingList": "都市ビル一覧表",
   "topFooterLang_topResidentList": "都市居住者一覧表",
   "topFooterLang_topDarkMode": "ダークモード",
-  "topFooterLang_phoneHome": "ホームページへ戻る",
-  "topFooterLang_phoneOnlineMap": "オンラインマップ",
-  "topFooterLang_phoneBulidingList": "都市ビル一覧表",
-  "topFooterLang_phoneResidentList": "都市居住者一覧表",
-  "topFooterLang_phoneDarkMode": "ダークモード",
   "footer__content__weblogo__underText": "BUDDY CITY観光案内公式サイト",
   "topFooterLang_fotterTitle": "BUDDY CITY観光局",
   "topFooterLang_fotterAddress": "Buddy市大阪区本町通-2 Buddy市庁 2階 2D01室",
@@ -29,13 +25,13 @@
   "discover_row_subtitle_discover":"マップ、小冊子などBUDDY市を旅する上で役立つ情報をまとめました。あなたの大阪滞在を、便利で快適にするために役立てて下さい。",
   "discover_subtitle_discover": "この下の手段は都市参観できます",
   "discover_content_atoppadding_webMap": "オンライン マップ",
-  "discover_content_apadding_webMap": "クリックしでオンライン　マップを開る",
+  "discover_content_apadding_webMap": "押してオンライン　マップを開る",
   "discover_content_atoppadding_buildingList": "都市ビル一覧表",
   "discover_content_apadding_buildingList": "図書館で借りられます",
   "discover_content_atoppadding_areaMap": "エリア　マップ",
   "discover_content_apadding_areaMap": "前九広鉄路鐘楼前のサインでご提供しています",
   "discover_content_atoppadding_gps": "GPS全地球測位",
-  "discover_content_apadding_gps": "前九広鉄路鐘楼前のサインでご提供しています",
+  "discover_content_apadding_gps": "押してGPSライブマップを開る",
 
   "discover_row_title_basic":"BUDDY市について",
   "discover_row_subtitle_basic":"BUDDY市の場所や特徴、歴史、交通手段など基本情報をまとめました。",
@@ -277,5 +273,10 @@
   "railway_history_map11_service_area":"当時に市全域の佔當時全市65%を占めます、カバレージエリア：中央区、新中央区、BUDDY山、砂漠区、東京区、空港管轄区、沙田区、青衣区、学園区、清水区、港島区、楽園区、エネルギー区、大阪区、台北区",
   "railway_history_map12_service_area":"当時に市全域の佔當時全市80%を占めます、カバレージエリア：中央区、新中央区、BUDDY山、砂漠区、東京区、空港管轄区、沙田区、青衣区、学園区、清水区、港島区、楽園区、エネルギー区、大阪区、台北区",
   "railway_history_map13_service_area":"当時に市全域の佔當時全市90%を占めます、カバレージエリア：中央区、新中央区、BUDDY山、砂漠区、東京区、空港管轄区、沙田区、青衣区、学園区、清水区、港島区、楽園区、エネルギー区、大阪区、台北区",
-  "railway_history_map14_service_area":"当時に市全域の佔當時全市90%を占めます、カバレージエリア：中央区、新中央区、BUDDY山、砂漠区、東京区、空港管轄区、沙田区、青衣区、学園区、清水区、港島区、楽園区、エネルギー区、大阪区、台北区"
+  "railway_history_map14_service_area":"当時に市全域の佔當時全市90%を占めます、カバレージエリア：中央区、新中央区、BUDDY山、砂漠区、東京区、空港管轄区、沙田区、青衣区、学園区、清水区、港島区、楽園区、エネルギー区、大阪区、台北区",
+
+  "online_map_title":"オンラインマップ",
+  "online_map_spwan_point":"スポーン地点",
+  "online_map_footer_image_rendering":"画像レンダリング ©2021",
+  "online_map_footer_imagery_other":"画像 ©2021 Star_dust人工衛星, 地図データ ©2021 Buddy市開発局に地政総署"
 }

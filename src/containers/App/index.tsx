@@ -21,6 +21,7 @@ import bcctbAboutUsSideMenuData from "../../pageData/bcctbAboutUsSideMenuData";
 import DiscoveryPage from "../DiscoveryPage";
 import SubwayInfoPageContainer from "../SubwayInfoPageContainer";
 import RailwayHistoryPageContainer from "../RailwayHistoryPageContainer";
+import OnlineMap from "../OnlineMap";
 
 function App() {
   const { themeMode } = useTheme();
@@ -35,6 +36,8 @@ function App() {
     else if (pathname.includes("/page")) return;
     else if (pathname.includes("/subway-info")) return;
     else if (pathname.includes("/history")) return;
+    else if (pathname.includes("/online-map"))
+      document.title = findTitle([t("online_map_title")]) + appName;
     else if (pathname.includes("/bcctb-about-us"))
       document.title = findTitle([t("BCCTB__content__subTitle")]) + appName;
     else if (pathname.includes("/tnc"))
@@ -89,6 +92,9 @@ function App() {
             <RailwayHistoryPageContainer
               sideMenu={<SideMenu buttonData={bcctbAboutUsSideMenuData} />}
             />
+          </Route>
+          <Route path='/online-map'>
+            <OnlineMap />
           </Route>
           <Route path={["/page", "/subway-info", "/history"]}>
             <Redirect to='/' />

@@ -45,10 +45,17 @@ const discoveryRowData: IDiscoveryRowData = {
     rowIconData: [
       {
         type: "external",
-        to: `${process.env.REACT_APP_DYNMAP_URL}/map.html`,
-        src: image11,
+        to: "/online-map",
+        src: image14,
         atoppadding: "discover_content_atoppadding_webMap",
         apadding: "discover_content_apadding_webMap",
+      },
+      {
+        type: "external",
+        to: `${process.env.REACT_APP_DYNMAP_URL}/map.html`,
+        src: image11,
+        atoppadding: "discover_content_atoppadding_gps",
+        apadding: "discover_content_apadding_gps",
       },
       {
         type: "internal",
@@ -63,13 +70,6 @@ const discoveryRowData: IDiscoveryRowData = {
         src: image13,
         atoppadding: "discover_content_atoppadding_areaMap",
         apadding: "discover_content_apadding_areaMap",
-      },
-      {
-        type: "pointer",
-        to: "",
-        src: image14,
-        atoppadding: "discover_content_atoppadding_gps",
-        apadding: "discover_content_apadding_gps",
       },
     ],
   },
