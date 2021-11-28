@@ -30,14 +30,16 @@ const OnlineMap: React.FC<OnlineMapProps> = ({}) => {
   const { t } = useTranslation();
   const history = useHistory();
   const initPosition: LatLngExpression = [56.45884262171671, -70];
-  const initZoom = 5;
+  const initZoom = 4;
   const [map, setMap] = useState<L.Map | null>(null);
-  const [zoom, setZoom] = useState(initZoom);
+  const [sourceZoom, setSourceZoom] = useState<number>(1);
+  const [zoom, setZoom] = useState<number>(initZoom);
   const [mousePoint, setMousePoint] = useState<L.LatLng | null>(null);
 
   const DisplayPosition = ({ map }) => {
     const [position, setPosition] = useState(map.getCenter());
     const onMove = useCallback(() => {
+      setSourceZoom(Math.abs(map.getZoom() - 5));
       setZoom(map.getZoom());
       setPosition(map.getCenter());
     }, [map]);
@@ -47,7 +49,7 @@ const OnlineMap: React.FC<OnlineMapProps> = ({}) => {
         map.off("move", onMove);
       };
     }, [map, onMove]);
-    console.log("zoom: " + zoom, map.getBounds(), position);
+    console.log("zoom: " + zoom + " " + sourceZoom, map.getBounds(), position);
     return null;
   };
 
@@ -67,11 +69,11 @@ const OnlineMap: React.FC<OnlineMapProps> = ({}) => {
       {/* {map ? <DisplayPosition map={map} /> : null} */}
       <MapContainer
         center={initPosition}
-        zoom={initZoom}
+        zoom={zoom}
         whenCreated={setMap}
         scrollWheelZoom={false}
-        minZoom={initZoom}
-        maxZoom={initZoom}
+        minZoom={4}
+        maxZoom={4}
         className={styles.onlineMap_main}
       >
         <TileLayer
@@ -80,7 +82,11 @@ const OnlineMap: React.FC<OnlineMapProps> = ({}) => {
           }/map.html" target="blank_">Dynmap</a>, ${t(
             "online_map_footer_imagery_other"
           )}`}
-          url={`${process.env.REACT_APP_ONLINE_MAP_SOURCE}`}
+          url={
+            process.env.REACT_APP_ONLINE_LOCAL_MAP_SOURCE === "true"
+              ? `./map-tiles/${sourceZoom}/{x}_-{y}.png`
+              : `https://firebasestorage.googleapis.com/v0/b/${process.env.REACT_APP_STORAGE_BUCKET}/o/map-tiles%2F${sourceZoom}%2F{x}_-{y}.png?alt=media`
+          }
           // url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
         />
         {onlineMapMarkerData.onlineMapMarkerData.map((data, index) => {
