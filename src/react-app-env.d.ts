@@ -1,15 +1,18 @@
 /// <reference types="react-scripts" />
-declare module '*.scss';
+declare module "*.scss";
 declare module "*.jpg" {
-    export default "" as string;
-  }
+  export default "" as string;
+}
 declare module "*.png" {
-    export default "" as string;
-  }
+  export default "" as string;
+}
+declare module "*.pdf";
 declare module "react/jsx-runtime" {
-    export default any;
-  }
+  export default any;
+}
 declare namespace JSX {
-    interface Element { }
-    interface IntrinsicElements { div: any; }
+  interface Element {}
+  interface IntrinsicElements {
+    div: any;
   }
+}

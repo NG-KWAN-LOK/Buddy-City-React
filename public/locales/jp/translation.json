@@ -28,8 +28,8 @@
   "discover_content_apadding_webMap": "押してオンライン　マップを開る",
   "discover_content_atoppadding_buildingList": "都市ビル一覧表",
   "discover_content_apadding_buildingList": "図書館で借りられます",
-  "discover_content_atoppadding_areaMap": "エリア　マップ",
-  "discover_content_apadding_areaMap": "前九広鉄路鐘楼前のサインでご提供しています",
+  "discover_content_atoppadding_routeMap": "鉄道路線図",
+  "discover_content_apadding_routeMap": "BUDDY市の鉄道の発展もう十数年の歴史があります、押して鉄道路線図を開る",
   "discover_content_atoppadding_gps": "GPS全地球測位",
   "discover_content_apadding_gps": "押してGPSライブマップを開る",
 
@@ -278,5 +278,8 @@
   "online_map_title":"オンラインマップ",
   "online_map_spwan_point":"スポーン地点",
   "online_map_footer_image_rendering":"画像レンダリング ©2021",
-  "online_map_footer_imagery_other":"画像 ©2021 Star_dust人工衛星, 地図データ ©2021 Buddy市開発局に地政総署"
+  "online_map_footer_imagery_other":"画像 ©2021 Star_dust人工衛星, 地図データ ©2021 Buddy市開発局に地政総署",
+
+  "railway_route_map_title": "BUDDY市鉄道路線図",
+  "railway_route_map_subtitle":"BUDDY市の鉄道の発展もう十数年の歴史があります、線路は市全域の90%を被せます。どこにいても、鉄道システムに乗って、市内のあちこちを見て回れます。今すぐ用意しましょう！"
 }

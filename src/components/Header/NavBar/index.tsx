@@ -45,6 +45,21 @@ const NavBar: React.FC<NavBarProps> = ({
               </span>
             </div>
           </Link>
+          <Link
+            className={styles.PhoneTop__mainnav__container__col__a}
+            to='/page/discover'
+            onClick={setMobileNavOff}
+          >
+            <div className={styles.PhoneTop__mainnav__container__col__a__menu}>
+              <i
+                aria-hidden='true'
+                className={styles["ion-android-arrow-dropdown"]}
+              ></i>
+              <span id='discover_row_title_discover'>
+                {t("discover_row_title_discover")}
+              </span>
+            </div>
+          </Link>
           <a
             className={styles.PhoneTop__mainnav__container__col__a}
             href='/online-map'

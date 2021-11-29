@@ -148,6 +148,11 @@
     }
   }
   @media only screen and (max-width: 1024px) {
+    .district__image__box__toptext {
+      opacity: 1;
+      top: 10px;
+      transition: 0.5s;
+    }
     .atoppadding {
       position: absolute;
       display: flex;

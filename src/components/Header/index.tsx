@@ -95,6 +95,17 @@ const Header = () => {
                       </Link>
                     </div>
                     <div className={styles.Top__nav__left_subtitle}>
+                      <Link to='/page/discover'>
+                        <i
+                          aria-hidden='true'
+                          className={styles["ion-android-arrow-dropdown"]}
+                        ></i>
+                        <span id='discover_row_title_discover'>
+                          {t("discover_row_title_discover")}
+                        </span>
+                      </Link>
+                    </div>
+                    <div className={styles.Top__nav__left_subtitle}>
                       <a href='/online-map' target='_blank'>
                         <i
                           aria-hidden='true'

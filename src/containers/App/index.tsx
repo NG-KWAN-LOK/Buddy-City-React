@@ -21,6 +21,8 @@ import bcctbAboutUsSideMenuData from "../../pageData/bcctbAboutUsSideMenuData";
 import DiscoveryPage from "../DiscoveryPage";
 import SubwayInfoPageContainer from "../SubwayInfoPageContainer";
 import RailwayHistoryPageContainer from "../RailwayHistoryPageContainer";
+import RailwayRouteMapPageContainer from "../RailwayRouteMapPageContainer";
+
 import OnlineMap from "../OnlineMap";
 
 function App() {
@@ -36,6 +38,8 @@ function App() {
     else if (pathname.includes("/page")) return;
     else if (pathname.includes("/subway-info")) return;
     else if (pathname.includes("/history")) return;
+    else if (pathname.includes("/railway-route-map"))
+      document.title = findTitle([t("railway_route_map_title")]) + appName;
     else if (pathname.includes("/online-map"))
       document.title = findTitle([t("online_map_title")]) + appName;
     else if (pathname.includes("/bcctb-about-us"))
@@ -90,6 +94,11 @@ function App() {
           </Route>
           <Route path='/history/railway-history'>
             <RailwayHistoryPageContainer
+              sideMenu={<SideMenu buttonData={bcctbAboutUsSideMenuData} />}
+            />
+          </Route>
+          <Route path='/railway-route-map'>
+            <RailwayRouteMapPageContainer
               sideMenu={<SideMenu buttonData={bcctbAboutUsSideMenuData} />}
             />
           </Route>

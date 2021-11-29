@@ -34,3 +34,22 @@ a {
     line-height: 60px;
   }
 }
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: var(--phone-top-bottom-color);
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  background-color: var(--phone-top-bottom-color);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: var(--select-bg-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--button-bg-color);
+}
