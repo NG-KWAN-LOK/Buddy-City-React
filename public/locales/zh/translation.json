@@ -34,6 +34,8 @@
   "discover_content_atoppadding_gps": "GPS全球定位",
   "discover_content_apadding_gps": "點擊開啟GPS實時地圖",
 
+  "discover_subtitle_help_to_plan":"這些資料能協助你規劃旅程。",
+
   "discover_row_title_basic":"關於Buddy市",
   "discover_row_subtitle_basic":"我們彙整出各種基本消息，包括Buddy市是什麼樣的地方、Buddy市的歷史、各地及特色、交通方式等。",
   "discover_subtitle_basic": "BUDDY市的基本",
@@ -291,5 +293,37 @@
   "online_map_footer_imagery_other":"圖像 ©2021 行使衛星, 地圖資料 ©2021 Buddy市發展局轄下地政總署",
 
   "railway_route_map_title": "BUDDY市鐵路路線圖",
-  "railway_route_map_subtitle":"BUDDY市鐵路發展已有十多年的歷史，線路覆蓋全市90%。無論在哪裡，都能乘坐鐵路系統，遊走於市內各處。立刻規劃精彩豐富的旅程吧！"
+  "railway_route_map_subtitle":"BUDDY市鐵路發展已有十多年的歷史，線路覆蓋全市90%。無論在哪裡，都能乘坐鐵路系統，遊走於市內各處。立刻規劃精彩豐富的旅程吧！",
+
+  "holiday_today_is":"今天是 ",
+  "holiday_today_official_calendar_name":"友平 ",
+  "holiday_today_official_calendar_year":" 年",
+  "holiday_1_1_name":"西曆元旦日",
+  "holiday_1_1_description":"西曆第一天",
+  "holiday_2_1_name":"建市紀念日",
+  "holiday_2_1_description":"紀念2012年2月1日Buddy市建市",
+  "holiday_2_11_name":"日本建國紀念日",
+  "holiday_2_11_description":"日本建國紀念日",
+  "holiday_3_8_name":"婦女節",
+  "holiday_3_8_description":"國際婦女日",
+  "holiday_4_4_name":"兒童節",
+  "holiday_4_4_description":"尊重及讓兒童感到幸福及感謝天下母親",
+  "holiday_5_1_name":"勞動節",
+  "holiday_5_1_description":"國際勞動日",
+  "holiday_5_17_name":"創世日",
+  "holiday_5_17_description":"紀念2009年5月17日Minecraft首次公開發佈及感謝全市居民及建築師",
+  "holiday_6_21_name":"建軍日",
+  "holiday_6_21_description":"紀念2017年6月21日Buddy市建軍及祝願世界和平",
+  "holiday_7_1_name":"香港特別行政區成立紀念日",
+  "holiday_7_1_description":"香港特別行政區成立紀念日",
+  "holiday_10_10_name":"中華民國國慶日",
+  "holiday_10_10_description":"中華民國國慶日",
+  "holiday_11_13_name":"綠之日",
+  "holiday_11_13_description":"慶祝2017年11月13日Buddy市第一個大型綠地(大阪城公園)建成及感謝自然",
+  "holiday_12_24_name":"平安夜",
+  "holiday_12_24_description":"聖誕夜",
+  "holiday_12_25_name":"聖誕節",
+  "holiday_12_25_description":"紀念耶穌誕辰",
+  "holiday_12_26_name":"聖誕禮物日",
+  "holiday_12_26_description":"英國節禮日"
 }

@@ -33,6 +33,8 @@
   "discover_content_atoppadding_gps": "GPS全地球測位",
   "discover_content_apadding_gps": "押してGPSライブマップを開る",
 
+  "discover_subtitle_help_to_plan":"このインフォメーションはコースの計画が手伝います",
+
   "discover_row_title_basic":"BUDDY市について",
   "discover_row_subtitle_basic":"BUDDY市の場所や特徴、歴史、交通手段など基本情報をまとめました。",
   "discover_subtitle_basic": "BUDDY市の基本",
@@ -281,5 +283,38 @@
   "online_map_footer_imagery_other":"画像 ©2021 Star_dust人工衛星, 地図データ ©2021 Buddy市開発局に地政総署",
 
   "railway_route_map_title": "BUDDY市鉄道路線図",
-  "railway_route_map_subtitle":"BUDDY市の鉄道の発展もう十数年の歴史があります、線路は市全域の90%を被せます。どこにいても、鉄道システムに乗って、市内のあちこちを見て回れます。今すぐ用意しましょう！"
+  "railway_route_map_subtitle":"BUDDY市の鉄道の発展もう十数年の歴史があります、線路は市全域の90%を被せます。どこにいても、鉄道システムに乗って、市内のあちこちを見て回れます。今すぐ用意しましょう！",
+
+  "holiday_today_is":"今日は ",
+  "holiday_today_official_calendar_name":"友平 ",
+  "holiday_today_official_calendar_year":" 年",
+  "holiday_1_1_name":"西暦元日",
+  "holiday_1_1_description":"西曆の初日",
+  "holiday_2_1_name":"建市記念の日",
+  "holiday_2_1_description":"2012年2月1日に建市を記念する日",
+  "holiday_2_11_name":"日本の建国記念の日",
+  "holiday_2_11_description":"日本の建国記念の日",
+  "holiday_3_8_name":"国際女性デー",
+  "holiday_3_8_description":"国際女性の日",
+  "holiday_4_4_name":"こどもの日",
+  "holiday_4_4_description":"こどもの人格を重んじ、こどもの幸福をはかるとともに、母に感謝する",
+  "holiday_5_1_name":"労働節",
+  "holiday_5_1_description":"国際労働者の日",
+  "holiday_5_17_name":"創世の日",
+  "holiday_5_17_description":"2009年5月17日にマインクラフトのパブリックアルファ版をリリースを祝うの日と市内の居住者と建築家に感謝します",
+  "holiday_6_21_name":"建軍記念の日",
+  "holiday_6_21_description":"2017年6月21日に建軍を記念するし、世界平和を祈ります",
+  "holiday_7_1_name":"香港特別行政区成立記念の日",
+  "holiday_7_1_description":"香港特別行政区成立記念の日",
+  "holiday_10_10_name":"中華民国国慶日",
+  "holiday_10_10_description":"中華民国国慶日",
+  "holiday_11_13_name":"みどりの日",
+  "holiday_11_13_description":"2017年11月13日にBuddy市に最初の緑地を開設されたの大阪城公園を祝うし、自然に感謝します",
+  "holiday_12_24_name":"クリスマス・イヴ",
+  "holiday_12_24_description":"クリスマスの夜",
+  "holiday_12_25_name":"クリスマスの日",
+  "holiday_12_25_description":"イエス・キリストの降誕を記念する祭",
+  "holiday_12_26_name":"ボクシング・デー",
+  "holiday_12_26_description":"イギリス・ボクシング・デー"
+
 }

@@ -73,6 +73,39 @@ const discoveryRowData: IDiscoveryRowData = {
       },
     ],
   },
+  helpToPlan: {
+    rowTitle: "discover_subtitle_help_to_plan",
+    rowIconData: [
+      {
+        type: "external",
+        to: "/online-map",
+        src: image14,
+        atoppadding: "discover_content_atoppadding_webMap",
+        apadding: "discover_content_apadding_webMap",
+      },
+      {
+        type: "external",
+        to: `${process.env.REACT_APP_DYNMAP_URL}/map.html`,
+        src: image11,
+        atoppadding: "discover_content_atoppadding_gps",
+        apadding: "discover_content_apadding_gps",
+      },
+      {
+        type: "internal",
+        to: "/building_list",
+        src: image12,
+        atoppadding: "discover_content_atoppadding_buildingList",
+        apadding: "discover_content_apadding_buildingList",
+      },
+      {
+        type: "internal",
+        to: "/railway-route-map",
+        src: image71,
+        atoppadding: "discover_content_atoppadding_routeMap",
+        apadding: "discover_content_apadding_routeMap",
+      },
+    ],
+  },
   basic: {
     rowTitle: "discover_subtitle_basic",
     rowIconData: [

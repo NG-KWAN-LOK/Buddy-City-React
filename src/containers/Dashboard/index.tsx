@@ -15,8 +15,8 @@ const Dashboard = () => {
     <div className={styles.container}>
       <SwiperBanner />
       <BigIconPageMenuPage
-        pageTitle={discoveryData.pageTitle}
-        pageText={discoveryData.pageText}
+      // pageTitle={discoveryData.pageTitle}
+      // pageText={discoveryData.pageText}
       >
         {discoveryData.rowData.map((data, index) => {
           return (

@@ -40,7 +40,11 @@ const discoveryPageData: IDiscoveryPageData = {
     banner: discoveryIconData.rowData[2].src,
     pageTitle: discoveryIconData.rowData[2].rowTitleAtoppadding,
     pageText: discoveryIconData.rowData[2].rowTitleApadding,
-    rowIconData: [discoveryRowData["to-do"], discoveryRowData["activity"]],
+    rowIconData: [
+      discoveryRowData["helpToPlan"],
+      discoveryRowData["to-do"],
+      discoveryRowData["activity"],
+    ],
   },
   activity: {
     banner: discoveryIconData.rowData[3].src,

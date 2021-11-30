@@ -57,7 +57,7 @@ function App() {
       <div className={styles.content}>
         <Header />
         <Switch>
-          <Route exact path='/'>
+          <Route exact path='/'> 
             <Dashboard />
           </Route>
           <Route path={["/resident/:username", "/resident"]}>

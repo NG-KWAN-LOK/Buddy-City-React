@@ -32,6 +32,9 @@
   "discover_content_atoppadding_gps": "GPS",
   "discover_content_apadding_gps": "Click to open GPS Live Map",
 
+  "discover_subtitle_help_to_plan":"These infomations can help you in your travels.",
+
+
   "discover_row_title_basic":"About BUDDY City",
   "discover_row_subtitle_basic":"We've collected the basic information about Osaka, such as places, history, features, and transportation.",
   "discover_subtitle_basic": "BASIC INFORMATION",
@@ -280,5 +283,37 @@
   "online_map_footer_imagery_other":"Imagery ©2021 Star_dust's Satellite, Map data ©2021 Lands Department under the Development Bureau of Buddy City",
   
   "railway_route_map_title": "Railway Route Map in BUDDY City",
-  "railway_route_map_subtitle":"The railway development of BUDDY City has a history of more than ten years, the route cover 90% of the entire city. Depending upon your destination, you can travel through the city using the railway system, which goes all throughout the city. Just plan your trip right now!"
+  "railway_route_map_subtitle":"The railway development of BUDDY City has a history of more than ten years, the route cover 90% of the entire city. Depending upon your destination, you can travel through the city using the railway system, which goes all throughout the city. Just plan your trip right now!",
+
+  "holiday_today_is":"Today is ",
+  "holiday_today_official_calendar_name":"BUDDY ",
+  "holiday_today_official_calendar_year":"",
+  "holiday_1_1_name":"Common Era New Year's Day",
+  "holiday_1_1_description":"First day of Common Era",
+  "holiday_2_1_name":"Citizen Foundation Day",
+  "holiday_2_1_description":"Commemorating the founding of Buddy City of 1/2/2012.",
+  "holiday_2_11_name":"National Foundation Day of Japan ",
+  "holiday_2_11_description":"National Foundation Day of Japan ",
+  "holiday_3_8_name":"Women's Day",
+  "holiday_3_8_description":"International Women's Day",
+  "holiday_4_4_name":"Children's Day",
+  "holiday_4_4_description":"To esteem the personalities of children and plan for their happiness and thanks for the mothers.",
+  "holiday_5_1_name":"Labour Day",
+  "holiday_5_1_description":"International Labour Day",
+  "holiday_5_17_name":"Creation Day",
+  "holiday_5_17_description":"Commemorating the Minecraft first released to the public on 17/5/2009 and thanks for the residents and the architects.",
+  "holiday_6_21_name":"Armed Forces Day",
+  "holiday_6_21_description":"Commemorating the founding of Buddy City Army of 1/2/2012 and wish for world peace.",
+  "holiday_7_1_name":"Hong Kong Special Administrative Region Establishment Day",
+  "holiday_7_1_description":"Hong Kong Special Administrative Region Establishment Day",
+  "holiday_10_10_name":"National Day of the Republic of China",
+  "holiday_10_10_description":"National Day of the Republic of China",
+  "holiday_11_13_name":"Greenery Day",
+  "holiday_11_13_description":"Celebrating the foundation of the first green land in Buddy City (Osaka Castle Park) on 13/11/2017 and thanks to nature.",
+  "holiday_12_24_name":"Christmas Eve",
+  "holiday_12_24_description":"Christmas Night",
+  "holiday_12_25_name":"Christmas Day",
+  "holiday_12_25_description":"Commemorating the birth of Jesus Christ.",
+  "holiday_12_26_name":"Boxing Day",
+  "holiday_12_26_description":"British Boxing Day"
 }
