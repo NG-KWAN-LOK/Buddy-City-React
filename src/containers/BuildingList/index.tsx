@@ -38,7 +38,6 @@ const BuildingList = () => {
       let dataList: any = [];
       Object.values(snapshot.val()).forEach(
         (buildingData: any, districtIndex) => {
-          console.log(buildingData);
           dataList.push({
             districtIndex,
             district_chi: buildingData[0].district_chi,

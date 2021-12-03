@@ -22,7 +22,10 @@ const discoveryPageData: IDiscoveryPageData = {
     pageText: discoveryIconData.rowData[0].rowTitleApadding,
     rowIconData: [
       discoveryRowData["discover"],
+      discoveryRowData["basic"],
       discoveryRowData["pubilc-transportation"],
+      discoveryRowData["to-do"],
+      discoveryRowData["activity"],
     ],
   },
   basic: {
@@ -64,6 +67,7 @@ const discoveryPageData: IDiscoveryPageData = {
     pageText: discoveryIconData.rowData[5].rowTitleApadding,
     rowIconData: [
       discoveryRowData["pubilc-transportation"],
+      discoveryRowData["helpToPlan"],
       discoveryRowData["railway-history"],
     ],
   },

@@ -9,7 +9,6 @@ interface SideMenuButtonProps {
 }
 
 const SideMenuButton: React.FC<SideMenuButtonProps> = ({ buttonData }) => {
-  console.log(buttonData);
   const { t } = useTranslation();
   const buttonContain = () => {
     return (

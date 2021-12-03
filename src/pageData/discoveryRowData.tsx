@@ -23,6 +23,7 @@ import image62 from "../image/pword6_2.jpg";
 import image63 from "../image/pword6_3.jpg";
 import image64 from "../image/pword6_4.jpg";
 import image71 from "../image/pword7_1.jpg";
+import image72 from "../image/pword7_2.jpg";
 
 interface IDiscoveryRowData {
   [index: string]: {
@@ -117,25 +118,25 @@ const discoveryRowData: IDiscoveryRowData = {
         apadding: "discover_content_apadding_place",
       },
       {
-        type: "pointer",
-        to: "",
+        type: "internal",
+        to: "/page/basic/background",
         src: image32,
-        atoppadding: "discover_content_atoppadding_history",
-        apadding: "discover_content_apadding_history",
+        atoppadding: "discover_content_atoppadding_background",
+        apadding: "discover_content_apadding_background",
       },
       {
-        type: "pointer",
-        to: "",
+        type: "internal",
+        to: "/page/basic/calendar-system",
         src: image33,
-        atoppadding: "discover_content_atoppadding_building",
-        apadding: "discover_content_apadding_building",
+        atoppadding: "discover_content_atoppadding_calendar_system",
+        apadding: "discover_content_apadding_calendar_system",
       },
       {
-        type: "pointer",
-        to: "",
+        type: "internal",
+        to: "/page/basic/legal-holiday",
         src: image34,
-        atoppadding: "discover_content_atoppadding_view",
-        apadding: "discover_content_apadding_view",
+        atoppadding: "discover_content_atoppadding_legal_holiday",
+        apadding: "discover_content_apadding_legal_holiday",
       },
     ],
   },
@@ -243,28 +244,28 @@ const discoveryRowData: IDiscoveryRowData = {
     rowIconData: [
       {
         type: "internal",
-        to: "/subway-info/elevated-railway",
+        to: "/page/subway-info/elevated-railway",
         src: image51,
         atoppadding: "discover_content_atoppadding_highway",
         apadding: "discover_content_apadding_highway",
       },
       {
         type: "internal",
-        to: "/subway-info/airport-express",
+        to: "/page/subway-info/airport-express",
         src: image52,
         atoppadding: "discover_content_atoppadding_airportWay",
         apadding: "discover_content_apadding_airportWay",
       },
       {
         type: "internal",
-        to: "/subway-info/tramways",
+        to: "/page/subway-info/tramways",
         src: image53,
         atoppadding: "discover_content_atoppadding_mrt",
         apadding: "discover_content_apadding_mrt",
       },
       {
         type: "internal",
-        to: "/subway-info/municipal-subway",
+        to: "/page/subway-info/municipal-subway",
         src: image54,
         atoppadding: "discover_content_atoppadding_downMrt",
         apadding: "discover_content_apadding_downMrt",
@@ -274,6 +275,13 @@ const discoveryRowData: IDiscoveryRowData = {
   history: {
     rowTitle: "discover_row_title_history",
     rowIconData: [
+      {
+        type: "pointer",
+        to: "",
+        src: image72,
+        atoppadding: "discover_content_atoppadding_history",
+        apadding: "discover_content_apadding_history",
+      },
       {
         type: "internal",
         to: "/history/railway-history",

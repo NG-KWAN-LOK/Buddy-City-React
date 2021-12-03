@@ -40,8 +40,13 @@
   "discover_subtitle_basic": "BASIC INFORMATION",
   "discover_content_atoppadding_place": "WAHT KIND OF BUDDY CITY?",
   "discover_content_apadding_place": "The dream world and paradise for all residents and tourism",
-  "discover_content_atoppadding_history": "HISTORY",
-  "discover_content_apadding_history": "Started by BRS members built the first building, different residents and architects took part in this land since 2012.",
+  "discover_content_atoppadding_background": "Background",
+  "discover_content_apadding_background": "Here have different language systems, special calendar era, time-system, wheather-system, and altitude law。",
+  "discover_content_atoppadding_calendar_system": "Era Name",
+  "discover_content_apadding_calendar_system": "The Government has published a unique era name.",
+  "discover_content_atoppadding_legal_holiday": "Legal Holiday",
+  "discover_content_apadding_legal_holiday": "The Government has published a unique legal holiday.",
+  
   "discover_content_atoppadding_building": "BUILDING",
   "discover_content_apadding_building": "All the building were built by resident and architect.  It will be protected forever.",
   "discover_content_atoppadding_view": "VIEW",
@@ -96,6 +101,8 @@
 
   "discover_row_title_history":"HISTORY IN BUDDY CITY",
   "discover_row_subtitle_history":"BUDDY市分為14個區。無論在哪裡, 都能乘坐非常便利的工具交通工具, 遊走於市內各處。",
+  "discover_content_atoppadding_history": "HISTORY",
+  "discover_content_apadding_history": "Started by BRS members built the first building, different residents and architects took part in this land since 2012.",
   "discover_subtitle_railway_history": "History of railway in BUDDY City",
   "discover_content_atoppadding_railway_history": "History of railway in BUDDY City",
   "discover_content_apadding_railway_history": "Let check out the development of the railway in BUDDY City in this decade.",
@@ -286,8 +293,6 @@
   "railway_route_map_subtitle":"The railway development of BUDDY City has a history of more than ten years, the route cover 90% of the entire city. Depending upon your destination, you can travel through the city using the railway system, which goes all throughout the city. Just plan your trip right now!",
 
   "holiday_today_is":"Today is ",
-  "holiday_today_official_calendar_name":"BUDDY ",
-  "holiday_today_official_calendar_year":"",
   "holiday_1_1_name":"Common Era New Year's Day",
   "holiday_1_1_description":"First day of Common Era",
   "holiday_2_1_name":"Citizen Foundation Day",
@@ -315,5 +320,22 @@
   "holiday_12_25_name":"Christmas Day",
   "holiday_12_25_description":"Commemorating the birth of Jesus Christ.",
   "holiday_12_26_name":"Boxing Day",
-  "holiday_12_26_description":"British Boxing Day"
+  "holiday_12_26_description":"British Boxing Day",
+
+  "const_buddy_era":"BUDDY ",
+  "const_buddy_name":"BUDDY ",
+  "const_era":"Era of BUDDY City",
+  "const_buddy_time_name":"BUDDY Standard Time",
+  "const_real_time_name":"Coordinated Universal Time",
+  "const_year":"year",
+  "const_month":"month",
+  "const_day":"day",
+  "const_hour":"hour",
+  "const_mins":"minute",
+  "const_secs":"second",
+  "const_month_name":"month",
+  "const_day_name":"day",
+  "const_hour_name":"hour",
+  "const_mins_name":"minute",
+  "const_secs_name":"second"
 }

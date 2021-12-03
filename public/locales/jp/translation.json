@@ -40,8 +40,13 @@
   "discover_subtitle_basic": "BUDDY市の基本",
   "discover_content_atoppadding_place": "どんなところですか？",
   "discover_content_apadding_place": "居住者と観光客の夢の世界、夢の天国",
-  "discover_content_atoppadding_history": "歴史",
-  "discover_content_apadding_history": "2012年BRSの同僚達はこの地に最初のビル建てていたから、色々な居住者と建築家が加入したから、この都市の発展が始まりました",
+  "discover_content_atoppadding_background": "背景情報",
+  "discover_content_apadding_background": "ここはは色々な言語システムがあるし、特別な元号システム、時刻システム、天気システムと高度システムがあります。",
+  "discover_content_atoppadding_calendar_system": "元号",
+  "discover_content_apadding_calendar_system": "政府は特定の元号を定めました。",
+  "discover_content_atoppadding_legal_holiday": "法定假期",
+  "discover_content_apadding_legal_holiday": "政府は特定の公休日を定めました。",
+
   "discover_content_atoppadding_building": "ビル",
   "discover_content_apadding_building": "市内のビルは市内の居住者と建築家たちと建てていた。そして永久保存されます",
   "discover_content_atoppadding_view": "BUDDY市とはどうですか？",
@@ -96,6 +101,8 @@
 
   "discover_row_title_history":"BUDDY市の鉄道史",
   "discover_row_subtitle_history":"BUDDY市分為14個区。無論在哪裡、都能乘坐非常便利的工具交通工具、遊走於市內各處。",
+  "discover_content_atoppadding_history": "歴史",
+  "discover_content_apadding_history": "2012年BRSの同僚達はこの地に最初のビル建てていたから、色々な居住者と建築家が加入したから、この都市の発展が始まりました",
   "discover_subtitle_railway_history": "BUDDY市の鉄道史",
   "discover_content_atoppadding_railway_history": "BUDDY市の鉄道史",
   "discover_content_apadding_railway_history": "この十年以來BUDDY市の鉄道発展をご覧ください。",
@@ -286,8 +293,6 @@
   "railway_route_map_subtitle":"BUDDY市の鉄道の発展もう十数年の歴史があります、線路は市全域の90%を被せます。どこにいても、鉄道システムに乗って、市内のあちこちを見て回れます。今すぐ用意しましょう！",
 
   "holiday_today_is":"今日は ",
-  "holiday_today_official_calendar_name":"友平 ",
-  "holiday_today_official_calendar_year":" 年",
   "holiday_1_1_name":"西暦元日",
   "holiday_1_1_description":"西曆の初日",
   "holiday_2_1_name":"建市記念の日",
@@ -315,6 +320,23 @@
   "holiday_12_25_name":"クリスマスの日",
   "holiday_12_25_description":"イエス・キリストの降誕を記念する祭",
   "holiday_12_26_name":"ボクシング・デー",
-  "holiday_12_26_description":"イギリス・ボクシング・デー"
+  "holiday_12_26_description":"イギリス・ボクシング・デー",
+
+  "const_buddy_era":"友平 ",
+  "const_buddy_name":"友",
+  "const_era":"BUDDY市の元号",
+  "const_buddy_time_name":"BUDDY標準時システム",
+  "const_real_time_name":"協定世界時システム",
+  "const_year":"年",
+  "const_month":"月",
+  "const_day":"日",
+  "const_hour":"時",
+  "const_mins":"分",
+  "const_secs":"秒",
+  "const_month_name":"ヶ月",
+  "const_day_name":"日",
+  "const_hour_name":"時間",
+  "const_mins_name":"分",
+  "const_secs_name":"秒"
 
 }

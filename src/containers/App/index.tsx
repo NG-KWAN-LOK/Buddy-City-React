@@ -19,6 +19,7 @@ import BCCTBContainer from "../../components/SimplePage/Container/BCCTBContainer
 
 import bcctbAboutUsSideMenuData from "../../pageData/bcctbAboutUsSideMenuData";
 import DiscoveryPage from "../DiscoveryPage";
+import BasicCategory from "../BasicCategory";
 import SubwayInfoPageContainer from "../SubwayInfoPageContainer";
 import RailwayHistoryPageContainer from "../RailwayHistoryPageContainer";
 import RailwayRouteMapPageContainer from "../RailwayRouteMapPageContainer";
@@ -57,7 +58,7 @@ function App() {
       <div className={styles.content}>
         <Header />
         <Switch>
-          <Route exact path='/'> 
+          <Route exact path='/'>
             <Dashboard />
           </Route>
           <Route path={["/resident/:username", "/resident"]}>
@@ -84,13 +85,18 @@ function App() {
               sideMenu={<SideMenu buttonData={bcctbAboutUsSideMenuData} />}
             />
           </Route>
-          <Route path='/page/:pagename'>
-            <DiscoveryPage />
+          <Route path='/page/basic/:pagename'>
+            <BasicCategory
+              sideMenu={<SideMenu buttonData={bcctbAboutUsSideMenuData} />}
+            />
           </Route>
-          <Route path='/subway-info/:pagename'>
+          <Route path='/page/subway-info/:pagename'>
             <SubwayInfoPageContainer
               sideMenu={<SideMenu buttonData={bcctbAboutUsSideMenuData} />}
             />
+          </Route>
+          <Route path='/page/:pagename'>
+            <DiscoveryPage />
           </Route>
           <Route path='/history/railway-history'>
             <RailwayHistoryPageContainer

@@ -27,7 +27,6 @@ const BuildingInfoPopUp: React.FC<BuildingInfoPopUpProps> = ({
     inside: null,
     utilization: null,
   };
-  console.log(buildingData);
   if (buildingData != null) {
     if (language === "zh") {
       translatedInfo = {
