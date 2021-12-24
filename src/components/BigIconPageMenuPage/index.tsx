@@ -114,7 +114,7 @@ const BigIconPageMenuPage: React.FC<BigIconPageMenuPageProps> = ({
                 <li>{monthList[today.month]}</li>
               </ul>
               <Link
-                to='/page/basic/background'
+                to="/page/basic/background"
                 className={styles.discover__news__dayHeader_time}
                 title={t("const_buddy_time_name")}
               >
@@ -163,7 +163,14 @@ const BigIconPageMenuPage: React.FC<BigIconPageMenuPageProps> = ({
             </div>
 
             <div className={styles.discover__news__dayHeader_holiday}>
-              <Link to='/page/basic/calendar-system' title={t("const_era")}>
+              <Link
+                to={
+                  holidayData[`${today.month + 1}/${today.day}`] !== undefined
+                    ? "/page/basic/legal-holiday"
+                    : "/page/basic/calendar-system"
+                }
+                title={t("const_era")}
+              >
                 <span
                   className={styles.discover__news__dayHeader_holiday_first}
                 >
