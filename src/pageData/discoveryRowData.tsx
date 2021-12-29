@@ -53,7 +53,7 @@ const discoveryRowData: IDiscoveryRowData = {
       },
       {
         type: "external",
-        to: `${process.env.REACT_APP_DYNMAP_URL}/map.html`,
+        to: `${process.env.REACT_APP_DYNMAP_URL}`,
         src: image11,
         atoppadding: "discover_content_atoppadding_gps",
         apadding: "discover_content_apadding_gps",
@@ -86,7 +86,7 @@ const discoveryRowData: IDiscoveryRowData = {
       },
       {
         type: "external",
-        to: `${process.env.REACT_APP_DYNMAP_URL}/map.html`,
+        to: `${process.env.REACT_APP_DYNMAP_URL}`,
         src: image11,
         atoppadding: "discover_content_atoppadding_gps",
         apadding: "discover_content_apadding_gps",

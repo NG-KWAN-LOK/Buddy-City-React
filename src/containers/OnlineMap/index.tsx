@@ -79,7 +79,7 @@ const OnlineMap: React.FC<OnlineMapProps> = ({}) => {
         <TileLayer
           attribution={`${t("online_map_footer_image_rendering")} <a href="${
             process.env.REACT_APP_DYNMAP_URL
-          }/map.html" target="blank_">Dynmap</a>, ${t(
+          }" target="blank_">Dynmap</a>, ${t(
             "online_map_footer_imagery_other"
           )}`}
           url={
