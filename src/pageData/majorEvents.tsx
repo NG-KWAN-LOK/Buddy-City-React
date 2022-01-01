@@ -421,6 +421,12 @@ const majorEvents: IMajorEvents = {
       day: "1",
       zh_name: "建立年號「友平」，諭意友好及和平，並以2012年為元年",
     },
+    {
+      year: "2022",
+      month: "1",
+      day: "1",
+      zh_name: "祝賀Buddy市成立10周年",
+    },
   ],
 };
 
