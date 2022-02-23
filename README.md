@@ -1,4 +1,4 @@
-# IS_P2P_Chat
+# Buddy-City-React
 ## heroku app page
 
 ### https://buddycity-info.herokuapp.com/
