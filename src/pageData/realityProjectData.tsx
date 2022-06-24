@@ -44,6 +44,12 @@ import image221 from "../image/photo/compress/023.jpg";
 import image222 from "../image/photo/big/023.png";
 import image231 from "../image/photo/compress/024.jpg";
 import image232 from "../image/photo/big/024.png";
+import image241 from "../image/photo/compress/025.jpg";
+import image242 from "../image/photo/big/025.png";
+import image251 from "../image/photo/compress/026.jpg";
+import image252 from "../image/photo/big/026.png";
+import image261 from "../image/photo/compress/027.jpg";
+import image262 from "../image/photo/big/027.png";
 
 interface IRealityProjectData {
   pageTitle: string;
@@ -73,6 +79,18 @@ const realityProjectData: IRealityProjectData = {
       image2: image12,
     },
     {
+      title: "reality_project_Otowayama_Kiyomizu_Dera",
+      title2: null,
+      image1: image241,
+      image2: image242,
+    },
+    {
+      title: "reality_project_Hokanji_Temple",
+      title2: null,
+      image1: image261,
+      image2: image262,
+    },
+    {
       title: "reality_project_Tokyo_Tower",
       title2: null,
       image1: image21,
@@ -95,6 +113,12 @@ const realityProjectData: IRealityProjectData = {
       title2: null,
       image1: image51,
       image2: image52,
+    },
+    {
+      title: "reality_project_Kiyomizu_Zaka",
+      title2: null,
+      image1: image251,
+      image2: image252,
     },
     {
       title: "reality_project_Megurogawa",

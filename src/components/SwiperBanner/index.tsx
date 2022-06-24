@@ -27,6 +27,9 @@ import banner21 from "../../image/photo/021.jpg";
 import banner22 from "../../image/photo/022.jpg";
 import banner23 from "../../image/photo/023.jpg";
 import banner24 from "../../image/photo/024.jpg";
+import banner25 from "../../image/photo/025.jpg";
+import banner26 from "../../image/photo/026.jpg";
+import banner27 from "../../image/photo/027.jpg";
 
 import SwiperCore, {
   Navigation,
@@ -54,6 +57,14 @@ const SwiperBanner: React.FC = () => {
       place: "reality_project_osaka_castle_park",
     },
     {
+      url: banner25,
+      place: "reality_project_Otowayama_Kiyomizu_Dera",
+    },
+    {
+      url: banner27,
+      place: "reality_project_Hokanji_Temple",
+    },
+    {
       url: banner3,
       place: "reality_project_Tokyo_Tower",
     },
@@ -68,6 +79,10 @@ const SwiperBanner: React.FC = () => {
     {
       url: banner6,
       place: "reality_project_paletteTown",
+    },
+    {
+      url: banner26,
+      place: "reality_project_Kiyomizu_Zaka",
     },
     {
       url: banner7,
