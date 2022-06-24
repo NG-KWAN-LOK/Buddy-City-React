@@ -40,7 +40,7 @@ const BuildingInfoPopUp: React.FC<BuildingInfoPopUpProps> = ({
       translatedInfo = {
         adress: buildingData.adress_eng,
         district: buildingData.district_eng,
-        name: buildingData.name_chi,
+        name: buildingData.name_eng,
         inside: buildingData.inside,
         utilization: buildingData.Utilization,
       };
