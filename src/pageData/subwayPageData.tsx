@@ -97,13 +97,13 @@ const subwayPageData: ISubwayPageData = {
       },
       {
         routeLogo: mstHangenLineLogo,
-        routeTitle: "mst_route_hangen_line_title",
-        routeText: "mst_route_hangen_line_text",
+        routeTitle: "mst_route_kiyo_gen_line_title",
+        routeText: "mst_route_kiyo_gen_line_text",
       },
       {
         routeLogo: mstKoyoMizuShaTinLogo,
-        routeTitle: "mst_route_koyo_mizu_sha_Tin_Line_title",
-        routeText: "mst_route_koyo_mizu_sha_Tin_Line_text",
+        routeTitle: "mst_route_futa_keihan_Line_title",
+        routeText: "mst_route_futa_keihan_Line_text",
       },
     ],
   },

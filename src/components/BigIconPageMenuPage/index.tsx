@@ -33,7 +33,7 @@ const BigIconPageMenuPage: React.FC<BigIconPageMenuPageProps> = ({
       return sunny;
     }
     if (ramdomIndex === 2) {
-      if (gameToday.hour > 19) {
+      if (gameToday.hour > 19 && gameToday.hour < 7) {
         return thunder;
       }
       return rain;
@@ -88,7 +88,7 @@ const BigIconPageMenuPage: React.FC<BigIconPageMenuPageProps> = ({
                 <li>{monthList[today.month]}</li>
               </ul>
               <Link
-                to="/page/basic/background"
+                to='/page/basic/background'
                 title={t("const_buddy_time_name")}
                 className={styles.discover__news__dayHeader_weatherTime}
               >

@@ -1,10 +1,9 @@
 import image11 from "../image/pword1_1.jpg";
 import image12 from "../image/pword1_2.jpg";
-import image13 from "../image/pword1_3.jpg";
 import image14 from "../image/pword1_4.jpg";
 import image21 from "../image/pword2_1.jpg";
-import image22 from "../image/pword2_2.jpg";
-import image23 from "../image/pword2_3.jpg";
+import image22 from "../image/pword2_6.jpg";
+import image23 from "../image/pword2_5.jpg";
 import image24 from "../image/pword2_4.jpg";
 import image31 from "../image/pword3_1.jpg";
 import image32 from "../image/pword3_2.jpg";
@@ -18,7 +17,7 @@ import image51 from "../image/pword5_1.jpg";
 import image52 from "../image/pword5_2.jpg";
 import image53 from "../image/pword5_3.jpg";
 import image54 from "../image/pword5_4.jpg";
-import image61 from "../image/pword6_1.jpg";
+import image61 from "../image/pword6_5.jpg";
 import image62 from "../image/pword6_2.jpg";
 import image63 from "../image/pword6_3.jpg";
 import image64 from "../image/pword6_4.jpg";
@@ -180,8 +179,8 @@ const discoveryRowData: IDiscoveryRowData = {
         type: "pointer",
         to: "",
         src: image61,
-        atoppadding: "discover_content_atoppadding_playaround",
-        apadding: "discover_content_apadding_playaround",
+        atoppadding: "discover_content_atoppadding_sport",
+        apadding: "discover_content_apadding_sport",
       },
       {
         type: "pointer",
