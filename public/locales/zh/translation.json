@@ -65,7 +65,7 @@
     "市內有吃、喝、玩、樂等娛樂場所，能給你渡過悠閒假期。",
   "discover_content_atoppadding_playCountry": "遊歷國度",
   "discover_content_apadding_playCountry":
-    "市內有香港、日本等氛圍及建築，足不出市能感受多國風情。",
+    "市內有香港、日本、臺灣等氛圍及建築，足不出市能感受多國風情。",
   "discover_content_atoppadding_creatWorld": "創造世界",
   "discover_content_apadding_creatWorld":
     "成為Buddy市的建築師，一起建造自己夢想中的城市。",
@@ -73,8 +73,8 @@
   "discover_row_title_activity":"自然與戶外",
   "discover_row_subtitle_activity":"在BUDDY市有許多美麗的景點，不用遠遊，隨時都能在城市中享受戶外活動的樂趣。",
   "discover_subtitle_activity": "自然與戶外活動",
-  "discover_content_atoppadding_playaround": "遊歷",
-  "discover_content_apadding_playaround": "探索這個城市",
+  "discover_content_atoppadding_sport": "育樂",
+  "discover_content_apadding_sport": "市內有運動場、體育館和游泳池等育樂設施，市民可隨時使用。",
   "discover_content_atoppadding_flower": "花·自然",
   "discover_content_apadding_flower":
     "市內有大量綠化區，能體驗城市，又能體驗自然，更能欣賞櫻花。",
@@ -133,6 +133,7 @@
   "reality_project_title": "REALITY PROJECT",
   "reality_project_zoom_in": "放大觀看",
   "reality_project_osaka_castle_park": "大阪區 - 大阪城公園",
+  "reality_project_dotonbori": "大阪區 - 道頓堀／戎橋",
   "reality_project_Tokyo_Tower": "東京區 - 東京鐵塔",
   "reality_project_Bank_of_China_(HK)_Building": "港島區 - 中國銀行香港大廈",
   "reality_project_Teipei_101": "臺北區 - 臺北101",
@@ -156,7 +157,7 @@
   "reality_project_Tivoli_Garden": "青衣區 - 宏福花園",
   "reality_project_Tsing_Yi_Municipal_Services_Building": "青衣區 - 青衣市政大廈",
   "reality_project_Otowayama_Kiyomizu_Dera": "京都區 - 音羽山清水寺",
-  "reality_project_Hokanji_Temple": "京都區 - 法觀寺\n八坂塔",
+  "reality_project_Hokanji_Temple": "京都區 - 法觀寺／八坂塔",
   "reality_project_Kiyomizu_Zaka": "京都區 - 清水坂",
 
   "BuildingList_title": "城市建築物名冊",
@@ -236,7 +237,7 @@
 
   "bct_title":"Buddy City路面電車系統",
   "bct_about_title":"路面電車簡介：",
-  "bct_about_text":"Buddy City路面電車系統，簡稱路面電車。現由Buddy City路面電車系統有限公司營運。為Buddy City 首個興建於路面且私營的環形線路鐵路系統。\n\n2013年由Buddy市觀光局計劃、Buddy市運輸局興建，於2017年5月第一期完工。原由Buddy市運輸局暨Buddy City路面電車有限公司營運。\n\n2017年6月，路面電車第二期Buddy City運動場及沙田區延展完工通車。\n\n2017年7月，路面電車第三期清水區延展完工通車。\n\n2018年2月，進行大型延展工程，期後私有化．由Buddy City路面電車系統有限公司營運。\n\n2018年3月3日，路面電車第四期港島區、能源區及跨海線路延展完工通車。\n\n2018年5月3日，路面電車第五期大阪區、目黑川及臺北區延展完工通車。\n\n2018年10月28日，路面電車第六期青衣區延展完工通車。\n\n路網範圍涵蓋整個Buddy City，已成為Buddy City線路最長、車站最多、覆蓋率最高鐵路系統。主要目的為旅遊觀光。",
+  "bct_about_text":"Buddy City路面電車系統，簡稱路面電車。現由Buddy City路面電車系統有限公司營運。為Buddy City 首個興建於路面且私營的環形線路鐵路系統。\n\n2013年由Buddy市觀光局計劃、Buddy市運輸局興建，於2017年5月第一期完工。原由Buddy市運輸局暨Buddy City路面電車有限公司營運。\n\n2017年6月，路面電車第二期Buddy City運動場及沙田區延展完工通車。\n\n2017年7月，路面電車第三期清水區延展完工通車。\n\n2018年2月，進行大型延展工程，期後私有化．由Buddy City路面電車系統有限公司營運。\n\n2018年3月3日，路面電車第四期港島區、能源區及跨海線路延展完工通車。\n\n2018年5月3日，路面電車第五期大阪區、目黑川及臺北區延展完工通車。\n\n2018年10月28日，路面電車第六期青衣區延展完工通車。\n\n2022年7月3日，路面電車第七期京都區和大阪區道頓堀延線完工通車。\n\n路網範圍涵蓋整個Buddy City，已成為Buddy City線路最長、車站最多、覆蓋率最高鐵路系統。主要目的為旅遊觀光。",
   "bct_route_about_title":"路面電車路線：",
   "bct_route_about_subtitle":"路面電車由一條環形線路組成",
   "bct_route_tramways_title":"路面電車",
@@ -254,15 +255,15 @@
 
   "mst_title":"Buddy City市營地下鐵路運輸系統",
   "mst_about_title":"市營地下鐵簡介：",
-  "mst_about_text":"Buddy City市營地下鐵路運輸系統，簡稱市營地下鐵。為Buddy City 地下鐵路運輸系統，現由Buddy市運輸局暨Buddy City市營地下鐵路有限公司營運。係以Buddy市運輸局為主要股東之公營交通事業公司。\n\n2018年3月，城市開發急速。配合城市交通發展，Buddy市運輸局暨Buddy City市營地下鐵路有限公司成立。同月接手Buddy City暨Kai's 國際機場快速線路有限公司，營運機場快線。\n\n2018年4月，開始計劃興建市營地下鐵。同年5月第一期全面建成，5月3日全面正式通車。\n\n路網範圍涵蓋整個Buddy City。為居民及遊客一個最快速通勤交通系統。",
+  "mst_about_text":"Buddy City市營地下鐵路運輸系統，簡稱市營地下鐵。為Buddy City 地下鐵路運輸系統，現由Buddy市運輸局暨Buddy City市營地下鐵路有限公司營運。係以Buddy市運輸局為主要股東之公營交通事業公司。\n\n2018年3月，城市開發急速。配合城市交通發展，Buddy市運輸局暨Buddy City市營地下鐵路有限公司成立。同月接手Buddy City暨Kai's 國際機場快速線路有限公司，營運機場快線。\n\n2018年4月，開始計劃興建市營地下鐵。同年5月第一期全面建成，5月3日全面正式通車。\n\n2022年7月3日，清水至京都新車站延線段、谷町四丁目至難波延線段和黑目川至沙漠東京延線段完工。清水沙田線重劃線路並廢線，更名為雙京坂線正式重新通車。阪源線重劃線路，更名為清源線正式重新通車。\n\n路網範圍涵蓋整個Buddy City。為居民及遊客一個最快速通勤交通系統。",
   "mst_route_about_title":"市營地下鐵路線",
   "mst_route_about_subtitle":"市營地下鐵由三條線路組成",
   "mst_route_central_line_title":"市營地下鐵中央線",
   "mst_route_central_line_text":"2018年5月3日正式通車\nBuddy City由北至南主要幹線。途經大阪區、沙田區、市中心、新市中心、東京區 (部份區域) 、沙漠區 (部份區域) 、港島區、臺北區及能源區。",
-  "mst_route_hangen_line_title":"市營地下鐵阪源線",
-  "mst_route_hangen_line_text":"2018年5月3日正式通車\nBuddy City由東至西主要幹線。途經大阪區、清水區、東京區、Buddy 山區、青衣區、校園區、臺北區及能源區。",
-  "mst_route_koyo_mizu_sha_Tin_Line_title":"市營地下鐵清水沙田線",
-  "mst_route_koyo_mizu_sha_Tin_Line_text":"2018年5月3日正式通車\nBuddy City由東至西支線。途經清水區東京區、Buddy 山區及沙田區。",
+  "mst_route_kiyo_gen_line_title":"市營地下鐵清源線",
+  "mst_route_kiyo_gen_line_text":"原為阪源線，於2018年5月3日通車。2022年7月3日更名重新通車\nBuddy City由東至西主要幹線。途經清水區、東京區、Buddy 山區、沙田區、青衣區、校園區、臺北區及能源區。",
+  "mst_route_futa_keihan_Line_title":"市營地下鐵雙京阪線",
+  "mst_route_futa_keihan_Line_text":"原為清水沙田線2018年5月3日通車。2022年7月3日更名重新通車\nBuddy City日式地區連接線路。途經大阪區、京都區、清水區、東京區及沙漠區 (部份區域) 。",
 
   "railway_history_title":"BUDDY市鐵路史",
   "railway_history_subtitle":"BUDDY市鐵路發展已有十多年的歷史，你可以移動下方的滑輪閱讀不同時期的BUDDY市的鐵路史。",
