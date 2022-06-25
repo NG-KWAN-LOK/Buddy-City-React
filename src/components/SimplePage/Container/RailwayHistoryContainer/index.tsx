@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import styles from "./style.module.scss";
+import Loading from "../../../Loading";
 
 import { useTranslation } from "react-i18next";
 
@@ -22,6 +23,7 @@ interface RailwayHistoryContainerProps {}
 
 const RailwayHistoryContainer: React.FC<RailwayHistoryContainerProps> = () => {
   const { t } = useTranslation();
+  const [isImageLoading, setIsImageLoading] = useState(true);
   const metroMap = [
     {
       image: image01,
@@ -125,27 +127,36 @@ const RailwayHistoryContainer: React.FC<RailwayHistoryContainerProps> = () => {
   const [timeValue, setTimeValue] = useState<number>(metroMap.length - 1);
   const handleTimeValueChange = (e) => {
     setTimeValue(e.target.value);
+    setIsImageLoading(true);
   };
 
   const handleAddTimeValueChange = () => {
     if (timeValue === metroMap.length - 1) return;
     setTimeValue(timeValue + 1);
+    setIsImageLoading(true);
   };
 
   const handleMinusTimeValueChange = () => {
     if (timeValue === 0) return;
     setTimeValue(timeValue - 1);
+    setIsImageLoading(true);
   };
+
+  const handleImageOnLoad = () => {
+    setIsImageLoading(false);
+  };
+
+  console.log(isImageLoading);
 
   return (
     <>
       <div className={styles.railwayHistroy__title__content}>
-        <div className={styles.railwayHistroy__title} id='railwayHistroy_title'>
+        <div className={styles.railwayHistroy__title} id="railwayHistroy_title">
           {t("railway_history_title")}
         </div>
         <div
           className={styles.railwayHistroy__subTitle}
-          id='railway_history_subtitle'
+          id="railway_history_subtitle"
         >
           {t("railway_history_subtitle")}
         </div>
@@ -157,11 +168,13 @@ const RailwayHistoryContainer: React.FC<RailwayHistoryContainerProps> = () => {
             <div
               className={styles.railwayHistroy__title__map__banner_container}
             >
+              {isImageLoading && <Loading containersClassName={true}></Loading>}
               <img
                 className={
                   styles.railwayHistroy__title__map__banner_container_img
                 }
                 src={metroMap[timeValue].image}
+                onLoad={handleImageOnLoad}
               />
             </div>
           </div>
@@ -173,10 +186,10 @@ const RailwayHistoryContainer: React.FC<RailwayHistoryContainerProps> = () => {
           ></div>
           <div className={styles.range}>
             <input
-              type='range'
-              min='0'
-              max='13'
-              step='1'
+              type="range"
+              min="0"
+              max="13"
+              step="1"
               value={timeValue}
               onChange={handleTimeValueChange}
             />

@@ -1,11 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React, { useRef, useEffect } from "react";
+import lottie from "lottie-web";
 import { Link } from "react-router-dom";
 import styles from "./style.module.scss";
 
 import { useTranslation } from "react-i18next";
 
+import useTime from "../../hook/useTIme";
 import holidayData from "../../pageData/holidayData";
 import majorEvents from "../../pageData/majorEvents";
+import sunny from "../../image/lottie/sunny.json";
+import rain from "../../image/lottie/rain.json";
+import thunder from "../../image/lottie/thunder.json";
 
 interface BigIconPageMenuPageProps {
   // pageTitle: string;
@@ -18,68 +23,37 @@ const BigIconPageMenuPage: React.FC<BigIconPageMenuPageProps> = ({
   // pageText,
   children,
 }) => {
+  const weatherIcon = useRef<HTMLInputElement>(null);
   const { t, i18n } = useTranslation();
   const language = i18n.language;
-  const [todayDate, setTodayDate] = useState(new Date());
+  const { today, gameToday } = useTime();
+
+  const getWeatherIcon = (ramdomIndex) => {
+    if (ramdomIndex === 1) {
+      return sunny;
+    }
+    if (ramdomIndex === 2) {
+      if (gameToday.hour > 19) {
+        return thunder;
+      }
+      return rain;
+    }
+    return thunder;
+  };
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      var localCurrentDate = new Date();
-      var currentUTC =
-        localCurrentDate.getTime() +
-        localCurrentDate.getTimezoneOffset() * 60000;
-      setTodayDate(new Date(currentUTC + 3600000 * 8));
-    }, 1000);
-    return function cleanup() {
-      clearInterval(timer);
-    };
-  });
-
-  const today = {
-    year: todayDate.getFullYear(),
-    month: todayDate.getMonth(),
-    day: todayDate.getDate(),
-    hour: todayDate.getHours(),
-    minute: todayDate.getMinutes(),
-    second: todayDate.getSeconds(),
-  };
-
-  // const gameToday = {
-  //   minute: Math.floor((today.second * 72) / 60) % 60,
-  //   hour: Math.floor(((today.minute * 60 + today.second) * 72) / 3600) % 24,
-  //   day: Math.floor(
-  //     (((today.hour * 3600 + today.minute * 60 + today.second) * 72) /
-  //       3600 /
-  //       24) %
-  //       24
-  //   ),
-  // };
-  const gameToday = {
-    minute: Math.floor(
-      (((((((((today.hour * 3600 + today.minute * 60 + today.second) * 72) /
-        3600 /
-        24) %
-        24) %
-        1) *
-        24) %
-        24) %
-        1) *
-        60) %
-        60
-    ),
-    hour: Math.floor(
-      ((((((today.hour * 3600 + today.minute * 60 + today.second) * 72) /
-        3600 /
-        24) %
-        24) %
-        1) *
-        24) %
-        24
-    ),
-    day: Math.floor(
-      ((today.hour * 3600 + today.minute * 60 + today.second) * 72) / 3600 / 24
-    ),
-  };
+    const ramdomIndex = (today.timestamp % 10000) % 3;
+    lottie.loadAnimation({
+      container: weatherIcon.current!,
+      renderer: "svg",
+      loop: true,
+      autoplay: true,
+      animationData: getWeatherIcon(ramdomIndex),
+      name: "Weather",
+    });
+    lottie.setSpeed(5);
+    return () => lottie.destroy();
+  }, [gameToday.hour]);
 
   const monthList = [
     "January",
@@ -115,50 +89,60 @@ const BigIconPageMenuPage: React.FC<BigIconPageMenuPageProps> = ({
               </ul>
               <Link
                 to="/page/basic/background"
-                className={styles.discover__news__dayHeader_time}
                 title={t("const_buddy_time_name")}
+                className={styles.discover__news__dayHeader_weatherTime}
               >
-                <li>
-                  {`${
-                    gameToday.hour < 10 ? `0${gameToday.hour}` : gameToday.hour
-                  }`}
-                  <sub>
+                <div
+                  ref={weatherIcon}
+                  className={
+                    styles.discover__news__dayHeader_weatherTime_weatherIcon
+                  }
+                ></div>
+                <div className={styles.discover__news__dayHeader_time}>
+                  <li>
+                    {`${
+                      gameToday.hour < 10
+                        ? `0${gameToday.hour}`
+                        : gameToday.hour
+                    }`}
+                    <sub>
+                      {language === "en"
+                        ? "BH"
+                        : t("const_buddy_name") + t("const_hour")}
+                    </sub>
+                    {`${
+                      gameToday.minute < 10
+                        ? `0${gameToday.minute}`
+                        : gameToday.minute
+                    }`}
+                    <sub>
+                      {language === "en"
+                        ? "BM"
+                        : t("const_buddy_name") + t("const_mins")}
+                    </sub>
+                  </li>
+                  <li>
+                    {language === "en" ? "The " : "第 "}
+                    {gameToday.day}
+                    <sup>
+                      {language === "en" &&
+                        `${
+                          gameToday.day % 10 == 1
+                            ? "st"
+                            : gameToday.day % 10 == 2
+                            ? "nd"
+                            : gameToday.day % 10 === 3
+                            ? "rd"
+                            : "th"
+                        }`}
+                    </sup>
+                  </li>
+                  <li>
                     {language === "en"
-                      ? "BH"
-                      : t("const_buddy_name") + t("const_hour")}
-                  </sub>
-                  {`${
-                    gameToday.minute < 10
-                      ? `0${gameToday.minute}`
-                      : gameToday.minute
-                  }`}
-                  <sub>
-                    {language === "en"
-                      ? "BM"
-                      : t("const_buddy_name") + t("const_mins")}
-                  </sub>
-                </li>
-                <li>
-                  {language === "en" ? "The " : "第 "}
-                  {gameToday.day}
-                  <sup>
-                    {language === "en" &&
-                      `${
-                        gameToday.day % 10 == 1
-                          ? "st"
-                          : gameToday.day % 10 == 2
-                          ? "nd"
-                          : gameToday.day % 10 === 3
-                          ? "rd"
-                          : "th"
-                      }`}
-                  </sup>
-                </li>
-                <li>
-                  {language === "en"
-                    ? `BUDDY Day${gameToday.day != 1 && "s"}`
-                    : "友日"}
-                </li>
+                      ? `BUDDY Day${gameToday.day != 1 && "s"}`
+                      : "友日"}
+                  </li>
+                </div>
               </Link>
             </div>
 
@@ -199,7 +183,7 @@ const BigIconPageMenuPage: React.FC<BigIconPageMenuPageProps> = ({
             <table className={styles.discover__news_display_table}>
               <tbody>
                 {majorEvents.data
-                  .slice(-5)
+                  .slice(0)
                   .reverse()
                   .map((data, index) => {
                     return (
