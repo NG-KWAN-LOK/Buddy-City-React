@@ -3,6 +3,7 @@ import styles from "./style.module.scss";
 
 import { useTranslation } from "react-i18next";
 
+import banner0 from "../../image/photo/000.jpg";
 import banner1 from "../../image/photo/001.jpg";
 import banner2 from "../../image/photo/002.jpg";
 import banner3 from "../../image/photo/003.jpg";
@@ -30,6 +31,7 @@ import banner24 from "../../image/photo/024.jpg";
 import banner25 from "../../image/photo/025.jpg";
 import banner26 from "../../image/photo/026.jpg";
 import banner27 from "../../image/photo/027.jpg";
+import banner28 from "../../image/photo/028.jpg";
 
 import SwiperCore, {
   Navigation,
@@ -55,6 +57,10 @@ const SwiperBanner: React.FC = () => {
     {
       url: banner2,
       place: "reality_project_osaka_castle_park",
+    },
+    {
+      url: banner28,
+      place: "reality_project_dotonbori",
     },
     {
       url: banner25,
@@ -155,6 +161,10 @@ const SwiperBanner: React.FC = () => {
     {
       url: banner24,
       place: "reality_project_Tsing_Yi_Municipal_Services_Building",
+    },
+    {
+      url: banner0,
+      place: "",
     },
   ];
   return (
