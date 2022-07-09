@@ -1,5 +1,7 @@
 import React from "react";
 import styles from "./style.module.scss";
+import buddyCitySong from "../../../../media/BuddyCitySong.m4a";
+import VideoPlayer from "../../../VideoPlayer";
 
 import { useTranslation } from "react-i18next";
 
@@ -9,7 +11,7 @@ interface BasicCategoryContainerProps {
     pageSubtitle: string;
     contentName: string;
     contentData: {
-      contentType: "title" | "text" | "table";
+      contentType: "title" | "text" | "table" | "musicPlayer";
       contentText?: string;
       tableTR?: {
         tableTD: {
@@ -34,7 +36,6 @@ const BasicCategoryContainer: React.FC<BasicCategoryContainerProps> = ({
       <table key={index} className={styles.discover__news_display_table}>
         <tbody>
           {Object(data.tableTR).map((data, index) => {
-            console.log(data.tableTD);
             return (
               <tr
                 key={index}
@@ -70,7 +71,6 @@ const BasicCategoryContainer: React.FC<BasicCategoryContainerProps> = ({
       <table key={index} className={styles.discover__news_display_table}>
         <tbody>
           {Object(data.tableTR).map((data, index) => {
-            console.log(data.tableTD);
             return (
               <tr
                 key={index}
@@ -100,12 +100,12 @@ const BasicCategoryContainer: React.FC<BasicCategoryContainerProps> = ({
   return (
     <>
       <div className={styles.BasicCategoryContainer__title__content}>
-        <div className={styles.BasicCategoryContainer__title} id='title'>
+        <div className={styles.BasicCategoryContainer__title} id="title">
           {t(basicCategoryData.pageTitle)}
         </div>
         <div
           className={styles.BasicCategoryContainer__content__subTitle}
-          id='subtitle'
+          id="subtitle"
         >
           {t(basicCategoryData.pageSubtitle)}
         </div>
@@ -138,7 +138,9 @@ const BasicCategoryContainer: React.FC<BasicCategoryContainerProps> = ({
               </div>
             );
           }
-          console.log(data.tableTR);
+          if (data.contentType === "musicPlayer") {
+            return <VideoPlayer src={buddyCitySong} />;
+          }
           if (basicCategoryData.contentName === "legal-holiday")
             return renderLegalHolidayTable(data, index);
           if (basicCategoryData.contentName === "background")

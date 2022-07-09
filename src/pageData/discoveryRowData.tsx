@@ -125,10 +125,10 @@ const discoveryRowData: IDiscoveryRowData = {
       },
       {
         type: "internal",
-        to: "/page/basic/calendar-system",
+        to: "/page/basic/calendar-system-and-city-song",
         src: image33,
-        atoppadding: "discover_content_atoppadding_calendar_system",
-        apadding: "discover_content_apadding_calendar_system",
+        atoppadding: "discover_content_atoppadding_calendar_system_city_song",
+        apadding: "discover_content_apadding_calendar_system_city_song",
       },
       {
         type: "internal",

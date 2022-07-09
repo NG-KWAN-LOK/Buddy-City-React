@@ -41,8 +41,8 @@
   "discover_content_apadding_place": "居民、遊客們的夢想世界、夢想天堂",
   "discover_content_atoppadding_background": "背景資料",
   "discover_content_apadding_background": "這裡有不同的語言系統；獨特的紀年系統、時間系統、天氣系統和高度系統。",
-  "discover_content_atoppadding_calendar_system": "年號",
-  "discover_content_apadding_calendar_system": "政府製定了獨有的年號。",
+  "discover_content_atoppadding_calendar_system_city_song": "年號 & 市歌",
+  "discover_content_apadding_calendar_system_city_song": "政府製定了獨有的年號和市歌。",
   "discover_content_atoppadding_legal_holiday": "法定假期",
   "discover_content_apadding_legal_holiday": "政府製定了獨有法定假期。",
 
@@ -118,6 +118,9 @@
   "basic_background_title_5_1": "高度以「方」為單位。一個成年人約1.62方。\n\n世界高度以「層」為單位，而整個世界可以興建物體的區域只有256方(0層 - 256層)。\n\n海平面位於63層，63層以下皆為地下層。",
   "basic_calendar_system_title_1": "年號",
   "basic_calendar_system_title_1_1": "2021年12月1日開始，BUDDY市政府正式頒布BUDDY年號為「友平」，諭意為「友好及和平」，自此「友平」成為BUDDY市第二個標準紀年系統。2012年1月1日定為友平元年。\n\nBUDDY年號會永久使用，如無意外，不會更改。",
+  "basic_city_song_title_1": "市歌",
+  "basic_city_song_title_1_1": "2022年7月10日，BUDDY市政府正式發佈代表BUDDY市的市歌，名為《友與平》。諭意為「友好及和平」與年號一樣，祝願BUDDY市和全宇宙的人能友好與和平地生活。可以點擊以下的播放器欣賞歌曲。",
+  "basic_city_song_lyrics_title_1_1": "《友與平》\n作曲／作詞／編曲：沢尻佐智郎（DJaLok）\n\n齊用愛 兼奮鬥\n志同友 建自由\n\n全盡心 得永慶\n立民主 創和平\n\n這世代 積怨厚\n邂共手 化負憂\n\n憑全力 往幸福\n衛我家 存萬世",
   "basic_legal_holiday_title_1": "法定假期",
   "basic_legal_holiday_title_1_1": "BUDDY市一年有14天法定假期，也是公眾假期，假期的日期和簡介如下：",
 
