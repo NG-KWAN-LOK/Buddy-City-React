@@ -16,3 +16,5 @@ declare namespace JSX {
     div: any;
   }
 }
+
+declare module "*.m4a";

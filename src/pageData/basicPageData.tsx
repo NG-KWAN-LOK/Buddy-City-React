@@ -4,7 +4,7 @@ interface IBasicPageData {
     pageSubtitle: string;
     contentName: string;
     contentData: {
-      contentType: "title" | "text" | "table";
+      contentType: "title" | "text" | "table" | "musicPlayer";
       contentText?: string;
       tableTR?: {
         tableTD: {
@@ -233,10 +233,10 @@ const BasicPageData: IBasicPageData = {
       },
     ],
   },
-  "calendar-system": {
-    pageTitle: "discover_content_atoppadding_calendar_system",
-    pageSubtitle: "discover_content_apadding_calendar_system",
-    contentName: "calendar-system",
+  "calendar-system-and-city-song": {
+    pageTitle: "discover_content_atoppadding_calendar_system_city_song",
+    pageSubtitle: "discover_content_apadding_calendar_system_city_song",
+    contentName: "calendar-system-and-city-song",
     contentData: [
       {
         contentType: "title",
@@ -245,6 +245,22 @@ const BasicPageData: IBasicPageData = {
       {
         contentType: "text",
         contentText: "basic_calendar_system_title_1_1",
+      },
+      {
+        contentType: "title",
+        contentText: "basic_city_song_title_1",
+      },
+      {
+        contentType: "text",
+        contentText: "basic_city_song_title_1_1",
+      },
+      {
+        contentType: "musicPlayer",
+        contentText: "basic_city_song_title_1_1",
+      },
+      {
+        contentType: "text",
+        contentText: "basic_city_song_lyrics_title_1_1",
       },
     ],
   },
