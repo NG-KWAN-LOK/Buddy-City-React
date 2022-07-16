@@ -1,6 +1,6 @@
-import image14 from "../image/merto-map/18.jpg";
+import image15 from "../image/merto-map/19.jpg";
 
-import routeMap from "../image/merto-map/18Metro路面電車第六期20211031.pdf";
+import routeMap from "../image/merto-map/19Metro路面電車第七期市營地下鐵清源線雙京阪線20220703.pdf";
 
 export interface IRailwayRouteMapData {
   image: string;
@@ -9,9 +9,9 @@ export interface IRailwayRouteMapData {
 }
 
 const railwayRouteMapData: IRailwayRouteMapData = {
-  image: image14,
+  image: image15,
   routeMap: routeMap,
-  title: "railway_history_map14_name",
+  title: "railway_history_map15_name",
 };
 
 export default railwayRouteMapData;
