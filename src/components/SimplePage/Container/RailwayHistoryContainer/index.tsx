@@ -18,6 +18,7 @@ import image11 from "../../../../image/merto-map/13.jpg";
 import image12 from "../../../../image/merto-map/16.jpg";
 import image13 from "../../../../image/merto-map/17.jpg";
 import image14 from "../../../../image/merto-map/18.jpg";
+import image15 from "../../../../image/merto-map/19.jpg";
 
 interface RailwayHistoryContainerProps {}
 
@@ -123,6 +124,13 @@ const RailwayHistoryContainer: React.FC<RailwayHistoryContainerProps> = () => {
       opened: "2021-10-31",
       serviceArea: "railway_history_map14_service_area",
     },
+    {
+      image: image15,
+      title: "railway_history_map15_name",
+      projectName: "railway_history_map15_project_name",
+      opened: "2022-07-03",
+      serviceArea: "railway_history_map15_service_area",
+    },
   ];
   const [timeValue, setTimeValue] = useState<number>(metroMap.length - 1);
   const handleTimeValueChange = (e) => {
@@ -151,12 +159,12 @@ const RailwayHistoryContainer: React.FC<RailwayHistoryContainerProps> = () => {
   return (
     <>
       <div className={styles.railwayHistroy__title__content}>
-        <div className={styles.railwayHistroy__title} id="railwayHistroy_title">
+        <div className={styles.railwayHistroy__title} id='railwayHistroy_title'>
           {t("railway_history_title")}
         </div>
         <div
           className={styles.railwayHistroy__subTitle}
-          id="railway_history_subtitle"
+          id='railway_history_subtitle'
         >
           {t("railway_history_subtitle")}
         </div>
@@ -186,10 +194,10 @@ const RailwayHistoryContainer: React.FC<RailwayHistoryContainerProps> = () => {
           ></div>
           <div className={styles.range}>
             <input
-              type="range"
-              min="0"
-              max="13"
-              step="1"
+              type='range'
+              min='0'
+              max='14'
+              step='1'
               value={timeValue}
               onChange={handleTimeValueChange}
             />

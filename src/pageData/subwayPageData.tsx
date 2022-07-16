@@ -97,8 +97,8 @@ const subwayPageData: ISubwayPageData = {
       },
       {
         routeLogo: mstHangenLineLogo,
-        routeTitle: "mst_route_kiyo_gen_line_title",
-        routeText: "mst_route_kiyo_gen_line_text",
+        routeTitle: "mst_route_hangen_ryokuchi_line_title",
+        routeText: "mst_route_hangen_ryokuchi_line_text",
       },
       {
         routeLogo: mstKoyoMizuShaTinLogo,

@@ -49,7 +49,7 @@ const discoveryIconData: IDiscoveryDataRowData = {
     {
       type: "internal",
       to: "/page/activity",
-      src: image61,
+      src: image41,
       topText: "discover_content_toptext",
       rowTitleAtoppadding: "discover_row_title_activity",
       rowTitleApadding: "discover_row_subtitle_activity",
@@ -57,7 +57,7 @@ const discoveryIconData: IDiscoveryDataRowData = {
     {
       type: "internal",
       to: "/page/how-to-visit",
-      src: image41,
+      src: image61,
       topText: "discover_content_toptext",
       rowTitleAtoppadding: "discover_row_title_method",
       rowTitleApadding: "discover_row_subtitle_method",
