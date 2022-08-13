@@ -135,6 +135,8 @@
   "reality_project_Otowayama_Kiyomizu_Dera": "京都区 - 音羽山清水寺",
   "reality_project_Hokanji_Temple": "京都区 - 法観寺／八坂の塔",
   "reality_project_Kiyomizu_Zaka": "京都区 - 清水坂",
+  "reality_project_Hep_Five": "大阪區 - HEP FIVE",
+  "reality_project_Crystal_Tower": "大阪區 - クリスタルタワー",
 
   "BuildingList_title": "都市ビル一覧表",
   "BuildingList_text": "全部BUDDY 市內のビル一はここに見られます。",
@@ -274,7 +276,7 @@
   "railway_history_map15_project_name": "市営地下鉄中央線二期谷町四丁目から難波まで延伸路線\n市営地下鉄双京阪線一期清水から京都まで延伸路線と黑目川から砂漠東京まで延伸路線\n市営地下鉄清水沙田線は再計画と廃止、双京阪線を代える\n市営地下鉄清源線一期\n市営地下鉄阪源線は再計画と廃止、清源線を代える、\n路面電車七期京都区と大阪区道頓堀延伸路線",
   "railway_history_project_opened": "開業",
   "railway_history_project_service_area": "サービスエリア",
-  "railway_history_map1_service_area":" 当時に市全域の20%を占めます、カバレージエリア：中央区、BUDDY山",
+  "railway_history_map1_service_area": " 当時に市全域の20%を占めます、カバレージエリア：中央区、BUDDY山",
   "railway_history_map2_service_area": "当時に市全域の25%を占めます、カバレージエリア：中央区、BUDDY山",
   "railway_history_map3_service_area": "当時に市全域の30%を占めます、カバレージエリア：中央区、BUDDY山",
   "railway_history_map4_service_area": "当時に市全域の32%を占めます、カバレージエリア：中央区、BUDDY山",
@@ -289,7 +291,6 @@
   "railway_history_map13_service_area": "当時に市全域の佔當時全市90%を占めます、カバレージエリア：中央区、新中央区、BUDDY山、砂漠区、東京区、空港管轄区、沙田区、青衣区、学園区、清水区、港島区、楽園区、エネルギー区、大阪区、台北区",
   "railway_history_map14_service_area": "当時に市全域の佔當時全市90%を占めます、カバレージエリア：中央区、新中央区、BUDDY山、砂漠区、東京区、空港管轄区、沙田区、青衣区、学園区、清水区、港島区、楽園区、エネルギー区、大阪区、台北区",
   "railway_history_map15_service_area": "当時に市全域の佔當時全市90%を占めます、カバレージエリア：中央区、新中央区、BUDDY山、砂漠区、東京区、空港管轄区、沙田区、青衣区、学園区、清水区、港島区、楽園区、エネルギー区、大阪区、台北区、京都区",
-
 
   "online_map_title": "オンラインマップ",
   "online_map_spwan_point": "スポーン地点",
