@@ -9,6 +9,7 @@ import mstLogo from "../image/subway/mst.png";
 import mstCentralLineLogo from "../image/subway/central_line.jpg";
 import mstHangenLineLogo from "../image/subway/hangen_line.jpg";
 import mstKoyoMizuShaTinLogo from "../image/subway/koyo_mizu_sha_Tin_Line.jpg";
+import mstMidoSujiLogo from "../image/subway/mido_suji_line.jpg";
 
 interface ISubwayPageData {
   [index: string]: {
@@ -104,6 +105,11 @@ const subwayPageData: ISubwayPageData = {
         routeLogo: mstKoyoMizuShaTinLogo,
         routeTitle: "mst_route_futa_keihan_Line_title",
         routeText: "mst_route_futa_keihan_Line_text",
+      },
+      {
+        routeLogo: mstMidoSujiLogo,
+        routeTitle: "mst_route_mido_suji_Line_title",
+        routeText: "mst_route_mido_suji_Line_text",
       },
     ],
   },

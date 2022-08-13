@@ -18,7 +18,9 @@ import image11 from "../../../../image/merto-map/13.jpg";
 import image12 from "../../../../image/merto-map/16.jpg";
 import image13 from "../../../../image/merto-map/17.jpg";
 import image14 from "../../../../image/merto-map/18.jpg";
-import image15 from "../../../../image/merto-map/19.jpg";
+import image15 from "../../../../image/merto-map/19.png";
+import image16 from "../../../../image/merto-map/20.png";
+import image17 from "../../../../image/merto-map/21.png";
 
 interface RailwayHistoryContainerProps {}
 
@@ -131,6 +133,20 @@ const RailwayHistoryContainer: React.FC<RailwayHistoryContainerProps> = () => {
       opened: "2022-07-03",
       serviceArea: "railway_history_map15_service_area",
     },
+    {
+      image: image16,
+      title: "railway_history_map16_name",
+      projectName: "railway_history_map16_project_name",
+      opened: "2022-07-17",
+      serviceArea: "railway_history_map16_service_area",
+    },
+    {
+      image: image17,
+      title: "railway_history_map17_name",
+      projectName: "railway_history_map17_project_name",
+      opened: "2022-08-07",
+      serviceArea: "railway_history_map17_service_area",
+    },
   ];
   const [timeValue, setTimeValue] = useState<number>(metroMap.length - 1);
   const handleTimeValueChange = (e) => {
@@ -196,7 +212,7 @@ const RailwayHistoryContainer: React.FC<RailwayHistoryContainerProps> = () => {
             <input
               type='range'
               min='0'
-              max='14'
+              max='16'
               step='1'
               value={timeValue}
               onChange={handleTimeValueChange}
