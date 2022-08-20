@@ -52,6 +52,10 @@ import image261 from "../image/photo/compress/027.jpg";
 import image262 from "../image/photo/big/027.png";
 import image271 from "../image/photo/compress/028.jpg";
 import image272 from "../image/photo/big/028.png";
+import image281 from "../image/photo/compress/029.jpg";
+import image282 from "../image/photo/big/029.png";
+import image291 from "../image/photo/compress/030.jpg";
+import image292 from "../image/photo/big/030.png";
 
 interface IRealityProjectData {
   pageTitle: string;
@@ -235,6 +239,18 @@ const realityProjectData: IRealityProjectData = {
       title2: null,
       image1: image231,
       image2: image232,
+    },
+    {
+      title: "reality_project_Hep_Five",
+      title2: null,
+      image1: image281,
+      image2: image282,
+    },
+    {
+      title: "reality_project_Crystal_Tower",
+      title2: null,
+      image1: image291,
+      image2: image292,
     },
   ],
 };

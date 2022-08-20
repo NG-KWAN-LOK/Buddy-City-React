@@ -32,6 +32,8 @@ import banner25 from "../../image/photo/025.jpg";
 import banner26 from "../../image/photo/026.jpg";
 import banner27 from "../../image/photo/027.jpg";
 import banner28 from "../../image/photo/028.jpg";
+import banner29 from "../../image/photo/029.jpg";
+import banner30 from "../../image/photo/030.jpg";
 
 import SwiperCore, {
   Navigation,
@@ -161,6 +163,14 @@ const SwiperBanner: React.FC = () => {
     {
       url: banner24,
       place: "reality_project_Tsing_Yi_Municipal_Services_Building",
+    },
+    {
+      url: banner29,
+      place: "reality_project_Hep_Five",
+    },
+    {
+      url: banner30,
+      place: "reality_project_Crystal_Tower",
     },
     {
       url: banner0,
