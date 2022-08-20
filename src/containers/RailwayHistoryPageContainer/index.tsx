@@ -10,29 +10,30 @@ interface RailwayHistoryPageContainerProps {
   sideMenu: React.ReactNode;
 }
 
-const RailwayHistoryPageContainer: React.FC<RailwayHistoryPageContainerProps> =
-  ({ sideMenu }) => {
-    const { t, i18n } = useTranslation();
-    const history = useHistory();
-    const pagename = history.location.pathname;
+interface IRailwayHistoryPageParams {
+  timeSlot: string;
+}
 
-    console.log(pagename);
+const RailwayHistoryPageContainer: React.FC<
+  RailwayHistoryPageContainerProps
+> = ({ sideMenu }) => {
+  const { t, i18n } = useTranslation();
+  const history = useHistory();
+  const pagename = history.location.pathname;
+  const { timeSlot } = useParams<IRailwayHistoryPageParams>();
 
-    useEffect(() => {
-      document.title =
-        findTitle([t("discover_row_title_history")]) + t("title");
-    }, [history, i18n.language]);
+  console.log(pagename, timeSlot);
 
-    if (pagename != "/history/railway-history") {
-      return null;
-    }
+  useEffect(() => {
+    document.title = findTitle([t("discover_row_title_history")]) + t("title");
+  }, [history, i18n.language]);
 
-    return (
-      <SimplePageContainer
-        contain={<RailwayHistoryContainer />}
-        sideMenu={sideMenu}
-      />
-    );
-  };
+  return (
+    <SimplePageContainer
+      contain={<RailwayHistoryContainer timeSlot={parseInt(timeSlot)} />}
+      sideMenu={sideMenu}
+    />
+  );
+};
 
 export default RailwayHistoryPageContainer;

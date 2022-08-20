@@ -1,11 +1,15 @@
 export interface IMajorEvents {
-  data: {
-    year: string;
-    month: string;
-    day: string;
-    zh_name: string;
-    display: boolean;
-  }[];
+  data: IMajorEventData[];
+}
+
+export interface IMajorEventData {
+  year: string;
+  month: string;
+  day: string;
+  zh_name: string;
+  display: boolean;
+  url?: string;
+  type: "internal" | "external" | "pointer";
 }
 
 const majorEvents: IMajorEvents = {
@@ -16,6 +20,7 @@ const majorEvents: IMajorEvents = {
       day: "1",
       zh_name: "Buddy市開荒",
       display: true,
+      type: "pointer",
     },
     {
       year: "2012",
@@ -23,6 +28,7 @@ const majorEvents: IMajorEvents = {
       day: "2",
       zh_name: "基礎道路建成",
       display: true,
+      type: "pointer",
     },
     {
       year: "2012",
@@ -30,6 +36,8 @@ const majorEvents: IMajorEvents = {
       day: "3",
       zh_name: "定義市政區-市中心，界定為(197,238)至(375,383)之間",
       display: true,
+      url: "/building_list/0",
+      type: "internal",
     },
     {
       year: "2012",
@@ -38,6 +46,8 @@ const majorEvents: IMajorEvents = {
       zh_name:
         "定義市政區-Buddy Hill，界定為(197,238)、(405,227)、(437,373)、(360,296)之間",
       display: true,
+      url: "/building_list/0",
+      type: "internal",
     },
     {
       year: "2012",
@@ -45,6 +55,7 @@ const majorEvents: IMajorEvents = {
       day: "1",
       zh_name: "建立路名系統",
       display: true,
+      type: "pointer",
     },
     {
       year: "2012",
@@ -52,6 +63,8 @@ const majorEvents: IMajorEvents = {
       day: "15",
       zh_name: "Buddy City 火箭發射中心落成",
       display: true,
+      url: "/building_list/0/20",
+      type: "internal",
     },
     {
       year: "2012",
@@ -60,6 +73,7 @@ const majorEvents: IMajorEvents = {
       zh_name:
         "行使衛星發射升空，搭載全球定位系統、氣像監測設備，位置為(293,345)至(311,363)之間上空",
       display: true,
+      type: "pointer",
     },
     {
       year: "2012",
@@ -67,6 +81,8 @@ const majorEvents: IMajorEvents = {
       day: "20",
       zh_name: "Buddy City體育館落成",
       display: true,
+      url: "/building_list/0/3",
+      type: "internal",
     },
     {
       year: "2012",
@@ -74,6 +90,8 @@ const majorEvents: IMajorEvents = {
       day: "25",
       zh_name: "Buddy City天文台落成，現Buddy City暨DJaLok天文台",
       display: true,
+      url: "/building_list/1/6",
+      type: "internal",
     },
     {
       year: "2012",
@@ -81,13 +99,26 @@ const majorEvents: IMajorEvents = {
       day: "27",
       zh_name: "前九廣鐵路鐘樓建成",
       display: true,
+      url: "/building_list/0/0",
+      type: "internal",
     },
     {
       year: "2012",
       month: "4",
       day: "1",
       zh_name: "高架鐵路一線第一期完工通車",
+      display: false,
+      url: "/history/railway-history/0",
+      type: "internal",
+    },
+    {
+      year: "2012",
+      month: "4",
+      day: "1",
+      zh_name: "高架鐵路一線正式通車",
       display: true,
+      url: "/history/railway-history/0",
+      type: "internal",
     },
     {
       year: "2012",
@@ -95,20 +126,44 @@ const majorEvents: IMajorEvents = {
       day: "1",
       zh_name: "Buddy City電視城落成",
       display: true,
+      url: "/building_list/0/6",
+      type: "internal",
     },
     {
       year: "2012",
       month: "5",
       day: "2",
       zh_name: "高架鐵路二線第一期完工通車",
+      display: false,
+      url: "/history/railway-history/1",
+      type: "internal",
+    },
+    {
+      year: "2012",
+      month: "5",
+      day: "2",
+      zh_name: "高架鐵路二線正式通車",
       display: true,
+      url: "/history/railway-history/1",
+      type: "internal",
     },
     {
       year: "2012",
       month: "5",
       day: "3",
-      zh_name: "地下鐵路一線完工通車",
+      zh_name: "地下鐵路一線正式通車",
+      display: false,
+      url: "/history/railway-history/2",
+      type: "internal",
+    },
+    {
+      year: "2012",
+      month: "5",
+      day: "3",
+      zh_name: "地下鐵路一線正式通車",
       display: true,
+      url: "/history/railway-history/2",
+      type: "internal",
     },
     {
       year: "2012",
@@ -116,6 +171,8 @@ const majorEvents: IMajorEvents = {
       day: "4",
       zh_name: "高架鐵路一線第二期喪屍場延線完工通車",
       display: false,
+      url: "/history/railway-history/3",
+      type: "internal",
     },
     {
       year: "2013",
@@ -123,6 +180,8 @@ const majorEvents: IMajorEvents = {
       day: "5",
       zh_name: "高架鐵路一線第二期Super Restaurant延線完工通車",
       display: false,
+      url: "/history/railway-history/3",
+      type: "internal",
     },
     {
       year: "2013",
@@ -130,6 +189,8 @@ const majorEvents: IMajorEvents = {
       day: "10",
       zh_name: "Buddy City 電車總站落成",
       display: true,
+      url: "/building_list/0/7",
+      type: "internal",
     },
     {
       year: "2013",
@@ -137,6 +198,8 @@ const majorEvents: IMajorEvents = {
       day: "11",
       zh_name: "定義市政區-北區、沙漠區",
       display: true,
+      url: "/building_list/2",
+      type: "internal",
     },
     {
       year: "2013",
@@ -144,6 +207,8 @@ const majorEvents: IMajorEvents = {
       day: "2",
       zh_name: "定義市政區-沙田區",
       display: true,
+      url: "/building_list/9",
+      type: "internal",
     },
     {
       year: "2017",
@@ -151,13 +216,26 @@ const majorEvents: IMajorEvents = {
       day: "1",
       zh_name: "定義市政區-東京區，取代部份沙漠區",
       display: true,
+      url: "/building_list/4",
+      type: "internal",
     },
     {
       year: "2017",
       month: "4",
       day: "2",
-      zh_name: "香港中國銀行香港大廈、東京タワー落成",
+      zh_name: "香港中國銀行香港大廈落成",
       display: true,
+      url: "/building_list/11/2",
+      type: "internal",
+    },
+    {
+      year: "2017",
+      month: "4",
+      day: "2",
+      zh_name: "東京タワー落成",
+      display: true,
+      url: "/building_list/4/2",
+      type: "internal",
     },
     {
       year: "2017",
@@ -166,6 +244,8 @@ const majorEvents: IMajorEvents = {
       zh_name:
         "定義市政區-清水區，界定為現由黑目川以北、東京タワー通り以東、大阪城以西區域",
       display: true,
+      url: "/building_list/5",
+      type: "internal",
     },
     {
       year: "2017",
@@ -173,6 +253,8 @@ const majorEvents: IMajorEvents = {
       day: "11",
       zh_name: "定義市政區-樂園區，界定為現港島區、校園區以南、臺北區以北區域",
       display: true,
+      url: "/building_list/8",
+      type: "internal",
     },
     {
       year: "2017",
@@ -180,37 +262,73 @@ const majorEvents: IMajorEvents = {
       day: "13",
       zh_name: "香港中央圖書館落成",
       display: true,
+      url: "/building_list/11/3",
+      type: "internal",
     },
     {
       year: "2017",
       month: "4",
       day: "15",
-      zh_name: "RoyHo清水寺落成",
+      zh_name: "RoyHo 清水寺落成",
       display: true,
+      url: "/building_list/8/0",
+      type: "internal",
     },
     {
       year: "2017",
       month: "4",
       day: "16",
-      zh_name:
-        "建立地址系統、定義市政區-新市中心區，取代部份市中心區域、Buddy Hill更名為Buddy山區",
+      zh_name: "建立地址系統、定義市政區-新市中心區，取代部份市中心區域",
       display: true,
+      url: "/building_list/0",
+      type: "internal",
+    },
+    {
+      year: "2017",
+      month: "4",
+      day: "16",
+      zh_name: "Buddy Hill 更名為 Buddy 山區",
+      display: true,
+      url: "/building_list/1",
+      type: "internal",
+    },
+    {
+      year: "2017",
+      month: "4",
+      day: "19",
+      zh_name: "旋轉木馬搬遷到通天列車以南、樂園區一部份被港島區替代",
+      display: true,
+      url: "/building_list/8/1",
+      type: "internal",
     },
     {
       year: "2017",
       month: "4",
       day: "19",
       zh_name:
-        "旋轉木馬搬遷到通天列車以南、樂園區一部份被港島區替代、定義市政區-港島區，取代樂園區，界定為現東京タワー通り以南、新中央區以南、樂園區以東區域",
+        "定義市政區-港島區，取代樂園區，界定為現東京タワー通り以南、新中央區以南、樂園區以東區域",
       display: true,
+      url: "/building_list/11",
+      type: "internal",
     },
     {
       year: "2017",
       month: "4",
       day: "20",
       zh_name:
-        "青衣運動場建成、定義市政區-青衣區，取代北區。界定為由現青敬路以西、校園路以北等區域",
+        "定義市政區-青衣區，取代北區。界定為由現青敬路以西、校園路以北等區域",
       display: true,
+      url: "/building_list/6",
+      type: "internal",
+    },
+    {
+      year: "2017",
+      month: "4",
+      day: "20",
+      zh_name: "青衣運動場建成",
+      display: true,
+      url: "/building_list/6/0",
+      type: "internal",
     },
     {
       year: "2017",
@@ -218,6 +336,8 @@ const majorEvents: IMajorEvents = {
       day: "30",
       zh_name: "Buddy City 海濱公園落成",
       display: true,
+      url: "/building_list/11/0",
+      type: "internal",
     },
     {
       year: "2017",
@@ -225,27 +345,61 @@ const majorEvents: IMajorEvents = {
       day: "10",
       zh_name: "定義市政區-機場管轄區，取代部份沙漠區",
       display: true,
+      url: "/building_list/7",
+      type: "internal",
     },
     {
       year: "2017",
       month: "5",
       day: "15",
-      zh_name: "高架鐵路一線第三期電車總站延線完工通車、定義市政區-能源區",
+      zh_name: "高架鐵路一線第三期電車總站延線完工通車",
       display: false,
+      url: "/history/railway-history/4",
+      type: "internal",
+    },
+    {
+      year: "2017",
+      month: "5",
+      day: "15",
+      zh_name: "定義市政區-能源區",
+      display: true,
+      url: "/building_list/10",
+      type: "internal",
     },
     {
       year: "2017",
       month: "5",
       day: "16",
-      zh_name: "Buddy City暨Kai's 國際機場落成、Buddy City核電站落成啟用",
+      zh_name: "Buddy City暨Kai's 國際機場落成啟用",
       display: true,
+      url: "/building_list/7/0",
+      type: "internal",
+    },
+    {
+      year: "2017",
+      month: "5",
+      day: "16",
+      zh_name: "Buddy City核電站落成啟用",
+      display: true,
+      url: "/building_list/10/0",
+      type: "internal",
     },
     {
       year: "2017",
       month: "5",
       day: "20",
-      zh_name: "青馬大橋建成、定義市鎮-新Buddy市",
+      zh_name: "青馬大橋建成",
       display: true,
+      url: "/building_list/7/2",
+      type: "internal",
+    },
+    {
+      year: "2017",
+      month: "5",
+      day: "20",
+      zh_name: "定義市鎮-新Buddy市",
+      display: true,
+      type: "pointer",
     },
     {
       year: "2017",
@@ -253,13 +407,26 @@ const majorEvents: IMajorEvents = {
       day: "22",
       zh_name: "海底隧道落成啟用",
       display: true,
+      url: "/building_list/10/1",
+      type: "internal",
     },
     {
       year: "2017",
       month: "6",
       day: "1",
       zh_name: "路面電車第一期完工通車",
+      display: false,
+      url: "/history/railway-history/5",
+      type: "internal",
+    },
+    {
+      year: "2017",
+      month: "6",
+      day: "1",
+      zh_name: "路面電車正式通車",
       display: true,
+      url: "/history/railway-history/5",
+      type: "internal",
     },
     {
       year: "2017",
@@ -267,6 +434,8 @@ const majorEvents: IMajorEvents = {
       day: "2",
       zh_name: "定義市政區-校園區。界定為由現校園路以南、中央廣場路以西等區域",
       display: true,
+      url: "/building_list/3",
+      type: "internal",
     },
     {
       year: "2017",
@@ -274,21 +443,35 @@ const majorEvents: IMajorEvents = {
       day: "6",
       zh_name: "梁植偉(樂善堂梁植偉紀念中學校舍)落成",
       display: true,
+      url: "/building_list/3/0",
+      type: "internal",
     },
     {
       year: "2017",
       month: "6",
       day: "10",
       zh_name: "機場快線第一期完工通車",
+      display: false,
+      url: "/history/railway-history/6",
+      type: "internal",
+    },
+    {
+      year: "2017",
+      month: "6",
+      day: "10",
+      zh_name: "機場快線正式通車",
       display: true,
+      url: "/history/railway-history/6",
+      type: "internal",
     },
     {
       year: "2017",
       month: "6",
       day: "20",
-      zh_name:
-        "路面電車第二期Buddy City運動場及沙田區延線完工通車、St.Mok M大教堂落成",
+      zh_name: "路面電車第二期Buddy City運動場及沙田區延線完工通車",
       display: false,
+      url: "/history/railway-history/7",
+      type: "internal",
     },
     {
       year: "2017",
@@ -296,6 +479,8 @@ const majorEvents: IMajorEvents = {
       day: "20",
       zh_name: "St.Mok M大教堂落成",
       display: true,
+      url: "/building_list/1/10",
+      type: "internal",
     },
     {
       year: "2017",
@@ -303,6 +488,7 @@ const majorEvents: IMajorEvents = {
       day: "21",
       zh_name: "定義市政區-軍營區",
       display: true,
+      type: "pointer",
     },
     {
       year: "2017",
@@ -310,6 +496,8 @@ const majorEvents: IMajorEvents = {
       day: "25",
       zh_name: "浩園落成",
       display: true,
+      url: "/building_list/1/11",
+      type: "internal",
     },
     {
       year: "2017",
@@ -317,6 +505,8 @@ const majorEvents: IMajorEvents = {
       day: "12",
       zh_name: "路面電車第三期清水區延線完工通車",
       display: false,
+      url: "/history/railway-history/8",
+      type: "internal",
     },
     {
       year: "2017",
@@ -325,6 +515,8 @@ const majorEvents: IMajorEvents = {
       zh_name:
         "定義市政區-大阪區，取代北區。界定為由現清水路以北、本町通以北、Buddy山徑以北等區域",
       display: true,
+      url: "/building_list/12",
+      type: "internal",
     },
     {
       year: "2017",
@@ -332,6 +524,8 @@ const majorEvents: IMajorEvents = {
       day: "13",
       zh_name: "大阪城落成",
       display: true,
+      url: "/building_list/12/8",
+      type: "internal",
     },
     {
       year: "2017",
@@ -339,6 +533,8 @@ const majorEvents: IMajorEvents = {
       day: "15",
       zh_name: "大阪城公園周邊建設落成",
       display: true,
+      url: "/building_list/12/0",
+      type: "internal",
     },
     {
       year: "2017",
@@ -346,6 +542,7 @@ const majorEvents: IMajorEvents = {
       day: "20",
       zh_name: "開始建立觀光服務網站Buddy-Info",
       display: true,
+      type: "pointer",
     },
     {
       year: "2017",
@@ -353,6 +550,8 @@ const majorEvents: IMajorEvents = {
       day: "25",
       zh_name: "財團法人Buddy市觀光局正式成立",
       display: true,
+      url: "/bcctb-about-us",
+      type: "internal",
     },
     {
       year: "2018",
@@ -360,6 +559,8 @@ const majorEvents: IMajorEvents = {
       day: "1",
       zh_name: "Buddy City路面電車進行大型延展工程",
       display: true,
+      url: "/history/railway-history/9",
+      type: "internal",
     },
     {
       year: "2018",
@@ -367,6 +568,8 @@ const majorEvents: IMajorEvents = {
       day: "3",
       zh_name: "路面電車第四期港島區、能源區及跨海線路延線完工通車",
       display: false,
+      url: "/history/railway-history/9",
+      type: "internal",
     },
     {
       year: "2018",
@@ -374,6 +577,8 @@ const majorEvents: IMajorEvents = {
       day: "1",
       zh_name: "修建目黒川水道",
       display: true,
+      url: "/building_list/4/6",
+      type: "internal",
     },
     {
       year: "2018",
@@ -381,6 +586,8 @@ const majorEvents: IMajorEvents = {
       day: "2",
       zh_name: "目黒川沿いの桜並木修建完工",
       display: true,
+      url: "/building_list/4/6",
+      type: "internal",
     },
     {
       year: "2018",
@@ -388,6 +595,8 @@ const majorEvents: IMajorEvents = {
       day: "5",
       zh_name: "基督教醫療財團法人Buddy醫院落成",
       display: true,
+      url: "/building_list/13/0",
+      type: "internal",
     },
     {
       year: "2018",
@@ -395,6 +604,8 @@ const majorEvents: IMajorEvents = {
       day: "10",
       zh_name: "臺北101落成",
       display: true,
+      url: "/building_list/13/2",
+      type: "internal",
     },
     {
       year: "2018",
@@ -402,6 +613,8 @@ const majorEvents: IMajorEvents = {
       day: "15",
       zh_name: "Buddy市警察廳本部落成",
       display: true,
+      url: "/building_list/12/5",
+      type: "internal",
     },
     {
       year: "2018",
@@ -409,6 +622,8 @@ const majorEvents: IMajorEvents = {
       day: "20",
       zh_name: "Buddy市廳落成",
       display: true,
+      url: "/building_list/12/6",
+      type: "internal",
     },
     {
       year: "2018",
@@ -416,14 +631,36 @@ const majorEvents: IMajorEvents = {
       day: "25",
       zh_name: "Buddy市消防廳本部落成",
       display: true,
+      url: "/building_list/4/7",
+      type: "internal",
+    },
+    {
+      year: "2018",
+      month: "5",
+      day: "3",
+      zh_name: "高架鐵路二線第二期青衣區延線完工通車",
+      display: false,
+      url: "/history/railway-history/10",
+      type: "internal",
     },
     {
       year: "2018",
       month: "5",
       day: "3",
       zh_name:
-        "高架鐵路二線第二期青衣區延線完工通車、市營地下鐵中央線第一期正式通車、市營地下鐵阪源線第一期正式通車、市營地下鐵清水沙田線第一期正式通車",
+        "市營地下鐵中央線第一期正式通車、市營地下鐵阪源線第一期正式通車、市營地下鐵清水沙田線第一期正式通車",
       display: false,
+      url: "/history/railway-history/10",
+      type: "internal",
+    },
+    {
+      year: "2018",
+      month: "5",
+      day: "3",
+      zh_name: "市營地下鐵中央線、阪源線、清水沙田線正式通車",
+      display: true,
+      url: "/history/railway-history/10",
+      type: "internal",
     },
     {
       year: "2018",
@@ -432,6 +669,8 @@ const majorEvents: IMajorEvents = {
       zh_name:
         "機場快線第二期東京沙漠、沙田、大阪延線完工通車。路面電車第五期大阪區、目黑川及臺北區延線完工通車。",
       display: false,
+      url: "/history/railway-history/11",
+      type: "internal",
     },
     {
       year: "2018",
@@ -439,6 +678,8 @@ const majorEvents: IMajorEvents = {
       day: "15",
       zh_name: "機場快線直通車正式通車",
       display: true,
+      url: "/history/railway-history/11",
+      type: "internal",
     },
     {
       year: "2018",
@@ -446,6 +687,8 @@ const majorEvents: IMajorEvents = {
       day: "2",
       zh_name: "宏福花園落成",
       display: true,
+      url: "/building_list/6/2",
+      type: "internal",
     },
     {
       year: "2018",
@@ -453,6 +696,8 @@ const majorEvents: IMajorEvents = {
       day: "4",
       zh_name: "青衣海濱公園修建完工",
       display: true,
+      url: "/building_list/6/8",
+      type: "internal",
     },
     {
       year: "2018",
@@ -460,6 +705,8 @@ const majorEvents: IMajorEvents = {
       day: "19",
       zh_name: "青衣市政大廈落成",
       display: true,
+      url: "/building_list/6/4",
+      type: "internal",
     },
     {
       year: "2018",
@@ -467,6 +714,8 @@ const majorEvents: IMajorEvents = {
       day: "28",
       zh_name: "路面電車第六期青衣區延線完工通車",
       display: false,
+      url: "/history/railway-history/12",
+      type: "internal",
     },
     {
       year: "2018",
@@ -474,6 +723,8 @@ const majorEvents: IMajorEvents = {
       day: "9",
       zh_name: "定義市政區-臺北區。界定為由現軍營區以西、樂園區以南區域",
       display: true,
+      url: "/building_list/13",
+      type: "internal",
     },
     {
       year: "2021",
@@ -482,6 +733,7 @@ const majorEvents: IMajorEvents = {
       zh_name:
         "定義市水域-維多利亞港，界定為現軍營區以東、海盜船以南水域。東京灣，界定海盜船以東，機場以西至能源區以東水域為止",
       display: true,
+      type: "pointer",
     },
     {
       year: "2021",
@@ -489,6 +741,8 @@ const majorEvents: IMajorEvents = {
       day: "31",
       zh_name: "鐵路轉乘重組",
       display: false,
+      url: "/history/railway-history/13",
+      type: "internal",
     },
     {
       year: "2021",
@@ -496,6 +750,8 @@ const majorEvents: IMajorEvents = {
       day: "1",
       zh_name: "建立年號「友平」，諭意友好及和平，並以2012年為元年",
       display: true,
+      url: "/page/basic/calendar-system-and-city-song",
+      type: "internal",
     },
     {
       year: "2022",
@@ -503,6 +759,7 @@ const majorEvents: IMajorEvents = {
       day: "1",
       zh_name: "祝賀Buddy市成立10周年",
       display: true,
+      type: "pointer",
     },
     {
       year: "2022",
@@ -511,6 +768,7 @@ const majorEvents: IMajorEvents = {
       zh_name:
         "出現十年一遇大地震，因地殼變動而多處出現斷層，是 Buddy 市建立以來最大規模的一次災難。",
       display: true,
+      type: "pointer",
     },
     {
       year: "2022",
@@ -518,6 +776,7 @@ const majorEvents: IMajorEvents = {
       day: "13",
       zh_name: "Buddy 山隧道、清水隧道落成啟用",
       display: true,
+      type: "pointer",
     },
     {
       year: "2022",
@@ -525,6 +784,7 @@ const majorEvents: IMajorEvents = {
       day: "14",
       zh_name: "市中心地下街落成",
       display: true,
+      type: "pointer",
     },
     {
       year: "2022",
@@ -532,6 +792,8 @@ const majorEvents: IMajorEvents = {
       day: "22",
       zh_name: "定義市政區-京都區，界定為清水區以東、東京區以東、沙漠區以東",
       display: true,
+      url: "/building_list/14",
+      type: "internal",
     },
     {
       year: "2022",
@@ -539,6 +801,8 @@ const majorEvents: IMajorEvents = {
       day: "23",
       zh_name: "法觀寺（八坂塔）重見天日",
       display: true,
+      url: "/building_list/14/0",
+      type: "internal",
     },
     {
       year: "2022",
@@ -546,6 +810,8 @@ const majorEvents: IMajorEvents = {
       day: "24",
       zh_name: "音羽山清水寺重見天日",
       display: true,
+      url: "/building_list/14/1",
+      type: "internal",
     },
     {
       year: "2022",
@@ -553,6 +819,8 @@ const majorEvents: IMajorEvents = {
       day: "1",
       zh_name: "修建道頓堀水道",
       display: true,
+      url: "/building_list/12/12",
+      type: "internal",
     },
     {
       year: "2022",
@@ -560,6 +828,8 @@ const majorEvents: IMajorEvents = {
       day: "1",
       zh_name: "道頓堀周邊景點落成",
       display: true,
+      url: "/building_list/12/20",
+      type: "internal",
     },
     {
       year: "2022",
@@ -568,6 +838,8 @@ const majorEvents: IMajorEvents = {
       zh_name:
         "市營地下鐵中央線第二期谷町四丁目至難波延線段完工通車。雙京阪線第一期清水至京都延線段及黑目川至沙漠東京延線段完工，市營地下鐵清水沙田線重劃線路並廢線，由雙京坂線代替正式通車。市營地下鐵清源線第一期完工，市營地下鐵阪源線重劃線路，由清源線代替正式通車。路面電車第七期京都區、大阪區道頓堀延線完工通車。",
       display: false,
+      url: "/history/railway-history/14",
+      type: "internal",
     },
     {
       year: "2022",
@@ -576,6 +848,8 @@ const majorEvents: IMajorEvents = {
       zh_name:
         "市營地下鐵清水沙田線重劃線路並廢線，由雙京坂線代替正式通車。市營地下鐵阪源線重劃線路，由清源線代替正式通車。",
       display: true,
+      url: "/history/railway-history/14",
+      type: "internal",
     },
     {
       year: "2022",
@@ -584,6 +858,8 @@ const majorEvents: IMajorEvents = {
       zh_name:
         "BUDDY市政府正式發佈代表BUDDY市的市歌，名為《友與平》。諭意為「友好及和平」與年號一樣，祝願BUDDY市和全宇宙的人能友好與和平地生活。",
       display: true,
+      url: "/page/basic/calendar-system-and-city-song",
+      type: "internal",
     },
     {
       year: "2022",
@@ -591,6 +867,8 @@ const majorEvents: IMajorEvents = {
       day: "17",
       zh_name: "大阪クリスタルタワー完工開張。",
       display: true,
+      url: "/building_list/12/25",
+      type: "internal",
     },
     {
       year: "2022",
@@ -599,6 +877,8 @@ const majorEvents: IMajorEvents = {
       zh_name:
         "市營地下鐵中央線與雙京坂線於谷町四丁目相接直通運轉，市營地下鐵清源線第二期清水至大阪商業園區延線段完工，市營地下鐵清源線，重新覆蓋大阪區，更名為阪源綠地線正式通車。路面電車第八期大阪商業園區延線段完工通車。",
       display: false,
+      url: "/history/railway-history/15",
+      type: "internal",
     },
     {
       year: "2022",
@@ -607,6 +887,8 @@ const majorEvents: IMajorEvents = {
       zh_name:
         "市營地下鐵中央線與雙京坂線於谷町四丁目相接直通運轉，市營地下鐵清源線，重新覆蓋大阪區，更名為阪源綠地線正式通車。",
       display: true,
+      url: "/history/railway-history/15",
+      type: "internal",
     },
     {
       year: "2022",
@@ -614,6 +896,8 @@ const majorEvents: IMajorEvents = {
       day: "30",
       zh_name: "大阪 HEP FIVE 及大阪梅田周邊景點落成。",
       display: true,
+      url: "/building_list/12/27",
+      type: "internal",
     },
     {
       year: "2022",
@@ -622,6 +906,17 @@ const majorEvents: IMajorEvents = {
       zh_name:
         "市營地下鐵雙京坂線第三期東梅田站完工通車。市營地下鐵御堂筋線第一期完工通車。路面電車第九期大阪梅田區域延線段完工通車。",
       display: false,
+      url: "/history/railway-history/16",
+      type: "internal",
+    },
+    {
+      year: "2022",
+      month: "8",
+      day: "7",
+      zh_name: "市營地下鐵御堂筋線正式通車。",
+      display: true,
+      url: "/history/railway-history/16",
+      type: "internal",
     },
   ],
 };

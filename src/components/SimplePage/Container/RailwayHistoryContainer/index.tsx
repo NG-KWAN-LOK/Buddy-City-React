@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
 import styles from "./style.module.scss";
 import Loading from "../../../Loading";
 
@@ -22,10 +23,15 @@ import image15 from "../../../../image/merto-map/19.png";
 import image16 from "../../../../image/merto-map/20.png";
 import image17 from "../../../../image/merto-map/21.png";
 
-interface RailwayHistoryContainerProps {}
+interface RailwayHistoryContainerProps {
+  timeSlot: number;
+}
 
-const RailwayHistoryContainer: React.FC<RailwayHistoryContainerProps> = () => {
+const RailwayHistoryContainer: React.FC<RailwayHistoryContainerProps> = ({
+  timeSlot,
+}) => {
   const { t } = useTranslation();
+  const history = useHistory();
   const [isImageLoading, setIsImageLoading] = useState(true);
   const metroMap = [
     {
@@ -149,20 +155,39 @@ const RailwayHistoryContainer: React.FC<RailwayHistoryContainerProps> = () => {
     },
   ];
   const [timeValue, setTimeValue] = useState<number>(metroMap.length - 1);
+  useEffect(() => {
+    if (typeof timeSlot !== "undefined") {
+      if (timeSlot >= metroMap.length) {
+        history.push(`/history/railway-history/${metroMap.length - 1}`);
+        return;
+      }
+      if (timeSlot < 0) {
+        history.push(`/history/railway-history/${0}`);
+        setTimeValue(0);
+        return;
+      }
+      setTimeValue(timeSlot);
+    }
+  }, []);
   const handleTimeValueChange = (e) => {
     setTimeValue(e.target.value);
+    history.push(`/history/railway-history/${e.target.value}`);
     setIsImageLoading(true);
   };
 
   const handleAddTimeValueChange = () => {
     if (timeValue === metroMap.length - 1) return;
-    setTimeValue(timeValue + 1);
+    const newTimeValue = timeValue + 1;
+    setTimeValue(newTimeValue);
+    history.push(`/history/railway-history/${newTimeValue}`);
     setIsImageLoading(true);
   };
 
   const handleMinusTimeValueChange = () => {
     if (timeValue === 0) return;
-    setTimeValue(timeValue - 1);
+    const newTimeValue = timeValue - 1;
+    setTimeValue(newTimeValue);
+    history.push(`/history/railway-history/${newTimeValue}`);
     setIsImageLoading(true);
   };
 
@@ -170,7 +195,7 @@ const RailwayHistoryContainer: React.FC<RailwayHistoryContainerProps> = () => {
     setIsImageLoading(false);
   };
 
-  console.log(isImageLoading);
+  console.log(timeValue, isImageLoading);
 
   return (
     <>

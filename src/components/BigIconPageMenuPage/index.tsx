@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 import lottie from "lottie-web";
 import { Link } from "react-router-dom";
 import styles from "./style.module.scss";
@@ -8,6 +9,7 @@ import { useTranslation } from "react-i18next";
 import useTime from "../../hook/useTIme";
 import holidayData from "../../pageData/holidayData";
 import majorEvents from "../../pageData/majorEvents";
+import type { IMajorEventData } from "../../pageData/majorEvents";
 import sunny from "../../image/lottie/sunny.json";
 import rain from "../../image/lottie/rain.json";
 import thunder from "../../image/lottie/thunder.json";
@@ -26,6 +28,7 @@ const BigIconPageMenuPage: React.FC<BigIconPageMenuPageProps> = ({
   const weatherIcon = useRef<HTMLInputElement>(null);
   const { t, i18n } = useTranslation();
   const language = i18n.language;
+  const history = useHistory();
   const { today, gameToday } = useTime();
 
   const getWeatherIcon = (ramdomIndex) => {
@@ -69,6 +72,61 @@ const BigIconPageMenuPage: React.FC<BigIconPageMenuPageProps> = ({
     "November",
     "December",
   ];
+
+  const getRow = (data: IMajorEventData) => {
+    const rowElement: React.ReactElement = (
+      <>
+        <div
+          className={`${
+            data.type !== "pointer" &&
+            styles["discover__news_display_table_row_arrow"]
+          }`}
+        ></div>
+        <li
+          className={`${styles["discover__news_display_table_col"]} ${styles["discover__news_display_table_col-bullet"]}`}
+        >
+          &bull;
+        </li>
+        <li
+          className={`${styles["discover__news_display_table_col"]} ${styles["discover__news_display_table_col-first"]}`}
+        >
+          {`${t("const_buddy_era")} ${parseInt(data.year) - 2012} ${
+            language != "en" ? t("const_year") : ""
+          }\n${data.year}/${data.month}/${data.day}`}
+        </li>
+        <li
+          className={`${styles["discover__news_display_table_col"]} ${styles["discover__news_display_table_col-second"]}`}
+        >
+          {data.zh_name}
+        </li>
+      </>
+    );
+    if (data.type === "internal") {
+      return (
+        <Link
+          to={data.url || ""}
+          className={`${styles["discover__news_display_table_row"]} ${styles["discover__news_display_table_row-hover"]}`}
+        >
+          {rowElement}
+        </Link>
+      );
+    }
+    if (data.type === "external") {
+      return (
+        <a
+          href={data.url || ""}
+          className={`${styles["discover__news_display_table_row"]} ${styles["discover__news_display_table_row-hover"]}`}
+        >
+          {rowElement}
+        </a>
+      );
+    }
+    return (
+      <ul className={`${styles["discover__news_display_table_row"]}`}>
+        {rowElement}
+      </ul>
+    );
+  };
 
   return (
     <div className={styles.main}>
@@ -180,39 +238,17 @@ const BigIconPageMenuPage: React.FC<BigIconPageMenuPageProps> = ({
             </div>
           </div>
           <div className={styles.discover__news_display}>
-            <table className={styles.discover__news_display_table}>
-              <tbody>
-                {majorEvents.data
-                  .slice(0)
-                  .reverse()
-                  .map((data, index) => {
-                    return (
-                      <tr
-                        key={index}
-                        className={styles.discover__news_display_table_row}
-                      >
-                        <td
-                          className={`${styles["discover__news_display_table_col"]} ${styles["discover__news_display_table_col-bullet"]}`}
-                        >
-                          &bull;
-                        </td>
-                        <td className={styles.discover__news_display_table_col}>
-                          {`${t("const_buddy_era")} ${
-                            parseInt(data.year) - 2012
-                          } ${language != "en" ? t("const_year") : ""}\n${
-                            data.year
-                          }/${data.month}/${data.day}`}
-                        </td>
-                        <td
-                          className={`${styles["discover__news_display_table_col"]} ${styles["discover__news_display_table_col-second"]}`}
-                        >
-                          {data.zh_name}
-                        </td>
-                      </tr>
-                    );
-                  })}
-              </tbody>
-            </table>
+            <div className={styles.discover__news_display_table}>
+              {majorEvents.data
+                .slice(0)
+                .reverse()
+                .map((data) => {
+                  if (data.display) {
+                    return getRow(data);
+                  }
+                  return null;
+                })}
+            </div>
           </div>
         </div>
         <div className={styles.discover__content}>{children}</div>
