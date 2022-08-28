@@ -1,5 +1,5 @@
 # Buddy-City-React
-## heroku app page
+## app page
 
 ### https://buddycity-info.herokuapp.com/
 
