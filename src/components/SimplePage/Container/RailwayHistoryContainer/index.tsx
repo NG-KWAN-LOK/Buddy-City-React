@@ -24,7 +24,7 @@ import image16 from "../../../../image/merto-map/20.png";
 import image17 from "../../../../image/merto-map/21.png";
 
 interface RailwayHistoryContainerProps {
-  timeSlot: number;
+  timeSlot: number | undefined;
 }
 
 const RailwayHistoryContainer: React.FC<RailwayHistoryContainerProps> = ({
@@ -157,7 +157,11 @@ const RailwayHistoryContainer: React.FC<RailwayHistoryContainerProps> = ({
   const [timeValue, setTimeValue] = useState<number>(metroMap.length - 1);
   useEffect(() => {
     if (typeof timeSlot !== "undefined") {
-      if (timeSlot >= metroMap.length) {
+      if (timeSlot === 0) {
+        setTimeValue(0);
+        return;
+      }
+      if (timeSlot >= metroMap.length || !!!timeSlot) {
         history.push(`/history/railway-history/${metroMap.length - 1}`);
         return;
       }
@@ -166,7 +170,6 @@ const RailwayHistoryContainer: React.FC<RailwayHistoryContainerProps> = ({
         setTimeValue(0);
         return;
       }
-      setTimeValue(timeSlot);
     }
   }, []);
   const handleTimeValueChange = (e) => {
