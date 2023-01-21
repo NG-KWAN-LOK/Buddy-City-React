@@ -113,7 +113,7 @@ function App() {
               sideMenu={<SideMenu buttonData={bcctbAboutUsSideMenuData} />}
             />
           </Route>
-          <Route path="/online-map">
+          <Route path={["/online-map/:year", "/online-map"]}>
             <OnlineMap />
           </Route>
           <Route path={["/page", "/subway-info", "/history"]}>

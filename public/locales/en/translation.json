@@ -300,6 +300,14 @@
   "railway_history_map16_service_area": "Accounted for the entire city 90% at that time, coverage area: Buddy Central、New Buddy Central、Buddy Hill、Desert District、Tokyo District、Airport Control Area、Sha Tin District、Tsing Yi District、Campus District、Kiyo Mizu District、Hong Kong Island District、Paradise District、Energy District、Osaka District、Taipei District, Kyoto District",
   "railway_history_map17_service_area": "Accounted for the entire city 90% at that time, coverage area: Buddy Central、New Buddy Central、Buddy Hill、Desert District、Tokyo District、Airport Control Area、Sha Tin District、Tsing Yi District、Campus District、Kiyo Mizu District、Hong Kong Island District、Paradise District、Energy District、Osaka District、Taipei District, Kyoto District",
 
+  "online_map_title": "Online Map",
+  "online_map_spwan_point": "Spawn Point",
+  "online_map_footer_image_rendering": "Image rendering ©",
+  "online_map_footer_imagery_other": "Imagery ©",
+  "online_map_footer_imagery_satellite": " Star_dust Satellite, ",
+  "online_map_footer_imagery_map_data": "Map data ©",
+  "online_map_footer_imagery_map_data_buddy": " Lands Department under the Development Bureau of Buddy City",
+
   "railway_route_map_title": "Railway Route Map in BUDDY City",
   "railway_route_map_subtitle": "The railway development of BUDDY City has a history of more than ten years, the route cover 90% of the entire city. Depending upon your destination, you can travel through the city using the railway system, which goes all throughout the city. Just plan your trip right now!",
 

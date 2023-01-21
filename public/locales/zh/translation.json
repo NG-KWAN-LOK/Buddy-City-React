@@ -320,8 +320,11 @@
 
   "online_map_title": "線上地圖",
   "online_map_spwan_point": "出生點",
-  "online_map_footer_image_rendering": "圖像渲染 ©2021",
-  "online_map_footer_imagery_other": "圖像 ©2021 行使衛星, 地圖資料 ©2021 Buddy市發展局轄下地政總署",
+  "online_map_footer_image_rendering": "圖像渲染 ©",
+  "online_map_footer_imagery_other": "圖像 ©",
+  "online_map_footer_imagery_satellite": " 行使衛星, ",
+  "online_map_footer_imagery_map_data": "地圖資料 ©",
+  "online_map_footer_imagery_map_data_buddy": " Buddy市發展局轄下地政總署",
 
   "railway_route_map_title": "BUDDY市鐵路路線圖",
   "railway_route_map_subtitle": "BUDDY市鐵路發展已有十多年的歷史，線路覆蓋全市90%。無論在哪裡，都能乘坐鐵路系統，遊走於市內各處。立刻規劃精彩豐富的旅程吧！",
