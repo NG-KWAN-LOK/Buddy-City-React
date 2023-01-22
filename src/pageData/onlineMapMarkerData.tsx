@@ -10,7 +10,7 @@ const onlineMapMarkerData: IOnlineMapMarkerData = {
   onlineMapMarkerData: [
     {
       title: "online_map_spwan_point",
-      position: [56.58247765465308, -58.00131225585938],
+      position: [1.48247765465308, -58.00131225585938],
     },
   ],
 };

@@ -40,12 +40,16 @@ const OnlineMap: React.FC<OnlineMapProps> = ({}) => {
   const history = useHistory();
   const search = useLocation().search;
   const searchParams = new URLSearchParams(search);
-  const lat = searchParams.get("lat");
-  const lng = searchParams.get("lng");
+  const paramLat = searchParams.get("lat");
+  const paramLng = searchParams.get("lng");
   const { t } = useTranslation();
   const [displayPosition, setdisplayPosition] = useState<LatLngExpression>([
-    lat ? Number(lat) : onlineMapMarkerData.onlineMapMarkerData[0].position[0],
-    lng ? Number(lng) : onlineMapMarkerData.onlineMapMarkerData[0].position[1],
+    paramLat
+      ? Number(paramLat)
+      : onlineMapMarkerData.onlineMapMarkerData[0].position[0],
+    paramLng
+      ? Number(paramLng)
+      : onlineMapMarkerData.onlineMapMarkerData[0].position[1],
   ]);
   const initZoom = 4;
   const [map, setMap] = useState<L.Map | null>(null);
@@ -62,16 +66,18 @@ const OnlineMap: React.FC<OnlineMapProps> = ({}) => {
       setMapYear(year);
     }
 
-    if (lat && lng) {
-      setdisplayPosition([Number(lat), Number(lng)]);
+    if (paramLat && paramLng) {
+      setdisplayPosition([Number(paramLat), Number(paramLng)]);
     }
   }, []);
 
   useEffect(() => {
     if (reloadMap) {
-      if (lat && lng) {
-        history.push(`/online-map/${mapYear}?lat=${lat}&lng=${lng}`);
-        setdisplayPosition([Number(lat), Number(lng)]);
+      if (position) {
+        history.push(
+          `/online-map/${mapYear}?lat=${position.lat}&lng=${position.lng}`
+        );
+        setdisplayPosition([Number(position.lat), Number(position.lng)]);
       }
 
       setReloadMap(false);
@@ -83,8 +89,9 @@ const OnlineMap: React.FC<OnlineMapProps> = ({}) => {
       if (isCopyPosition) {
         setIsCopyPosition(false);
       }
-
-      setZoom(map.getZoom());
+    }, [map]);
+    const onMoveendUpdatePosition = useCallback(() => {
+      // setZoom(map.getZoom());
       setPosition(map.getCenter());
       const lat = position?.lat || displayPosition[0];
       const lng = position?.lng || displayPosition[1];
@@ -92,14 +99,13 @@ const OnlineMap: React.FC<OnlineMapProps> = ({}) => {
     }, [map]);
 
     useEffect(() => {
-      const interval = setInterval(() => {
-        map.on("move", onMove);
-      }, 1000);
+      map.on("move", onMove);
+      map.on("moveend", onMoveendUpdatePosition);
       return () => {
         map.off("move", onMove);
-        clearInterval(interval);
+        map.off("moveend", onMoveendUpdatePosition);
       };
-    }, [map, onMove]);
+    }, [map, onMove, onMoveendUpdatePosition]);
 
     // console.log("zoom: " + zoom + " " + sourceZoom, map.getBounds(), position);
     return null;
@@ -133,7 +139,7 @@ const OnlineMap: React.FC<OnlineMapProps> = ({}) => {
 
   return (
     <>
-      {map ? <DisplayPosition map={map} /> : null}
+      {map && <DisplayPosition map={map} />}
       <div className={styles.onlineMap_nav}>
         <div className={styles.Top__nav} id="nav">
           <ul className={styles.Top__nav__list}>
@@ -149,10 +155,10 @@ const OnlineMap: React.FC<OnlineMapProps> = ({}) => {
                 >
                   <g
                     fill="none"
-                    fill-rule="evenodd"
+                    fillRule="evenodd"
                     id="Page-1"
                     stroke="none"
-                    stroke-width="1"
+                    strokeWidth="1"
                   >
                     <g
                       className={styles.Top__nav__right_title_icon}
@@ -206,15 +212,15 @@ const OnlineMap: React.FC<OnlineMapProps> = ({}) => {
           <svg
             className={styles.onlineMap_copy_icon}
             xmlns="http://www.w3.org/2000/svg"
-            shape-rendering="geometricPrecision"
-            text-rendering="geometricPrecision"
-            image-rendering="optimizeQuality"
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            shapeRendering="geometricPrecision"
+            textRendering="geometricPrecision"
+            imageRendering="optimizeQuality"
+            fillRule="evenodd"
+            clipRule="evenodd"
             viewBox="0 0 469 511.53"
           >
             <path
-              fill-rule="nonzero"
+              fillRule="nonzero"
               d="M143.57 91.42h273.27c28.7 0 52.16 23.46 52.16 52.16v315.79c0 28.57-23.58 52.16-52.16 52.16H143.57c-28.69 0-52.15-23.47-52.15-52.16V143.58c0-28.72 23.44-52.16 52.15-52.16zm122.42 169.95c-9.85 13.65-30.59-1.26-20.8-14.94l18.33-25.47a59.675 59.675 0 0 1 17.1-15.96 60.646 60.646 0 0 1 22.02-8.22c16.4-2.67 32.32 1.53 44.79 10.49 12.47 8.98 21.51 22.72 24.19 39.12a60.594 60.594 0 0 1-.79 23.49 59.474 59.474 0 0 1-9.68 21.29l-18.32 25.47c-9.83 13.67-30.61-1.28-20.77-14.95l18.3-25.46c2.71-3.76 4.55-7.92 5.55-12.2 1.04-4.45 1.17-9.06.45-13.51-1.55-9.47-6.73-17.37-13.86-22.5-7.14-5.14-16.28-7.53-25.73-5.98-4.45.73-8.77 2.32-12.67 4.72a34.15 34.15 0 0 0-9.8 9.14l-18.31 25.47zm21.12 6.53c9.9-13.61 30.51 1.27 20.71 14.95l-34.04 51.43c-9.84 13.58-30.49-1.29-20.72-14.94l34.05-51.44zm6.99 74.15c9.85-13.67 30.61 1.28 20.78 14.95l-17.97 24.98c-4.74 6.58-10.59 11.94-17.11 15.96a60.398 60.398 0 0 1-22.02 8.22c-16.4 2.67-32.31-1.53-44.78-10.49-12.47-8.97-21.51-22.72-24.19-39.12a60.45 60.45 0 0 1 .78-23.46 59.833 59.833 0 0 1 9.69-21.27l18.01-25.09c9.87-13.59 30.54 1.35 20.75 14.99l-17.98 24.99a33.93 33.93 0 0 0-5.56 12.19 34.893 34.893 0 0 0-.43 13.5l.01.07c1.54 9.43 6.71 17.32 13.84 22.44 7.13 5.13 16.24 7.53 25.69 6l.07-.02c4.44-.73 8.76-2.32 12.63-4.71 3.74-2.3 7.1-5.37 9.81-9.14l17.98-24.99zm-257.52 8.77c0 10.1-8.19 18.29-18.29 18.29S0 360.92 0 350.82V52.16C0 23.44 23.44 0 52.16 0h273.26c10.1 0 18.29 8.19 18.29 18.29s-8.19 18.29-18.29 18.29H52.16c-8.54 0-15.58 7.04-15.58 15.58v298.66zM416.84 128H143.57c-8.53 0-15.57 7.04-15.57 15.58v315.79c0 8.52 7.06 15.58 15.57 15.58h273.27c8.59 0 15.58-6.99 15.58-15.58V143.58c0-8.52-7.06-15.58-15.58-15.58z"
             />
           </svg>
