@@ -19,10 +19,12 @@ import BCCTBContainer from "../../components/SimplePage/Container/BCCTBContainer
 
 import bcctbAboutUsSideMenuData from "../../pageData/bcctbAboutUsSideMenuData";
 import DiscoveryPage from "../DiscoveryPage";
-import BasicCategory from "../BasicCategory";
+import GeneralCategory from "../GeneralCategory";
 import SubwayInfoPageContainer from "../SubwayInfoPageContainer";
 import RailwayHistoryPageContainer from "../RailwayHistoryPageContainer";
 import RailwayRouteMapPageContainer from "../RailwayRouteMapPageContainer";
+
+import basicPageData from "../../pageData/basicPageData";
 
 import OnlineMap from "../OnlineMap";
 
@@ -90,7 +92,8 @@ function App() {
             />
           </Route>
           <Route path='/page/basic/:pagename'>
-            <BasicCategory
+            <GeneralCategory
+              generalCategoryData={basicPageData}
               sideMenu={<SideMenu buttonData={bcctbAboutUsSideMenuData} />}
             />
           </Route>

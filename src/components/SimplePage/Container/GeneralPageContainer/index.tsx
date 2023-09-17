@@ -4,26 +4,14 @@ import buddyCitySong from "../../../../media/BuddyCitySong.m4a";
 import VideoPlayer from "../../../VideoPlayer";
 
 import { useTranslation } from "react-i18next";
+import { GeneralPageData } from "../../../../interface/GeneralPage";
 
-interface BasicCategoryContainerProps {
-  basicCategoryData: {
-    pageTitle: string;
-    pageSubtitle: string;
-    contentName: string;
-    contentData: {
-      contentType: "title" | "text" | "table" | "musicPlayer";
-      contentText?: string;
-      tableTR?: {
-        tableTD: {
-          tableTDText: string;
-        }[];
-      }[];
-    }[];
-  };
+interface GeneralPageContainerProps {
+  generalPageData: GeneralPageData;
 }
 
-const BasicCategoryContainer: React.FC<BasicCategoryContainerProps> = ({
-  basicCategoryData,
+const GeneralPageContainer: React.FC<GeneralPageContainerProps> = ({
+  generalPageData,
 }) => {
   const { t, i18n } = useTranslation();
   const language = i18n.language;
@@ -99,30 +87,30 @@ const BasicCategoryContainer: React.FC<BasicCategoryContainerProps> = ({
   };
   return (
     <>
-      <div className={styles.BasicCategoryContainer__title__content}>
-        <div className={styles.BasicCategoryContainer__title} id="title">
-          {t(basicCategoryData.pageTitle)}
+      <div className={styles.GeneralPageContainer__title__content}>
+        <div className={styles.GeneralPageContainer__title} id='title'>
+          {t(generalPageData.pageTitle)}
         </div>
         <div
-          className={styles.BasicCategoryContainer__content__subTitle}
-          id="subtitle"
+          className={styles.GeneralPageContainer__content__subTitle}
+          id='subtitle'
         >
-          {t(basicCategoryData.pageSubtitle)}
+          {t(generalPageData.pageSubtitle)}
         </div>
-        <div className={styles.BasicCategoryContainer__title__banner}>
+        <div className={styles.GeneralPageContainer__title__banner}>
           <img
-            className={styles.BasicCategoryContainer__title__banner_img}
+            className={styles.GeneralPageContainer__title__banner_img}
             src={""}
           />
         </div>
       </div>
-      <div className={styles.BasicCategoryContainer__content}>
-        {basicCategoryData.contentData.map((data, index) => {
+      <div className={styles.GeneralPageContainer__content}>
+        {generalPageData.contentData.map((data, index) => {
           if (data.contentType === "title") {
             return (
               <div
                 key={index}
-                className={styles.BasicCategoryContainer__content__subTitle}
+                className={styles.GeneralPageContainer__content__subTitle}
               >
                 {t(String(data.contentText))}
               </div>
@@ -132,7 +120,7 @@ const BasicCategoryContainer: React.FC<BasicCategoryContainerProps> = ({
             return (
               <div
                 key={index}
-                className={styles.BasicCategoryContainer__content__text}
+                className={styles.GeneralPageContainer__content__text}
               >
                 {t(String(data.contentText))}
               </div>
@@ -141,9 +129,9 @@ const BasicCategoryContainer: React.FC<BasicCategoryContainerProps> = ({
           if (data.contentType === "musicPlayer") {
             return <VideoPlayer src={buddyCitySong} />;
           }
-          if (basicCategoryData.contentName === "legal-holiday")
+          if (generalPageData.contentName === "legal-holiday")
             return renderLegalHolidayTable(data, index);
-          if (basicCategoryData.contentName === "background")
+          if (generalPageData.contentName === "background")
             return renderTimeSystemTable(data, index);
           return null;
         })}
@@ -152,4 +140,4 @@ const BasicCategoryContainer: React.FC<BasicCategoryContainerProps> = ({
   );
 };
 
-export default BasicCategoryContainer;
+export default GeneralPageContainer;

@@ -1,21 +1,6 @@
-interface IBasicPageData {
-  [index: string]: {
-    pageTitle: string;
-    pageSubtitle: string;
-    contentName: string;
-    contentData: {
-      contentType: "title" | "text" | "table" | "musicPlayer";
-      contentText?: string;
-      tableTR?: {
-        tableTD: {
-          tableTDText: string;
-        }[];
-      }[];
-    }[];
-  };
-}
+import { GeneralCategoryData } from "../interface/GeneralPage";
 
-const BasicPageData: IBasicPageData = {
+const BasicPageData: GeneralCategoryData = {
   background: {
     pageTitle: "discover_content_atoppadding_background",
     pageSubtitle: "discover_content_apadding_background",

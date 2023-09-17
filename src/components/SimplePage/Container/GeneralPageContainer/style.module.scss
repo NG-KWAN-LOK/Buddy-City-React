@@ -1,7 +1,7 @@
 @import "../../../../utils/theme.scss";
 
-.BasicCategoryContainer__title__content {
-  .BasicCategoryContainer__title {
+.GeneralPageContainer__title__content {
+  .GeneralPageContainer__title {
     padding: 16px 0 15px 0;
     font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
     font-style: normal;
@@ -13,7 +13,7 @@
     border-bottom: 1px solid var(--border-bottom-color);
     margin-bottom: 30px;
   }
-  .BasicCategoryContainer__content__subTitle {
+  .GeneralPageContainer__content__subTitle {
     color: var(--title-color);
     font-weight: 300;
     font-size: 18px;
@@ -21,26 +21,26 @@
     border-bottom: 1px solid var(--border-bottom-color);
     padding-bottom: 30px;
   }
-  .BasicCategoryContainer__title__banner {
+  .GeneralPageContainer__title__banner {
     width: 100%;
     display: flex;
     justify-content: center;
   }
-  .BasicCategoryContainer__title__banner_img {
+  .GeneralPageContainer__title__banner_img {
     width: 100%;
     max-width: 500px;
     object-fit: cover;
   }
   @media only screen and (max-width: 550px) {
-    .BasicCategoryContainer__title {
+    .GeneralPageContainer__title {
       font-size: 2em;
       text-align: left;
     }
   }
 }
-.BasicCategoryContainer__content {
+.GeneralPageContainer__content {
   padding: 20px 0;
-  .BasicCategoryContainer__content__subTitle {
+  .GeneralPageContainer__content__subTitle {
     width: 100%;
     line-height: 28px;
     padding: 20px 0;
@@ -49,7 +49,7 @@
     color: var(--subtitle-bg);
     font-size: 28px;
   }
-  .BasicCategoryContainer__content__text {
+  .GeneralPageContainer__content__text {
     font-weight: 300;
     color: var(--title-color);
     font-size: 18px;
@@ -57,11 +57,11 @@
     margin-top: 15px;
   }
   @media only screen and (max-width: 550px) {
-    .BasicCategoryContainer__content__subTitle {
+    .GeneralPageContainer__content__subTitle {
       font-size: 23px;
       padding: 15px 0px;
     }
-    .BasicCategoryContainer__content__text {
+    .GeneralPageContainer__content__text {
       font-size: 16px;
     }
   }
@@ -113,7 +113,7 @@
   }
 }
 
-.BasicCategoryContainer__content__route_container {
+.GeneralPageContainer__content__route_container {
   width: 100%;
   .line {
     width: 100%;
@@ -127,23 +127,23 @@
     }
   }
 }
-.BasicCategoryContainer__content__route {
+.GeneralPageContainer__content__route {
   display: flex;
   width: 100%;
   margin-top: 30px;
   align-items: center;
-  .BasicCategoryContainer__content__route_left {
+  .GeneralPageContainer__content__route_left {
     display: flex;
     align-items: center;
     width: 100%;
     max-width: 128px;
     margin-right: 10px;
-    .BasicCategoryContainer__content__route_left_logo {
+    .GeneralPageContainer__content__route_left_logo {
       object-fit: cover;
     }
   }
-  .BasicCategoryContainer__content__route_right {
-    .BasicCategoryContainer__content__route_right_subTitle {
+  .GeneralPageContainer__content__route_right {
+    .GeneralPageContainer__content__route_right_subTitle {
       width: 100%;
       line-height: 28px;
       font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
@@ -151,7 +151,7 @@
       color: var(--subtitle-bg);
       font-size: 23px;
     }
-    .BasicCategoryContainer__content__route_right_text {
+    .GeneralPageContainer__content__route_right_text {
       font-weight: 300;
       color: var(--title-color);
       font-size: 18px;
@@ -160,10 +160,10 @@
     }
     @media only screen and (max-width: 550px) {
       margin-top: 20px;
-      .BasicCategoryContainer__content__route_right_subTitle {
+      .GeneralPageContainer__content__route_right_subTitle {
         font-size: 23px;
       }
-      .BasicCategoryContainer__content__route_right_text {
+      .GeneralPageContainer__content__route_right_text {
         font-size: 16px;
       }
     }
