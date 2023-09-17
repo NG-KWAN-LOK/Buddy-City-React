@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 
 interface InfoPopUpProps {
   setPopUpOff: () => void;
-  title: string;
+  title?: string;
   children?: React.ReactNode;
   to: string;
 }
@@ -20,8 +20,17 @@ const InfoPopUp: React.FC<InfoPopUpProps> = ({
   const { t } = useTranslation();
   const history = useHistory();
   return (
-    <div className={styles.residentPopUpLayer} id='residentPopUpLayer'>
-      <div className={styles.residentPopUpLayer__container}>
+    <div
+      className={styles.residentPopUpLayer}
+      id='residentPopUpLayer'
+      onClick={setPopUpOff}
+    >
+      <div
+        className={styles.residentPopUpLayer__container}
+        onClick={(e: React.MouseEvent) => {
+          e.stopPropagation();
+        }}
+      >
         <div
           className={styles.residentPopUpLayer_closeLayer}
           onClick={() => {
@@ -29,14 +38,16 @@ const InfoPopUp: React.FC<InfoPopUpProps> = ({
             setPopUpOff();
           }}
         ></div>
-        <div className={styles.data_username_title} id='data_username_title'>
-          {title === "error" ? "" : title}
-        </div>
+        {title && (
+          <div className={styles.data_username_title} id='data_username_title'>
+            {title === "error" ? "" : title}
+          </div>
+        )}
         <div
           className={styles.residentPopUpLayer__container__main}
           id='residentPopUpLayer__container__main'
         >
-          {title === "error" ? (
+          {title && title === "error" ? (
             <div className={styles.residentPopUpLayer__container__error}>
               <div
                 className={styles.residentPopUpLayer__container__error__title}

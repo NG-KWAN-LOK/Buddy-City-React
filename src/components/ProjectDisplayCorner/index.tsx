@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useState, useCallback } from "react";
+import { useLocation } from "react-router-dom";
+
 import styles from "./style.module.scss";
 
 import MediumIcon from "../MediumIcon";
 
 import { useTranslation } from "react-i18next";
+import InfoPopUp from "../InfoPopUp";
+import ImagePopUp from "../InfoPopUp/ImagePopUp";
+import { useQuery } from "../../utils/useQuery";
 
 interface IImgData {
   image1: string;
@@ -22,6 +27,11 @@ const ProjectDisplayCorner: React.FC<ProjectDisplayCornerProps> = ({
   imgData,
 }) => {
   const { t } = useTranslation();
+  const [isPopUpOn, setPopUpOn] = useState(false);
+  const PopUpToggleOn = useCallback(() => setPopUpOn(true), []);
+  const PopUpToggleOff = useCallback(() => setPopUpOn(false), []);
+  const queryString = useQuery();
+
   return (
     <div className={styles.reality_project}>
       <div className={styles.reality_project__box}>
@@ -41,13 +51,24 @@ const ProjectDisplayCorner: React.FC<ProjectDisplayCornerProps> = ({
                 }`}
                 imgSrc={data.image1}
                 topText={t("reality_project_zoom_in")}
-                to='/'
-                setPopUpOn={() => {}}
+                to={`/?reality-project-index=${index}`}
+                setPopUpOn={PopUpToggleOn}
               />
             );
           })}
         </div>
       </div>
+      {isPopUpOn && (
+        <InfoPopUp title='' setPopUpOff={PopUpToggleOff} to='/'>
+          {queryString && (
+            <ImagePopUp
+              src={
+                imgData[queryString.get("reality-project-index") ?? 0].image2
+              }
+            />
+          )}
+        </InfoPopUp>
+      )}
     </div>
   );
 };
