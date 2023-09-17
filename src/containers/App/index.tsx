@@ -31,8 +31,12 @@ function App() {
   const { pathname } = useLocation();
   const { t, i18n } = useTranslation();
   const appName = t("title");
+
   useEffect(() => {
     window.scrollTo(0, 0);
+  }, [pathname]);
+
+  useEffect(() => {
     if (pathname === "/") document.title = appName;
     else if (pathname.includes("/building_list")) return;
     else if (pathname.includes("/resident")) return;
@@ -58,7 +62,7 @@ function App() {
       <div className={styles.content}>
         <Header />
         <Switch>
-          <Route exact path="/">
+          <Route exact path='/'>
             <Dashboard />
           </Route>
           <Route path={["/resident/:username", "/resident"]}>
@@ -73,29 +77,29 @@ function App() {
           >
             <BuildingList />
           </Route>
-          <Route path="/bcctb-about-us">
+          <Route path='/bcctb-about-us'>
             <SimplePageContainer
               contain={<BCCTBContainer />}
               sideMenu={<SideMenu buttonData={bcctbAboutUsSideMenuData} />}
             />
           </Route>
-          <Route path="/tnc">
+          <Route path='/tnc'>
             <SimplePageContainer
               contain={<TNCContainer />}
               sideMenu={<SideMenu buttonData={bcctbAboutUsSideMenuData} />}
             />
           </Route>
-          <Route path="/page/basic/:pagename">
+          <Route path='/page/basic/:pagename'>
             <BasicCategory
               sideMenu={<SideMenu buttonData={bcctbAboutUsSideMenuData} />}
             />
           </Route>
-          <Route path="/page/subway-info/:pagename">
+          <Route path='/page/subway-info/:pagename'>
             <SubwayInfoPageContainer
               sideMenu={<SideMenu buttonData={bcctbAboutUsSideMenuData} />}
             />
           </Route>
-          <Route path="/page/:pagename">
+          <Route path='/page/:pagename'>
             <DiscoveryPage />
           </Route>
           <Route
@@ -108,7 +112,7 @@ function App() {
               sideMenu={<SideMenu buttonData={bcctbAboutUsSideMenuData} />}
             />
           </Route>
-          <Route path="/railway-route-map">
+          <Route path='/railway-route-map'>
             <RailwayRouteMapPageContainer
               sideMenu={<SideMenu buttonData={bcctbAboutUsSideMenuData} />}
             />
@@ -117,7 +121,7 @@ function App() {
             <OnlineMap />
           </Route>
           <Route path={["/page", "/subway-info", "/history"]}>
-            <Redirect to="/" />
+            <Redirect to='/' />
           </Route>
         </Switch>
         <Footer />

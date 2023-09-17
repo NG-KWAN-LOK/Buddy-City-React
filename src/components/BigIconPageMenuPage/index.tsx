@@ -73,9 +73,9 @@ const BigIconPageMenuPage: React.FC<BigIconPageMenuPageProps> = ({
     "December",
   ];
 
-  const getRow = (data: IMajorEventData) => {
+  const getRow = (data: IMajorEventData, index: number) => {
     const rowElement: React.ReactElement = (
-      <>
+      <React.Fragment key={`row-${index}`}>
         <div
           className={`${
             data.type !== "pointer" &&
@@ -101,7 +101,7 @@ const BigIconPageMenuPage: React.FC<BigIconPageMenuPageProps> = ({
           {language === "en" && data.eng_name}
           {language === "jp" && data.jp_name}
         </li>
-      </>
+      </React.Fragment>
     );
     if (data.type === "internal") {
       return (
@@ -244,9 +244,9 @@ const BigIconPageMenuPage: React.FC<BigIconPageMenuPageProps> = ({
               {majorEvents.data
                 .slice(0)
                 .reverse()
-                .map((data) => {
+                .map((data, index) => {
                   if (data.display) {
-                    return getRow(data);
+                    return getRow(data, index);
                   }
                   return null;
                 })}

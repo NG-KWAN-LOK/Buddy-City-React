@@ -57,7 +57,6 @@ i {
 html {
   font-size: 10px;
   height: 100%;
-  scroll-behavior: smooth;
 }
 html body {
   background-size: cover;
