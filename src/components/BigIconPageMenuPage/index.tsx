@@ -97,7 +97,9 @@ const BigIconPageMenuPage: React.FC<BigIconPageMenuPageProps> = ({
         <li
           className={`${styles["discover__news_display_table_col"]} ${styles["discover__news_display_table_col-second"]}`}
         >
-          {data.zh_name}
+          {language === "zh" && data.zh_name}
+          {language === "en" && data.eng_name}
+          {language === "jp" && data.jp_name}
         </li>
       </>
     );
@@ -146,7 +148,7 @@ const BigIconPageMenuPage: React.FC<BigIconPageMenuPageProps> = ({
                 <li>{monthList[today.month]}</li>
               </ul>
               <Link
-                to="/page/basic/background"
+                to='/page/basic/background'
                 title={t("const_buddy_time_name")}
                 className={styles.discover__news__dayHeader_weatherTime}
               >
@@ -197,7 +199,7 @@ const BigIconPageMenuPage: React.FC<BigIconPageMenuPageProps> = ({
                   </li>
                   <li>
                     {language === "en"
-                      ? `BUDDY Day${gameToday.day != 1 && "s"}`
+                      ? `BUDDY Day${gameToday.day !== 1 ? "s" : ""}`
                       : "友日"}
                   </li>
                 </div>
