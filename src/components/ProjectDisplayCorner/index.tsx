@@ -8,7 +8,7 @@ import MediumIcon from "../MediumIcon";
 import { useTranslation } from "react-i18next";
 import InfoPopUp from "../InfoPopUp";
 import ImagePopUp from "../InfoPopUp/ImagePopUp";
-import { useQuery } from "../../utils/useQuery";
+import { useQuery } from "../../hook/useQuery";
 
 interface IImgData {
   image1: string;
