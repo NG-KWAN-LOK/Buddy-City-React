@@ -25,7 +25,8 @@ import RailwayHistoryPageContainer from "../RailwayHistoryPageContainer";
 import RailwayRouteMapPageContainer from "../RailwayRouteMapPageContainer";
 
 import basicPageData from "../../pageData/basicPageData";
-
+import { activityPageData } from "../../pageData/activityPageData";
+import { toDoPageDataData } from "../../pageData/toDoPageData";
 import OnlineMap from "../OnlineMap";
 
 function App() {
@@ -94,6 +95,18 @@ function App() {
           <Route path='/page/basic/:pagename'>
             <GeneralCategory
               generalCategoryData={basicPageData}
+              sideMenu={<SideMenu buttonData={bcctbAboutUsSideMenuData} />}
+            />
+          </Route>
+          <Route path='/page/activity/:pagename'>
+            <GeneralCategory
+              generalCategoryData={activityPageData}
+              sideMenu={<SideMenu buttonData={bcctbAboutUsSideMenuData} />}
+            />
+          </Route>
+          <Route path='/page/to-do/:pagename'>
+            <GeneralCategory
+              generalCategoryData={toDoPageDataData}
               sideMenu={<SideMenu buttonData={bcctbAboutUsSideMenuData} />}
             />
           </Route>
