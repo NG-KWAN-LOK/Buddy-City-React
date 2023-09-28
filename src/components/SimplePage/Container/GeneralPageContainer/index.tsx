@@ -126,6 +126,32 @@ const GeneralPageContainer: React.FC<GeneralPageContainerProps> = ({
               </div>
             );
           }
+          if (data.contentType === "image") {
+            return (
+              <div
+                key={index}
+                className={styles.GeneralPageContainer__content__image}
+                style={
+                  data.center && {
+                    "justify-content": "center",
+                    "align-items": "center",
+                  }
+                }
+              >
+                <div
+                  className={styles.GeneralPageContainer__content_contain}
+                  style={data.style}
+                >
+                  <img
+                    src={data.src}
+                    className={
+                      styles.GeneralPageContainer__content__image_container_img
+                    }
+                  />
+                </div>
+              </div>
+            );
+          }
           if (data.contentType === "musicPlayer") {
             return <VideoPlayer src={buddyCitySong} />;
           }

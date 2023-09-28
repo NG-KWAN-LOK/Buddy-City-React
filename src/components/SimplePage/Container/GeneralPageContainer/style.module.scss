@@ -56,6 +56,18 @@
     white-space: pre-wrap;
     margin-top: 15px;
   }
+  .GeneralPageContainer__content__image{
+    display: flex;
+    width: 100%;
+    margin: 15px 0;
+    .GeneralPageContainer__content_contain{
+      display: flex;
+      .GeneralPageContainer__content__image_container_img{
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
   @media only screen and (max-width: 550px) {
     .GeneralPageContainer__content__subTitle {
       font-size: 23px;
