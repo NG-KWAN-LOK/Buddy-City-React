@@ -88,15 +88,19 @@ const GeneralPageContainer: React.FC<GeneralPageContainerProps> = ({
   return (
     <>
       <div className={styles.GeneralPageContainer__title__content}>
-        <div className={styles.GeneralPageContainer__title} id='title'>
-          {t(generalPageData.pageTitle)}
-        </div>
-        <div
-          className={styles.GeneralPageContainer__content__subTitle}
-          id='subtitle'
-        >
-          {t(generalPageData.pageSubtitle)}
-        </div>
+        {generalPageData.pageTitle.length > 0 && (
+          <div className={styles.GeneralPageContainer__title} id='title'>
+            {t(generalPageData.pageTitle)}
+          </div>
+        )}
+        {generalPageData.pageSubtitle.length > 0 && (
+          <div
+            className={styles.GeneralPageContainer__content__subTitle}
+            id='subtitle'
+          >
+            {t(generalPageData.pageSubtitle)}
+          </div>
+        )}
         <div className={styles.GeneralPageContainer__title__banner}>
           <img
             className={styles.GeneralPageContainer__title__banner_img}

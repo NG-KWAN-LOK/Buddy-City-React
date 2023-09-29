@@ -81,7 +81,7 @@
   "discover_row_subtitle_method": "ここはいくつの快適、便利なつく方法があります。",
   "discover_subtitle_method": "BUDDY市をつく方",
   "discover_content_atoppadding_airport": "空港",
-  "discover_content_atoppadding_dock": "港",
+  "discover_content_atoppadding_dock": "埠頭",
   "discover_content_atoppadding_land": "陸路",
   "discover_content_atoppadding_portal": "ポータル",
 
@@ -202,6 +202,19 @@
   "play_country_taipei_content": "「台北区」は2018年11月9日に定義された行政区域で、台湾の台北市をモデルにした建築物が集まっています。Buddy病院（台安病院）、台北101などが含まれます。",
   "play_country_kyoto": "京都区",
   "play_country_kyoto_content": "「京都区」は2022年6月22日に定義された行政区域で、日本の京都府をモデルにした建築物が集まっています。法観寺（八坂塔）、清水坂、音羽山清水寺などが含まれます。",
+
+  "how_to_visit_airport": "Buddy市Kai国際空港",
+  "how_to_visit_airport_content": "2017年5月16日に完成したBuddy市Kai国際空港は、軍民共用の空港です。アスファルト舗装された滑走路2本と駐機場2つを備え、Buddy市への訪問者だけでなく、貨物輸送および空軍用途も提供しています。",
+  "how_to_visit_dock": "Buddy市立埠頭",
+  "how_to_visit_dock_content": "2017年5月1日に完成したBuddy市立埠頭は、旅客と貨物のためのドックです。訪問者はここから客船でBuddy市にアクセスでき、貨物輸送も行っています。",
+  "how_to_visit_land": "青馬大橋",
+  "how_to_visit_land_content": "2017年5月20日に完成した有料の市をまたぐ橋で、新しいBuddy市や他の場所とを結びます。",
+  "how_to_visit_spawn_point": "リスポーンポイント",
+  "how_to_visit_spawn_point_content": "次元を越えてBuddy市に初めて入る訪問者は、ポータルに入り、通称「リスポーンポイント」と呼ばれる場所に移動します。現在のリスポーンポイントは中央区の噴水プールにあります。",
+  "how_to_visit_hell_portal": "ネザーポータル",
+  "how_to_visit_hell_portal_content": "歴史書によると、Buddy市にはかつて「ネザー」と呼ばれる場所へ行くためのポータルが存在したと記録されていますが、現在ではそのポータルの場所は見つかっておらず、「ネザー」のポータルはBuddy市の謎の一つとなっています。この記録から、同時に「天国」のポータルも存在すると考える人もいますが、「天国」のポータルに関する証拠は見つかっておらず、その存在は「ネザー」のポータルよりもさらに神秘的です。",
+  "how_to_visit_end_portal": "エンドポータル",
+  "how_to_visit_end_portal_content": "書物によれば、この世界の地下には要塞があり、その中に「エンド」へのポータルがある部屋があります。要塞の正確な場所はかつて先駆者によって発見され、エンドポータルが見つかりましたが、その時に詳細を知っていた先駆者の大部分はすでに移住しており、現在も新しい専門家や人々がエンドポータルの場所を見つけることはできていません。ただし、確認できることは「エンド」ポータルがBuddy市の境界外にあり、非常に遠くの場所にあるということです。",
 
   "reality_project_title": "REALITY PROJECT",
   "reality_project_zoom_in": "拡大表示",
