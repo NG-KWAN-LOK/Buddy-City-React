@@ -94,6 +94,21 @@ const NavBar: React.FC<NavBarProps> = ({
           </a>
           <Link
             className={styles.PhoneTop__mainnav__container__col__a}
+            to='/railway-route-map'
+            onClick={setMobileNavOff}
+          >
+            <div className={styles.PhoneTop__mainnav__container__col__a__menu}>
+              <i
+                aria-hidden='true'
+                className={styles["ion-android-arrow-dropdown"]}
+              ></i>
+              <span id='topFooterLang_topRouteMap'>
+                {t("topFooterLang_topRouteMap")}
+              </span>
+            </div>
+          </Link>
+          <Link
+            className={styles.PhoneTop__mainnav__container__col__a}
             to='/building_list'
             onClick={setMobileNavOff}
           >

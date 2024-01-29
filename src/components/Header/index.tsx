@@ -131,6 +131,17 @@ const Header = () => {
                       </a>
                     </div>
                     <div className={styles.Top__nav__left_subtitle}>
+                      <Link to='/railway-route-map'>
+                        <i
+                          aria-hidden='true'
+                          className={styles["ion-android-arrow-dropdown"]}
+                        ></i>
+                        <span id='topFooterLang_topRouteMap'>
+                          {t("topFooterLang_topRouteMap")}
+                        </span>
+                      </Link>
+                    </div>
+                    <div className={styles.Top__nav__left_subtitle}>
                       <Link to='/building_list'>
                         <i
                           aria-hidden='true'
