@@ -21,6 +21,52 @@
     border-bottom: 1px solid var(--border-bottom-color);
     padding-bottom: 30px;
   }
+  .railwayHistory__route_search {
+    border-bottom: 1px solid var(--border-bottom-color);
+    padding-bottom: 30px;
+    .railwayHistory__route_search_title {
+      width: 100%;
+      line-height: 28px;
+      padding: 20px 0;
+      font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
+      font-weight: 500;
+      color: var(--subtitle-bg);
+      font-size: 28px;
+    }
+    .railwayHistory__route_search_autocomplete {
+      align-items: center;
+      width: 100%;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      .railwayHistory__route_search_autocomplete_item {
+        display: flex;
+        .railwayHistory__route_search_autocomplete_item_text {
+          display: flex;
+          align-items: center;
+          font-weight: 300;
+          color: var(--title-color);
+          font-size: 18px;
+          vertical-align: 0;
+          margin-right: 8px;
+        }
+      }
+    }
+    .railwayHistory__route_search_button {
+      padding-top: 20px;
+    }
+
+    @media only screen and (max-width: 1280px) {
+      .railwayHistory__route_search_autocomplete {
+        .railwayHistory__route_search_autocomplete_item {
+          display: block;
+          .railwayHistory__route_search_autocomplete_item_text {
+            margin-bottom: 8px;
+          }
+        }
+      }
+    }
+  }
   .railwayHistroy__title__map {
     display: flex;
     width: 100%;

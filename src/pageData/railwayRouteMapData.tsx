@@ -1,6 +1,6 @@
 import image from "../image/merto-map/21.png";
 
-import routeMap from "../image/merto-map/21Metro路面電車第九期市營地下鐵雙京坂線第三期御堂筋線第一期阪源綠地線更名20220807.pdf";
+import routeMap from "../image/merto-map/21Metro路面電車第九期市營地下鐵雙京坂線第三期御堂筋線第一期阪源綠地線更名修訂版20220807.pdf";
 
 export interface IRailwayRouteMapData {
   image: string;

@@ -1,0 +1,37 @@
+@import "../../../../../utils/theme.scss";
+
+.show_recommend_route {
+  padding: 16px 0 0 0;
+  font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  color: var(--title-color);
+  text-decoration: none;
+  font-variant: normal;
+  font-size: 2.5em;
+}
+
+.show_recommend_route__station {
+  color: var(--title-color);
+  font-weight: 300;
+  font-size: 18px;
+  vertical-align: 0;
+}
+
+.show_recommend_route_line {
+  display: flex;
+  align-items: center;
+  margin-top: 4px;
+  .show_recommend_route_line_logo {
+    width: 37px;
+    height: 37px;
+    margin-right: 8px;
+  }
+  .show_recommend_route_line_text {
+    font-weight: 300;
+    font-size: 15px;
+    vertical-align: 0;
+    padding: 8px;
+    border-radius: 5px;
+  }
+}
