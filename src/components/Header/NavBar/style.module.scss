@@ -1,6 +1,6 @@
 @import "../../../utils/theme.scss";
 .PhoneTop__mainnav__container {
-  z-index: 2;
+  z-index: 9999;
   display: flex;
   position: fixed;
   justify-content: space-between;
@@ -10,7 +10,7 @@
   transition: 0.5s;
   transform: translateX(-1000px);
   &-open {
-    z-index: 2;
+    z-index: 9999;
     display: flex;
     position: fixed;
     justify-content: space-between;
