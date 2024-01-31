@@ -1,6 +1,6 @@
 import { RecommendRoute } from "../interface/RecommendRoute";
 import {
-  INTERCHANGE_STATION,
+  CONST_INTERCHANGE_LINE,
   RailwayLines,
   WALK_LINE,
 } from "../pageData/railwayRouteData";
@@ -47,8 +47,11 @@ export const findRoute = (
 
     if (station === endStation) {
       path = path.map((item, index) => {
-        if (item.station === INTERCHANGE_STATION) {
+        if (item.line === CONST_INTERCHANGE_LINE) {
           path[index - 1].interchange = true;
+        }
+        if (item.line[item.line.length - 1] === "1") {
+          item.line = item.line.slice(0, item.line.length - 1);
         }
         return item;
       });
@@ -62,13 +65,33 @@ export const findRoute = (
 
       path = path.filter((item, index) => {
         if (
-          item.station === INTERCHANGE_STATION &&
-          path[index - 1].station === INTERCHANGE_STATION
+          item.line === CONST_INTERCHANGE_LINE &&
+          path[index - 1].line === CONST_INTERCHANGE_LINE
         ) {
           return false;
         }
         return true;
       });
+
+      if (path.length > 1) {
+        if (path[1].line === CONST_INTERCHANGE_LINE) {
+          path[1].station = WALK_LINE;
+        }
+
+        if (path[path.length - 1].line === CONST_INTERCHANGE_LINE) {
+          path[path.length - 1].station = WALK_LINE;
+        }
+      }
+
+      // if path length is 1, concat one walk line
+      if (path.length === 1) {
+        path = path.concat({
+          station: WALK_LINE,
+          line: CONST_INTERCHANGE_LINE,
+          interchange: true,
+          showLine: false,
+        });
+      }
 
       return path.concat({ station, line, interchange, showLine });
     }
@@ -118,8 +141,8 @@ export const findRoute = (
           visited.add(nextKey);
           // 在轉換前加入“走路”的記錄
           let interchangePath = currentPath.concat({
-            station: INTERCHANGE_STATION,
-            line: INTERCHANGE_STATION,
+            station: otherLine,
+            line: CONST_INTERCHANGE_LINE,
             interchange: true,
             showLine: false,
           });
