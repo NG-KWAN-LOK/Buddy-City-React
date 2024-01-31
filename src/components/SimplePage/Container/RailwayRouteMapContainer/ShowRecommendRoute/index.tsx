@@ -4,12 +4,12 @@ import { styled, List, ListItem, ListItemText } from "@mui/material";
 
 import { useTranslation } from "react-i18next";
 import {
-  INTERCHANGE_STATION,
+  CONST_INTERCHANGE_LINE,
+  CONST_INTERCHANGE_WALK,
+  CONST_TRANSFER,
   RailwayLineBackGroundColors,
   RailwayLineImage,
-  RailwayLineOption,
   WALK_LINE,
-  railwayLines,
 } from "../../../../../pageData/railwayRouteData";
 import { RecommendRoute } from "../../../../../interface/RecommendRoute";
 import { getTextColor } from "../../../../../utils/getTextColor";
@@ -83,7 +83,7 @@ const StyledInterchangeListItem = styled(ListItem, {
     background,
     position: "absolute",
     left: 8,
-    top: 30,
+    top: 32,
     height: "100%",
   },
 }));
@@ -116,8 +116,8 @@ const StyledWalkListItem = styled(ListItem, {
     backgroundColor: "#fff",
     position: "absolute",
     left: 8,
-    top: -30,
-    height: "230%",
+    top: -28,
+    height: "205%",
     zIndex: 2,
   },
 }));
@@ -138,25 +138,23 @@ const Station: React.FC<{
         <div className={styles.show_recommend_route__station}>
           {t(station.station)}
         </div>
-        <div className={styles.show_recommend_route_line}>
-          {station.showLine && !station.line.includes(WALK_LINE) && (
-            <>
-              <img
-                className={styles.show_recommend_route_line_logo}
-                src={RailwayLineImage[station.line]}
-              />
-              <div
-                className={styles.show_recommend_route_line_text}
-                style={{
-                  background,
-                  color: getTextColor(background),
-                }}
-              >
-                {t(station.line)}
-              </div>
-            </>
-          )}
-        </div>
+        {station.showLine && !station.line.includes(WALK_LINE) && (
+          <div className={styles.show_recommend_route_line}>
+            <img
+              className={styles.show_recommend_route_line_logo}
+              src={RailwayLineImage[station.line]}
+            />
+            <div
+              className={styles.show_recommend_route_line_text}
+              style={{
+                background,
+                color: getTextColor(background),
+              }}
+            >
+              {t(station.line)}
+            </div>
+          </div>
+        )}
       </div>
     </StyledStationListItem>
   );
@@ -167,6 +165,9 @@ const Walk: React.FC<{ station: RecommendRoute; background: string }> = ({
   background,
 }) => {
   const { t } = useTranslation();
+
+  console.log("station", station);
+
   return (
     <StyledWalkListItem background={background}>
       <div className={styles.show_recommend_route_line}>
@@ -181,8 +182,26 @@ const Walk: React.FC<{ station: RecommendRoute; background: string }> = ({
             color: getTextColor(background),
           }}
         >
-          {t(station.station)}
+          {station.station.includes(WALK_LINE) &&
+          !station.station.includes("station") &&
+          station.station.length > WALK_LINE.length
+            ? t(CONST_TRANSFER)
+            : station.station.includes(WALK_LINE) &&
+              !station.station.includes("station")
+            ? t(CONST_INTERCHANGE_WALK)
+            : t(CONST_INTERCHANGE_LINE)}
         </div>
+        {station.station.includes("discounted") && (
+          <div
+            className={styles.show_recommend_route_line_text}
+            style={{
+              background: "#c0f5e4",
+              color: getTextColor("#c0f5e4"),
+            }}
+          >
+            {t("const_interchange_discount")}
+          </div>
+        )}
       </div>
     </StyledWalkListItem>
   );
@@ -228,31 +247,103 @@ const ShowRecommendRoute: React.FC<ShowRecommendRouteProps> = ({
   recommendRoute,
 }) => {
   const { t } = useTranslation();
+  const [routeDescription, setRouteDescription] = useState<string>("");
+
+  useEffect(() => {
+    if (!recommendRoute.length) {
+      return;
+    }
+
+    const { stationCount, interchangeCount, walkCount } = recommendRoute.reduce(
+      (acc, cur, index) => {
+        if (cur.line !== CONST_INTERCHANGE_LINE) {
+          acc.stationCount += 1;
+        }
+
+        if (cur.line === CONST_INTERCHANGE_LINE && cur.station !== WALK_LINE) {
+          acc.interchangeCount += 1;
+        }
+
+        if (cur.station === WALK_LINE) {
+          acc.walkCount += 1;
+        }
+
+        if (
+          index < recommendRoute.length - 2 &&
+          cur.station.includes(WALK_LINE) &&
+          cur.station.length > WALK_LINE.length
+        ) {
+          acc.walkCount += 1;
+          acc.stationCount += 1;
+        }
+
+        if (
+          (index === recommendRoute.length - 2 &&
+            cur.station.includes(WALK_LINE)) ||
+          cur.station.includes("station")
+        ) {
+          acc.stationCount -= 1;
+        }
+
+        return acc;
+      },
+      { stationCount: -1, interchangeCount: 0, walkCount: 0 }
+    );
+
+    const stationStopNumber = stationCount - interchangeCount;
+
+    setRouteDescription(
+      `${
+        stationStopNumber
+          ? `${stationStopNumber} ${t("const_station_stop")}`
+          : ""
+      }${
+        interchangeCount
+          ? `\u00A0\u00A0\u00A0${interchangeCount} ${t("const_transfer_count")}`
+          : ""
+      }${
+        walkCount
+          ? `\u00A0\u00A0\u00A0${walkCount} ${t("const_walk_count")}`
+          : ""
+      }`
+    );
+  }, [recommendRoute]);
+
+  console.log("recommendRoute", recommendRoute);
+
+  if (!recommendRoute.length) {
+    return null;
+  }
 
   return (
     <div className={styles.show_recommend_route}>
-      <StyledList>
-        {recommendRoute.map((station, index) => {
-          const background = station.line.includes(WALK_LINE)
-            ? RailwayLineBackGroundColors[INTERCHANGE_STATION]
-            : RailwayLineBackGroundColors[station.line];
+      <div className={styles.show_recommend_route_description}>
+        {routeDescription}
+      </div>
+      <div className={styles.show_recommend_route_content}>
+        <StyledList>
+          {recommendRoute.map((station, index) => {
+            const background = station.station.includes(WALK_LINE)
+              ? RailwayLineBackGroundColors[CONST_INTERCHANGE_LINE]
+              : RailwayLineBackGroundColors[station.line];
 
-          if (station.station === INTERCHANGE_STATION) {
-            return <Walk station={station} background={background} />;
-          }
+            if (station.line === CONST_INTERCHANGE_LINE) {
+              return <Walk station={station} background={background} />;
+            }
 
-          if (station.interchange) {
-            return <Interchange station={station} background={background} />;
-          }
-          return (
-            <Station
-              station={station}
-              background={background}
-              isLast={index === recommendRoute.length - 1}
-            />
-          );
-        })}
-      </StyledList>
+            if (station.interchange) {
+              return <Interchange station={station} background={background} />;
+            }
+            return (
+              <Station
+                station={station}
+                background={background}
+                isLast={index === recommendRoute.length - 1}
+              />
+            );
+          })}
+        </StyledList>
+      </div>
     </div>
   );
 };

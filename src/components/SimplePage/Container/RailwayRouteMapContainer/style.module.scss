@@ -23,7 +23,7 @@
   }
   .railwayHistory__route_search {
     border-bottom: 1px solid var(--border-bottom-color);
-    padding-bottom: 30px;
+    padding-bottom: 20px;
     .railwayHistory__route_search_title {
       width: 100%;
       line-height: 28px;
@@ -52,8 +52,12 @@
         }
       }
     }
-    .railwayHistory__route_search_button {
+    .railwayHistory__route_search_function {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
       padding-top: 20px;
+      gap: 10px;
     }
 
     @media only screen and (max-width: 1280px) {
@@ -64,6 +68,12 @@
             margin-bottom: 8px;
           }
         }
+      }
+    }
+
+    @media only screen and (max-width: 1024px) {
+      .railwayHistory__route_search_function {
+        display: grid;
       }
     }
   }
