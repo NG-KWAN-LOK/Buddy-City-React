@@ -8,6 +8,10 @@ import reportWebVitals from "./reportWebVitals";
 import "./i18n/index.js";
 import Loading from "./components/Loading";
 
+if (process.env.NODE_ENV !== "development") {
+  console.log = () => {};
+}
+
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider>

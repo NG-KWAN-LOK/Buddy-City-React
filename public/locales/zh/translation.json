@@ -482,15 +482,15 @@
   "const_buddy_city_sport_ground": "Buddy City 運動場",
   "const_buddy_city_television_city": "Buddy City電視城",
 
-  "const_tanimachi_yochome": "谷町四丁目",
-  "const_sha_tin": "沙田",
-  "const_central": "市中心",
-  "const_space_center_mae": "火箭發射中心前",
-  "const_desert_tokyo": "沙漠東京",
+  "const_tanimachi_yochome_air": "谷町四丁目",
+  "const_sha_tin_air": "沙田",
+  "const_central_air": "市中心",
+  "const_desert_tokyo_air": "沙漠東京",
   "const_buddy_city_international_airport_by_kai": "Buddy City暨Kai's 國際機場",
 
   "const_buddy_city_train_terminus_tram": "Buddy City 電車總站",
   "const_lcw_tram": "梁植偉",
+  "const_buddy_city_railway_terminus_tram": "Buddy City 鐵路總站",
   "const_supers_home": "Super's Home",
   "const_buddy_city_sport_ground_tram": "Buddy City 運動場",
   "const_tsing_yi_promenade": "青衣海濱公園",
@@ -525,6 +525,11 @@
   "const_palette_town": "パレットタウン",
   "const_buddy_paradise": "Buddy樂園",
 
+  "const_tanimachi_yochome": "谷町四丁目",
+  "const_sha_tin": "沙田",
+  "const_central": "市中心",
+  "const_space_center_mae": "火箭發射中心前",
+  "const_desert_tokyo": "沙漠東京",
   "const_hong_kong_island_causeway": "港島高士威",
   "const_taipei_101": "臺北101",
   "const_nuclear_disaster_mea": "核電站前",
@@ -547,5 +552,16 @@
   "const_airport_express_local_service": "機場快線普通車",
   "const_airport_express_service": "機場快線直通車",
 
-  "const_interchange": "步行/ 換車"
+  "const_walk": "步行",
+  "const_transfer": "轉乘",
+  "const_interchange": "同站換車",
+  "const_interchange_discount": "轉乘優惠",
+
+  "const_best_route": "最佳路線",
+  "const_discounted_interchange": "只要優惠轉乘",
+  "const_less_walk": "最少步行次數",
+
+  "const_station_stop": "個停靠站",
+  "const_transfer_count": "次換車",
+  "const_walk_count": "次步行"
 }

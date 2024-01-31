@@ -314,7 +314,7 @@
 
   "aet_title": "Buddy City International Airport by Kai Airport Express Transit",
   "aet_about_title": "Introduction to the Airport Express",
-  "aet_about_text": "The Buddy City International Airport by Kai Airport Express Transit, abbreviated as the Airport Express, is currently operated by the Buddy City Transport Bureau and the Buddy City Municipal Subway Transit Corporation, a subsidiary of Buddy City International Airport by Kai Airport Express Transit Corporation, with the Buddy City Transport Bureau as the main shareholder.\n\nIt originally started as the Mass Transit Railway Line One, which was the first underground railway system built by Buddy City in May 2012. It was constructed and operated by Elevated Railway Transit Corporation. Mass Transit Railway Line One's route ran from the Buddy City Railway Terminus to the Buddy City Space Center.\n\nIn May 2017, to align with the international airport development project, Mass Transit Railway Line One was extended into the current route and came under the operation of the Buddy City International Airport by Kai Airport Express Transit Corporation.\n\nOn June 20, 2017, the first phase of the Airport Express was completed and opened for service.\n\nIn March 2018, Buddy City Municipal Subway transit Corporation by Buddy City Transport Bureau was established, and the Buddy City International Airport by Kai Airport Express Transit Corporation was transferred to the operation of the Buddy City Municipal Subway Transit Corporation by Buddy City Transport Bureau, becoming one of the special lines.\n\nOn July 5, 2018, as part of the Municipal Subway Transit plan, the second phase of the Airport Express extending to Tokyo & Desert District, Sha Tin District and Osaka District was completed and opened for service.\n\nOn July 15, 2018, the Airport Express through train officially commenced operation.\n\nThe main purpose of the Airport Express is to provide the fastest and most convenient route from the northernmost part of the city to the airport. The network covers the areas of Osaka District,Buddy Central, New Buddy Central, Tokyo District and Desert District. It offers residents and travelers the quickest and most convenient way to access the airport.",
+  "aet_about_text": "The Buddy City International Airport by Kai Airport Express Transit, abbreviated as the Airport Express, is currently operated by the Buddy City Transport Bureau and the Buddy City Municipal Subway Transit Corporation, a subsidiary of Buddy City International Airport by Kai Airport Express Transit Corporation, with the Buddy City Transport Bureau as the main shareholder.\n\nIt originally started as the Mass Transit Railway Line One, which was the first underground railway system built by Buddy City in May 2012. It was constructed and operated by Elevated Railway Transit Corporation. Mass Transit Railway Line One's route ran from the Buddy City Railway Terminus to the Buddy City Space Center.\n\nIn May 2017, to align with the international airport development project, Mass Transit Railway Line One was extended into the current route and came under the operation of the Buddy City International Airport by Kai Airport Express Transit Corporation.\n\nOn June 20, 2017, the first phase of the Airport Express was completed and opened for service.\n\nIn March 2018, Buddy City Municipal Subway transit Corporation by Buddy City Transport Bureau was established, and the Buddy City International Airport by Kai Airport Express Transit Corporation was CONST_TRANSFERred to the operation of the Buddy City Municipal Subway Transit Corporation by Buddy City Transport Bureau, becoming one of the special lines.\n\nOn July 5, 2018, as part of the Municipal Subway Transit plan, the second phase of the Airport Express extending to Tokyo & Desert District, Sha Tin District and Osaka District was completed and opened for service.\n\nOn July 15, 2018, the Airport Express through train officially commenced operation.\n\nThe main purpose of the Airport Express is to provide the fastest and most convenient route from the northernmost part of the city to the airport. The network covers the areas of Osaka District,Buddy Central, New Buddy Central, Tokyo District and Desert District. It offers residents and travelers the quickest and most convenient way to access the airport.",
   "aet_route_about_title": "Airport Express Routes:",
   "aet_route_about_subtitle": "The Airport Express consists of Local Service and Express services.",
   "aet_route_local_service_title": "Local Service",
@@ -483,16 +483,16 @@
   "const_buddy_city_sport_ground": "Buddy City Sport Ground",
   "const_buddy_city_television_city": "Buddy City Television City",
 
-  "const_tanimachi_yochome": "Tanimachi 4-chome",
-  "const_sha_tin": "Sha Tin",
-  "const_central": "Central",
-  "const_space_center_mae": "Space Center Mae",
-  "const_desert_tokyo": "Desert Tokyo",
+  "const_tanimachi_yochome_air": "Tanimachi 4-chome",
+  "const_sha_tin_air": "Sha Tin",
+  "const_central_air": "Central",
+  "const_desert_tokyo_air": "Desert Tokyo",
   "const_buddy_city_international_airport_by_kai": "Buddy City International Airport by Kai",
 
   "const_buddy_city_train_terminus_tram": "Buddy City Train Terminus",
   "const_lcw_tram": "LCW",
   "const_supers_home": "Super's Home",
+  "const_buddy_city_railway_terminus_tram": "Buddy City Railway Terminus",
   "const_buddy_city_sport_ground_tram": "Buddy City Sport Ground",
   "const_tsing_yi_promenade": "Tsing Yi Promenade",
   "const_tivoli_garden": "Tivoli Garden",
@@ -526,6 +526,11 @@
   "const_palette_town": "Palette Town",
   "const_buddy_paradise": "Buddy Paradise",
 
+  "const_tanimachi_yochome": "Tanimachi 4-chome",
+  "const_sha_tin": "Sha Tin",
+  "const_central": "Central",
+  "const_space_center_mae": "Space Center Mae",
+  "const_desert_tokyo": "Desert Tokyo",
   "const_hong_kong_island_causeway": "Hong Kong Island Causeway",
   "const_taipei_101": "Taipei 101",
   "const_nuclear_disaster_mea": "Nuclear Disaster Mea",
@@ -547,5 +552,16 @@
   "const_airport_express_local_service": "Airport Express Local Service",
   "const_airport_express_service": "Airport Express Express Service",
 
-  "const_interchange": "Walk/ Interchange"
+  "const_walk": "Walk",
+  "const_transfer": "Transfer",
+  "const_interchange": "Interchange",
+  "const_interchange_discount": "Interchange Discount",
+
+  "const_best_route": "Best Route",
+  "const_less_walk": "Less Walking",
+  "const_discounted_interchange": "Discounted Transfer Only",
+
+  "const_station_stop": "stops",
+  "const_transfer_count": "times Transfer",
+  "const_walk_count": "times walk"
 }

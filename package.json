@@ -29,7 +29,7 @@
     "web-vitals": "^1.0.1"
   },
   "engines": {
-    "node": "20.x"
+    "node": "20.x.x"
   },
   "scripts": {
     "start": "ENVIRONMENT=dev npm run build && node server.js",
