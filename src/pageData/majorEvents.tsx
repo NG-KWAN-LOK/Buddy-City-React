@@ -1179,6 +1179,33 @@ const majorEvents: IMajorEvents = {
       url: "/history/railway-history/16",
       type: "internal",
     },
+    {
+      year: "2024",
+      month: "5",
+      day: "23",
+      zh_name: "BUDDY市政府正式公佈繡球花為市花，諭意「幸福、美滿和團圓」。",
+      eng_name:
+        "The BUDDY City Government officially announced the hydrangea as the city flower, signifying 'happiness, fulfillment, and unity'.",
+      jp_name:
+        "BUDDY市政府は正式にアジサイを市花として発表しました。アジサイは「幸福、充実、団結」を象徴しています。",
+      display: true,
+      url: "/page/basic/city-flag-emblem-and-flower",
+      type: "internal",
+    },
+    {
+      year: "2024",
+      month: "5",
+      day: "25",
+      zh_name:
+        "BUDDY市政府正式頒布 BUDDY 市市旗和市徽，名為「綠地白日水青繡球花旗」以代表這個城市的特色。",
+      eng_name:
+        "The BUDDY City Government officially issued the BUDDY City flag and emblem, named '綠地白日水青繡球花旗 (Green Ground, White sun, Water Blue Hydrangea Flag)' to represent the characteristics of the city.",
+      jp_name:
+        "BUDDY市政府は市の特性を表すために、市旗「綠地白日水青繡球花旗」（緑地、白い太陽、水色のアジサイ旗）と市章を正式に制定しました。",
+      display: true,
+      url: "/page/basic/city-flag-emblem-and-flower",
+      type: "internal",
+    },
   ],
 };
 

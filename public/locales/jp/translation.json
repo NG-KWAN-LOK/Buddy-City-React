@@ -44,6 +44,8 @@
   "discover_content_apadding_background": "異なる言語システム、ユニークな年号システム、時間システム、気象システム、高度システムがあります。",
   "discover_content_atoppadding_calendar_system_city_song": "年号と市の歌",
   "discover_content_apadding_calendar_system_city_song": "政府は特定の年号と市の歌を制定していました。",
+  "discover_content_atoppadding_city_flag_emblem_flower": "市旗・市章・市花",
+  "discover_content_apadding_city_flag_emblem_flower": "BUDDY市を象徴する市旗、市章、市花は、市の特性を表すために政府によって制定されました。",
   "discover_content_atoppadding_legal_holiday": "法定休日",
   "discover_content_apadding_legal_holiday": "政府は特定の法定休日を制定していました。",
 
@@ -125,6 +127,12 @@
   "basic_city_song_title_1": "市の歌",
   "basic_city_song_title_1_1": "2022年7月10日、BUDDY市政府はBUDDY市を代表する市の歌「友と平」を正式に発表しました。これは「友好と平和」を意味し、年号と同じくBUDDY市と宇宙全体の人々に友好と平和を願っています。以下のプレイヤーをクリックして歌をお楽しみいただけます。",
   "basic_city_song_lyrics_title_1_1": "《友與平》\n「友と平」\n作曲／作詞／編曲：沢尻佐智郎（DJaLok）\n\n齊用愛 兼奮鬥\n「愛と共に 一緒に立つ」\n志同友 建自由\n「志を同じく 自由を創り出す」\n\n全盡心 得永慶\n「全力を尽くす 永遠の栄光を手に入れる」\n立民主 創和平\n「民主を築き 平和を創り出す」\n\n這世代 積怨厚\n「この世代 怨み深い」\n邂共手 化負憂\n「手をつなぐ 憂いを解消す」\n\n憑全力 往幸福\n「全力を傾け 幸福を追求す」\n衛我家 存萬世\n「我が家を守り 千代に続く」",
+  "basic_city_flag_title_1": "市旗",
+  "basic_city_flag_title_1_1": "2024年5月25日、政府は正式にBUDDY市の市旗「綠地白日水青繡球花旗」（緑地、白い太陽、水色のアジサイ旗）を制定しました。\n\n緑の背景は「民主主義、平和、希望」を象徴し、旗の中央には水色のアジサイがいくつかの萼片と3枚の葉とともに描かれています。水色は「率直さと勇気」を表し、萼片は多文化の市民が幸せに繁栄することを示しています。また、3枚の葉は行政、司法、立法の三権分立を表し、互いにバランスを保っています。アジサイの背後にある白い円は「正義、誠実、純粋、公平」を象徴する太陽を意味します。",
+  "basic_city_emblem_title_1": "市章",
+  "basic_city_emblem_title_1_1": "2024年5月25日、政府は正式にBUDDY市の市章を制定しました。市章は市旗に描かれたアジサイの萼片の一つを中心にデザインされています。\n\n六つの薄い水色の花びらは、市の重要な役割を担う六つの要素（市の指導者、司法関係者、市の保護者と法執行官、公務員、建築家、市民）を表し、さらに薄い水色の中心部は政府を象徴しています。この市章は、市民の役割が政府よりも重要であり、市民全体が政府に権限を与えることを意味します。\n\n政府部門や役人が市章を表示・着用する際には、集まった市章が「団結」を象徴します。",
+  "basic_city_flower_title_1": "市花",
+  "basic_city_flower_title_1_1": "2024年5月23日、政府は正式にアジサイを市花として発表しました。\n\nアジサイは「幸せ、充実、団結」を象徴し、初夏に咲くことから「温かさと活力」も表しています。",
   "basic_legal_holiday_title_1": "法定休日",
   "basic_legal_holiday_title_1_1": "Buddy市は1年に14日の法定休日があり、これらは公共の休日でもあります。休日の日付と概要は以下の通りです：",
 

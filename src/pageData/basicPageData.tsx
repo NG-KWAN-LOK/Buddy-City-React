@@ -1,4 +1,8 @@
 import { GeneralCategoryData } from "../interface/GeneralPage";
+import ERA_NAME from "../image/photo/generalpage/basic/era_name.jpg";
+import CITY_FLAG from "../image/photo/generalpage/basic/city_flag.jpg";
+import CITY_EMBLEM from "../image/photo/generalpage/basic/city_emblem.jpg";
+import HYDRANGEAS from "../image/photo/generalpage/basic/hydrangeas.jpg";
 
 const BasicPageData: GeneralCategoryData = {
   background: {
@@ -228,6 +232,14 @@ const BasicPageData: GeneralCategoryData = {
         contentText: "basic_calendar_system_title_1",
       },
       {
+        contentType: "image",
+        src: ERA_NAME,
+        style: {
+          "max-width": 300,
+          "max-height": 300,
+        },
+      },
+      {
         contentType: "text",
         contentText: "basic_calendar_system_title_1_1",
       },
@@ -246,6 +258,61 @@ const BasicPageData: GeneralCategoryData = {
       {
         contentType: "text",
         contentText: "basic_city_song_lyrics_title_1_1",
+      },
+    ],
+  },
+  "city-flag-emblem-and-flower": {
+    pageTitle: "discover_content_atoppadding_city_flag_emblem_flower",
+    pageSubtitle: "discover_content_apadding_city_flag_emblem_flower",
+    contentName: "city-flag-emblem-and-flower",
+    contentData: [
+      {
+        contentType: "title",
+        contentText: "basic_city_flag_title_1",
+      },
+      {
+        contentType: "image",
+        src: CITY_FLAG,
+        style: {
+          "max-width": 600,
+          "max-height": 400,
+        },
+      },
+      {
+        contentType: "text",
+        contentText: "basic_city_flag_title_1_1",
+      },
+      {
+        contentType: "title",
+        contentText: "basic_city_emblem_title_1",
+      },
+      {
+        contentType: "image",
+        src: CITY_EMBLEM,
+        style: {
+          "max-width": 400,
+          "max-height": 400,
+        },
+      },
+      {
+        contentType: "text",
+        contentText: "basic_city_emblem_title_1_1",
+      },
+      {
+        contentType: "title",
+        contentText: "basic_city_flower_title_1",
+      },
+      {
+        contentType: "image",
+        src: HYDRANGEAS,
+        style: {
+          "max-width": 600,
+          "max-height": 400,
+        },
+      },
+      {
+        contentType: "text",
+        contentText: "basic_city_flower_title_1_1",
       },
     ],
   },

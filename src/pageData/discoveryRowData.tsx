@@ -9,6 +9,7 @@ import image31 from "../image/pword3_1.jpg";
 import image32 from "../image/pword3_2.jpg";
 import image33 from "../image/pword3_3.jpg";
 import image34 from "../image/pword3_4.jpg";
+import image35 from "../image/pword3_5.jpg";
 import image41 from "../image/pword4_1.jpg";
 import image42 from "../image/pword4_2.jpg";
 import image43 from "../image/pword4_3.jpg";
@@ -118,10 +119,10 @@ const discoveryRowData: IDiscoveryRowData = {
       },
       {
         type: "internal",
-        to: "/page/basic/background",
-        src: image32,
-        atoppadding: "discover_content_atoppadding_background",
-        apadding: "discover_content_apadding_background",
+        to: "/page/basic/city-flag-emblem-and-flower",
+        src: image35,
+        atoppadding: "discover_content_atoppadding_city_flag_emblem_flower",
+        apadding: "discover_content_apadding_city_flag_emblem_flower",
       },
       {
         type: "internal",
@@ -129,6 +130,13 @@ const discoveryRowData: IDiscoveryRowData = {
         src: image33,
         atoppadding: "discover_content_atoppadding_calendar_system_city_song",
         apadding: "discover_content_apadding_calendar_system_city_song",
+      },
+      {
+        type: "internal",
+        to: "/page/basic/background",
+        src: image32,
+        atoppadding: "discover_content_atoppadding_background",
+        apadding: "discover_content_apadding_background",
       },
       {
         type: "internal",
