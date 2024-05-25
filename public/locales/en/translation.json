@@ -559,7 +559,7 @@
 
   "const_best_route": "Best Route",
   "const_less_walk": "Less Walking",
-  "const_discounted_interchange": "Discounted Transfer Only",
+  "const_discounted_interchange": "Lowest Price",
 
   "const_station_stop": "stops",
   "const_transfer_count": "times Transfer",

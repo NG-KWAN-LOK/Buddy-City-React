@@ -560,7 +560,7 @@
 
   "const_best_route": "最適ルート",
   "const_less_walk": "徒歩少ない",
-  "const_discounted_interchange": "割引乗換のみ",
+  "const_discounted_interchange": "最低価格",
 
   "const_station_stop": "駅",
   "const_transfer_count": "回乗換",
