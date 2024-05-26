@@ -31,6 +31,7 @@ import { activityPageData } from "../../pageData/activityPageData";
 import { toDoPageDataData } from "../../pageData/toDoPageData";
 import { howToVisitPageData } from "../../pageData/howToVisitPageData";
 import OnlineMap from "../OnlineMap";
+import { historyPageDataData } from "../../pageData/historyPageData";
 
 function App() {
   const theme = useMuiTheme();
@@ -142,6 +143,12 @@ function App() {
               ]}
             >
               <RailwayHistoryPageContainer
+                sideMenu={<SideMenu buttonData={bcctbAboutUsSideMenuData} />}
+              />
+            </Route>
+            <Route path='/history/:pagename'>
+              <GeneralCategory
+                generalCategoryData={historyPageDataData}
                 sideMenu={<SideMenu buttonData={bcctbAboutUsSideMenuData} />}
               />
             </Route>

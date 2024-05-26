@@ -24,6 +24,7 @@ import image63 from "../image/pword6_3.jpg";
 import image64 from "../image/pword6_4.jpg";
 import image71 from "../image/pword7_1.jpg";
 import image72 from "../image/pword7_2.jpg";
+import image73 from "../image/pword7_3.jpg";
 
 interface IDiscoveryRowData {
   [index: string]: {
@@ -288,6 +289,13 @@ const discoveryRowData: IDiscoveryRowData = {
         src: image72,
         atoppadding: "discover_content_atoppadding_history",
         apadding: "discover_content_apadding_history",
+      },
+      {
+        type: "internal",
+        to: "/history/chronicle",
+        src: image73,
+        atoppadding: "discover_content_atoppadding_chronicle",
+        apadding: "discover_content_apadding_chronicle",
       },
       {
         type: "internal",

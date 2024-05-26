@@ -228,7 +228,7 @@ const majorEvents: IMajorEvents = {
       eng_name: "Completion of Buddy City Train Terminus",
       jp_name: "Buddy 市電車終着駅竣工",
       display: true,
-      url: "/building_list/0/7",
+      url: "/building_list/0/2",
       type: "internal",
     },
     {

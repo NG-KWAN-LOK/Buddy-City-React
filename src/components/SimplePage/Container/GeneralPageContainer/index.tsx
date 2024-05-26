@@ -5,6 +5,7 @@ import VideoPlayer from "../../../VideoPlayer";
 
 import { useTranslation } from "react-i18next";
 import { GeneralPageData } from "../../../../interface/GeneralPage";
+import Chronicle from "./Chronicle";
 
 interface GeneralPageContainerProps {
   generalPageData: GeneralPageData;
@@ -158,6 +159,9 @@ const GeneralPageContainer: React.FC<GeneralPageContainerProps> = ({
           }
           if (data.contentType === "musicPlayer") {
             return <VideoPlayer src={buddyCitySong} />;
+          }
+          if (data.contentType === "chronicle" && data.chronicleData) {
+            return <Chronicle eventData={data.chronicleData} />;
           }
           if (generalPageData.contentName === "legal-holiday")
             return renderLegalHolidayTable(data, index);

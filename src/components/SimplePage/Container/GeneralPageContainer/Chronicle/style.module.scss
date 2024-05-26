@@ -1,0 +1,90 @@
+@import "../../../../../utils/theme.scss";
+
+.container {
+  width: 100%;
+  padding: 0 10px;
+  font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
+  .container_content {
+    .container_content_chronicle {
+      color: var(--subtitle-bg);
+      .container_content_chronicle_year {
+        width: 100%;
+        line-height: 28px;
+        padding: 20px 0;
+        font-weight: 500;
+        font-size: 28px;
+      }
+      .container_content_chronicle_month {
+        .container_content_chronicle_day {
+          font-size: 22px;
+          font-weight: 500;
+        }
+      }
+      .container_content_chronicle_name {
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .discover__news_display_table_row {
+        position: relative;
+        display: flex;
+        transition: 0.5s;
+        &-hover:hover {
+          background-color: var(--primary-button-hover-bg-color);
+          transition: 0.5s;
+          cursor: pointer;
+        }
+        .discover__news_display_table_row_arrow {
+          position: absolute;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          right: 5px;
+          &::after {
+            content: "";
+            display: inline-block;
+            width: 5px;
+            height: 5px;
+            border-top: 2px solid var(--third-button-title-color);
+            border-right: 2px solid var(--third-button-title-color);
+            transform: rotate(45deg);
+          }
+        }
+        .discover__news_display_table_col {
+          font-size: 18px;
+          font-weight: 300;
+          line-height: 25px;
+          color: var(--title-color);
+          padding: 8px 0 8px 5px;
+          line-height: 1.3em;
+          &-bullet {
+            align-self: center;
+            font-family: "微軟正黑體", sans-serif;
+            color: var(--subject-blue);
+            font-size: 30px;
+            line-height: 10px;
+          }
+          &-first {
+            width: 160px;
+          }
+          &-second {
+            width: 100%;
+            padding-right: 25px;
+          }
+          @media only screen and (max-width: 550px) {
+            font-size: 16px;
+            padding: 8px 0 8px 5px;
+            &-bullet {
+              color: var(--subject-blue);
+              font-size: 35px;
+              line-height: 10px;
+              letter-spacing: -0.4em;
+              padding: 0 8px 0 0;
+            }
+            &-second {
+              padding-right: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -13,6 +13,7 @@ import type { IMajorEventData } from "../../pageData/majorEvents";
 import sunny from "../../image/lottie/sunny.json";
 import rain from "../../image/lottie/rain.json";
 import thunder from "../../image/lottie/thunder.json";
+import { getEraName } from "../../utils/getEraName";
 
 interface BigIconPageMenuPageProps {
   // pageTitle: string;
@@ -90,9 +91,9 @@ const BigIconPageMenuPage: React.FC<BigIconPageMenuPageProps> = ({
         <li
           className={`${styles["discover__news_display_table_col"]} ${styles["discover__news_display_table_col-first"]}`}
         >
-          {`${t("const_buddy_era")} ${parseInt(data.year) - 2012} ${
-            language != "en" ? t("const_year") : ""
-          }\n${data.year}/${data.month}/${data.day}`}
+          {`${getEraName(data.year, language)}\n${data.year}/${data.month}/${
+            data.day
+          }`}
         </li>
         <li
           className={`${styles["discover__news_display_table_col"]} ${styles["discover__news_display_table_col-second"]}`}
@@ -231,9 +232,7 @@ const BigIconPageMenuPage: React.FC<BigIconPageMenuPageProps> = ({
                   <span
                     className={styles.discover__news__dayHeader_holiday_first}
                   >
-                    {t("const_buddy_era")}
-                    {` ${today.year - 2012} `}
-                    {language != "en" ? t("const_year") : ""}
+                    {getEraName(today.year.toString(), language)}
                   </span>
                 )}
               </Link>
