@@ -7,6 +7,7 @@ import App from "./containers/App";
 import reportWebVitals from "./reportWebVitals";
 import "./i18n/index.js";
 import Loading from "./components/Loading";
+import { AuthProvider } from "./hoc/AuthProvider";
 
 if (process.env.NODE_ENV !== "development") {
   console.log = () => {};
@@ -14,13 +15,15 @@ if (process.env.NODE_ENV !== "development") {
 
 ReactDOM.render(
   <React.StrictMode>
-    <ThemeProvider>
-      <Router>
-        <Suspense fallback={<Loading containersClassName={false} />}>
-          <App />
-        </Suspense>
-      </Router>
-    </ThemeProvider>
+    <AuthProvider>
+      <ThemeProvider>
+        <Router>
+          <Suspense fallback={<Loading containersClassName={false} />}>
+            <App />
+          </Suspense>
+        </Router>
+      </ThemeProvider>
+    </AuthProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );
