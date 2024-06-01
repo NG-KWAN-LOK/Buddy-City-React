@@ -32,6 +32,7 @@ import { toDoPageDataData } from "../../pageData/toDoPageData";
 import { howToVisitPageData } from "../../pageData/howToVisitPageData";
 import OnlineMap from "../OnlineMap";
 import { historyPageDataData } from "../../pageData/historyPageData";
+import AdminPage from "../AdminPage";
 
 function App() {
   const theme = useMuiTheme();
@@ -57,6 +58,7 @@ function App() {
     else if (pathname.includes("/page")) return;
     else if (pathname.includes("/subway-info")) return;
     else if (pathname.includes("/history")) return;
+    else if (pathname.includes("/admin")) return;
     else if (pathname.includes("/railway-route-map"))
       document.title = findTitle([t("railway_route_map_title")]) + appName;
     else if (pathname.includes("/online-map"))
@@ -159,6 +161,9 @@ function App() {
             </Route>
             <Route path={["/online-map/:year", "/online-map"]}>
               <OnlineMap />
+            </Route>
+            <Route path='/admin'>
+              <AdminPage />
             </Route>
             <Route path={["/page", "/subway-info", "/history"]}>
               <Redirect to='/' />
