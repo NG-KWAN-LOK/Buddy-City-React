@@ -1,5 +1,10 @@
 @import "../../../utils/theme.scss";
 
+.container {
+  width: 100%;
+  position: relative;
+}
+
 .data__table {
   line-height: 15px;
   font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
@@ -10,11 +15,47 @@
   font-size: 17px;
   vertical-align: inherit;
   width: 100%;
+  margin-top: 20px;
   text-align: center;
   .data__table__datainfo {
     width: 60%;
     height: 38.38px;
   }
+  .data__table__datainfo_position {
+    cursor: pointer;
+    position: relative;
+    width: 60%;
+    height: 38.38px;
+    .data__table__datainfo_position_tooltip {
+      font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
+      position: absolute;
+      z-index: 1;
+      left: 40%;
+      bottom: -100%;
+      visibility: hidden;
+      background-color: var(--second-button-hover-bg-color);
+      color: var(--primary-button-title-color);
+      text-align: center;
+      padding: 5px;
+      border-radius: 6px;
+      opacity: 0;
+      transition: opacity 0.3s;
+      line-height: 22px;
+    }
+    &:hover {
+      .data__table__datainfo_position_tooltip {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+}
+.control {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
 .address__map {

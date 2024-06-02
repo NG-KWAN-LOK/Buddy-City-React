@@ -572,5 +572,13 @@
 
   "const_station_stop": "個停靠站",
   "const_transfer_count": "次換車",
-  "const_walk_count": "次步行"
+  "const_walk_count": "次步行",
+
+  "const_front": "正面",
+  "const_right": "右側",
+  "const_left": "左側",
+  "const_back": "背面",
+  "const_interior": "內裝",
+  "const_coordinate": "座標",
+  "const_copy_tp_command": "點撃複製傳送指令"
 }

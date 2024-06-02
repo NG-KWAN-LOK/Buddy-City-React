@@ -574,5 +574,13 @@
 
   "const_station_stop": "駅",
   "const_transfer_count": "回乗換",
-  "const_walk_count": "回徒歩"
+  "const_walk_count": "回徒歩",
+
+  "const_front": "前面",
+  "const_right": "右側",
+  "const_left": "左側",
+  "const_back": "後ろ",
+  "const_interior": "内装",
+  "const_coordinate": "座標",
+  "const_copy_tp_command": "テレポートコマンドをコピーするにはクリック"
 }

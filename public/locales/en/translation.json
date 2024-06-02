@@ -573,5 +573,13 @@
 
   "const_station_stop": "stops",
   "const_transfer_count": "times Transfer",
-  "const_walk_count": "times walk"
+  "const_walk_count": "times walk",
+
+  "const_front": "Front",
+  "const_right": "Right Side",
+  "const_left": "Left Side",
+  "const_back": "Back",
+  "const_interior": "Interior",
+  "const_coordinate": "Coordinate",
+  "const_copy_tp_command": "Click to Copy Teleport Command"
 }

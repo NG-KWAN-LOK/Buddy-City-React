@@ -16,23 +16,36 @@ import MediumIcon from "../../components/MediumIcon";
 import BuildingListPopUp from "../../components/InfoPopUp/BuildingListPopUp";
 import BuildingInfoPopUp from "../../components/InfoPopUp/BuildingInfoPopUp";
 
+import useAuth from "../../hoc/AuthProvider";
+import { Button } from "@mui/material";
 import { IBuilding } from "./interface";
+import AdminBuildingInfoPopUp from "../../components/InfoPopUp/BuildingInfoPopUp/AdminBuildingInfoPopUp";
 
-interface IBuildingListParms {
+export interface IBuildingListParms {
   districtid: string;
   buildingid: string;
 }
 
 const BuildingList = () => {
+  const { userRole } = useAuth();
   const { districtid, buildingid } = useParams<IBuildingListParms>();
   const { pathname } = useLocation();
   const pathNameSplitNumber = Object.keys(useParams()).length;
   const { t, i18n } = useTranslation();
   const language = i18n.language;
   const [buildingData, setBuildingData] = useState([]);
+  const [isCreateData, setIsCreateData] = useState(false);
+  const [preNewBuildingData, setPreNewBuildingData] = useState<{
+    lastBuildingData: IBuilding | null;
+    newBuildingIndex: number;
+  } | null>(null);
   const [isPopUpDisplay, setIsPopUpDisplay] = useState(false);
-  const PopUpToggleOn = useCallback(() => setIsPopUpDisplay(true), []);
+  const PopUpToggleOn = useCallback(() => {
+    setIsPopUpDisplay(true);
+    setIsCreateData(false);
+  }, []);
   const PopUpToggleOff = useCallback(() => setIsPopUpDisplay(false), []);
+
   const fetchData = useCallback(() => {
     onValue(getAllDistrictList, (snapshot) => {
       let dataList: any = [];
@@ -119,6 +132,15 @@ const BuildingList = () => {
       return "error";
     }
   };
+
+  const handleCreateDate = (
+    lastBuildingData: IBuilding,
+    newBuildingIndex: number
+  ) => {
+    setIsCreateData(true);
+    setPreNewBuildingData({ lastBuildingData, newBuildingIndex });
+  };
+
   return (
     <div className={styles.container}>
       <StaticBigBanner src={banner} />
@@ -159,9 +181,41 @@ const BuildingList = () => {
           title={getTitle()}
           to='/building_list'
         >
-          {typeof buildingData[districtid] != "undefined" &&
+          {userRole?.admin &&
+            isCreateData &&
+            preNewBuildingData &&
+            preNewBuildingData.lastBuildingData && (
+              <AdminBuildingInfoPopUp
+                buildingData={preNewBuildingData.lastBuildingData}
+                preNewBuildingIndex={preNewBuildingData.newBuildingIndex}
+                isCreateData
+              />
+            )}
+          {!isCreateData &&
+            typeof buildingData[districtid] != "undefined" &&
             pathNameSplitNumber == 1 && (
               <div id='building' className={styles.districtData}>
+                {userRole?.admin && (
+                  <div>
+                    <Button
+                      variant='contained'
+                      size='large'
+                      sx={{
+                        fontSize: 17,
+                      }}
+                      onClick={() =>
+                        handleCreateDate(
+                          buildingData[districtid].buildingData[
+                            buildingData[districtid].buildingData.length - 1
+                          ],
+                          buildingData[districtid].buildingData.length
+                        )
+                      }
+                    >
+                      新增建築物
+                    </Button>
+                  </div>
+                )}
                 {buildingData[districtid].buildingData.map((data, index) => {
                   return (
                     <BuildingListPopUp
@@ -180,11 +234,14 @@ const BuildingList = () => {
                 })}
               </div>
             )}
-          {typeof buildingData[districtid] != "undefined" &&
+          {!isCreateData &&
+            typeof buildingData[districtid] != "undefined" &&
             typeof buildingData[districtid].buildingData[buildingid] !=
               "undefined" && (
               <BuildingInfoPopUp
                 buildingData={buildingData[districtid].buildingData[buildingid]}
+                districtid={districtid}
+                buildingid={buildingid}
               />
             )}
         </InfoPopUp>
