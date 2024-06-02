@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import discoveryData from "../../pageData/discoveryIconData";
 import realityProjectData from "../../pageData/realityProjectData";
 
-import SwiperBanner from "../../components/SwiperBanner";
+import SwiperBanner from "../../components/Swiper/SwiperBanner";
 import BigIconPageMenuPage from "../../components/BigIconPageMenuPage";
 import HyperContentCard from "../../components/BigIconPageMenuPage/HyperContentCard";
 import ProjectDisplayCorner from "../../components/ProjectDisplayCorner";
