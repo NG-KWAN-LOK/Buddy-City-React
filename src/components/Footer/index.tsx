@@ -5,8 +5,13 @@ import Logo from "../Logo";
 
 import { useTranslation } from "react-i18next";
 
-const Footer: React.FC = () => {
+const Footer = ({ isHide = false }: { isHide?: boolean }) => {
   const { t } = useTranslation();
+
+  if (isHide) {
+    return null;
+  }
+
   return (
     <div className={styles.footer}>
       <div className={styles.footer__content}>

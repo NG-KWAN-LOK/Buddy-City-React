@@ -169,7 +169,7 @@ function App() {
               <Redirect to='/' />
             </Route>
           </Switch>
-          <Footer />
+          <Footer isHide={pathname.includes("/online-map")} />
         </div>
       </ThemeProvider>
     </div>

@@ -6,7 +6,7 @@
   display: flex;
   justify-content: center;
   position: fixed;
-  z-index: 9999;
+  z-index: 100;
   top: 0;
   @media (min-width: 1024px) {
     height: 9rem;
@@ -39,7 +39,7 @@
   display: flex;
   position: fixed;
   flex-wrap: wrap;
-  z-index: 9999;
+  z-index: 100;
   width: 100%;
   border-bottom: 3px solid var(--phone-top-bottom-color);
   background-color: var(--primary-bg-color);
@@ -112,7 +112,7 @@
 .Top {
   display: flex;
   position: fixed;
-  z-index: 9999;
+  z-index: 100;
   flex-wrap: nowrap;
   justify-content: space-between;
   width: 100%;
@@ -162,7 +162,7 @@
 .Top__nav {
   display: none;
   position: relative;
-  z-index: 9998;
+  z-index: 99;
   font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
   font-size: 13px;
   font-weight: 700;
