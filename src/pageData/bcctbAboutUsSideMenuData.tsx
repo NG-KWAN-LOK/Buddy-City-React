@@ -31,10 +31,10 @@ const bcctbAboutUsSideMenuData = {
     },
     ,
     {
-      type: "external",
+      type: "internal",
       title: "main__content__sideMenu__content__btn__title__admin",
       icon: "ion-android-person",
-      to: "https://ng-kwan-lok.github.io/BuddyCityWeb/admin/",
+      to: "/admin",
     },
   ],
 };

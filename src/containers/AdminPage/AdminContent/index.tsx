@@ -26,9 +26,12 @@ const AdminContent = ({}) => {
           </div>
           <div
             className={styles.admin__choosePage__editDatabase__item}
-            onClick={() => setCurrentDatabase(Database.RESIDENT)}
+            onClick={() => {
+              window.open("https://ng-kwan-lok.github.io/BuddyCityWeb/admin/");
+              setCurrentDatabase(Database.RESIDENT);
+            }}
           >
-            居民名冊
+            居民名冊 (外部連結)
           </div>
           <div
             className={styles.admin__choosePage__editDatabase__item}
