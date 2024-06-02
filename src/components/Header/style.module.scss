@@ -298,6 +298,28 @@
     border-bottom-right-radius: 7px;
     border-top-right-radius: 7px;
     transition: 0.5s;
+    .Top__nav__right_subtitle_a {
+      display: flex;
+      align-items: center;
+      width: 250px;
+      font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 45px;
+      color: var(--third-button-title-color);
+      border: 1px solid var(--main-between-line-color);
+      background-color: var(--top-nav-bg-color);
+      text-align: left;
+      box-sizing: border-box;
+      .Top__nav__right_subtitle_a_text {
+        padding-left: 20px;
+      }
+      &:hover {
+        cursor: pointer;
+        background-color: var(--primary-button-hover-bg-color);
+        transition: 0.3s;
+      }
+    }
     .Top__nav__right_subtitle {
       display: flex;
       align-items: center;

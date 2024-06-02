@@ -1,0 +1,269 @@
+@import "../../utils/theme.scss";
+.main {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: var(--primary-bg-color);
+  @media only screen and (max-width: 550px) {
+  }
+  @media only screen and (min-width: 550px) {
+  }
+  @media only screen and (min-width: 768px) {
+    max-width: 720px;
+    border-left: 1px solid var(--main-between-line-color);
+    border-right: 1px solid var(--main-between-line-color);
+  }
+  @media only screen and (min-width: 1024px) {
+    max-width: 980px;
+    border-left: 1px solid var(--main-between-line-color);
+    border-right: 1px solid var(--main-between-line-color);
+  }
+  @media only screen and (min-width: 1280px) {
+    max-width: 1280px;
+    border-left: 1px solid var(--main-between-line-color);
+    border-right: 1px solid var(--main-between-line-color);
+  }
+
+  .main__content {
+    padding: 20px 20px 30px;
+
+    .admin {
+      display: block;
+      .admin__title__content {
+        .admin__title {
+          display: block;
+          padding: 16px 0 36px 0;
+          text-align: center;
+          line-height: 55px;
+          font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
+          font-style: normal;
+          font-weight: 500;
+          color: var(--title-color);
+          text-decoration: none;
+          font-variant: normal;
+          font-size: 2em;
+        }
+        .admin__text {
+          display: block;
+          font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
+          text-align: center;
+          line-height: 35px;
+          font-style: normal;
+          font-weight: 400;
+          color: var(--title-color);
+          text-decoration: none;
+          font-variant: normal;
+          font-size: 16px;
+          padding-bottom: 36px;
+        }
+        .admin__content__chooseItem {
+          cursor: pointer;
+        }
+        @media only screen and (max-width: 550px) {
+          .admin__title,
+          .admin__text {
+            text-align: left;
+          }
+          padding: 0 30px;
+        }
+      }
+    }
+    .admin__content {
+      .admin__content__title {
+        display: block;
+        font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
+        text-align: center;
+        line-height: 35px;
+        font-style: normal;
+        font-weight: 400;
+        color: var(--title-color);
+        text-decoration: none;
+        font-variant: normal;
+        font-size: 20px;
+        padding-bottom: 20px;
+      }
+      .admin__content__logout {
+        display: flex;
+        justify-content: center;
+        .admin__content__logout__btn {
+          cursor: pointer;
+          display: flex;
+          border: 3px solid var(--main-between-line-color);
+          font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
+          line-height: 35px;
+          font-style: normal;
+          font-weight: 300;
+          color: var(--title-color);
+          text-decoration: none;
+          font-variant: normal;
+          font-size: 16px;
+          padding: 0 10px;
+          &:hover {
+            background-color: var(--primary-button-hover-bg-color);
+          }
+        }
+      }
+      .admin__login {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        .admin__login__title {
+          display: block;
+          width: 100%;
+          font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
+          text-align: center;
+          line-height: 35px;
+          font-style: normal;
+          font-weight: 400;
+          color: var(--title-color);
+          text-decoration: none;
+          font-variant: normal;
+          font-size: 20px;
+          padding-bottom: 36px;
+        }
+        .admin__login__button {
+          cursor: pointer;
+          display: block;
+          border: 3px solid var(--main-between-line-color);
+          font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
+          text-align: center;
+          line-height: 35px;
+          font-style: normal;
+          font-weight: 300;
+          color: var(--title-color);
+          text-decoration: none;
+          font-variant: normal;
+          font-size: 16px;
+          padding: 0 10px;
+          &:hover {
+            background-color: var(--primary-button-hover-bg-color);
+          }
+        }
+      }
+      .admin__content__text {
+        display: block;
+        font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
+        text-align: left;
+        line-height: 35px;
+        font-style: normal;
+        font-weight: 400;
+        color: var(--title-color);
+        text-decoration: none;
+        font-variant: normal;
+        font-size: 20px;
+        padding-top: 36px;
+      }
+      .admin__content__chooseItem {
+        cursor: pointer;
+        display: flex;
+        font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
+        text-align: left;
+        line-height: 35px;
+        font-style: normal;
+        font-weight: 300;
+        color: var(--title-color);
+        text-decoration: none;
+        font-variant: normal;
+        font-size: 16px;
+        &:hover {
+          color: var(--subject-blue);
+          background-color: var(--second-bottom-hover-color);
+          transition: 0.5s;
+        }
+      }
+    }
+    .admin__choosePage {
+      .admin__choosePage__editDatabase {
+        .admin__choosePage__editDatabase__title {
+          display: block;
+          font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
+          text-align: left;
+          line-height: 35px;
+          font-style: normal;
+          font-weight: 400;
+          color: var(--title-color);
+          text-decoration: none;
+          font-variant: normal;
+          font-size: 20px;
+          padding-top: 36px;
+        }
+        .admin__choosePage__editDatabase__item {
+          cursor: pointer;
+          display: flex;
+          font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
+          text-align: left;
+          line-height: 35px;
+          font-style: normal;
+          font-weight: 300;
+          color: var(--title-color);
+          text-decoration: none;
+          font-variant: normal;
+          font-size: 16px;
+          &:hover {
+            color: var(--subject-blue);
+            background-color: var(--second-bottom-hover-color);
+            transition: 0.5s;
+          }
+        }
+      }
+    }
+    .admin__monitor {
+      .admin__monitor__title {
+        display: block;
+        font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
+        text-align: left;
+        line-height: 35px;
+        font-style: normal;
+        font-weight: 400;
+        color: var(--title-color);
+        text-decoration: none;
+        font-variant: normal;
+        font-size: 20px;
+        padding-top: 36px;
+      }
+      .admin__monitor__subtitle {
+        display: block;
+        font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
+        text-align: left;
+        line-height: 35px;
+        font-style: normal;
+        font-weight: 300;
+        color: var(--title-color);
+        text-decoration: none;
+        font-variant: normal;
+        font-size: 16px;
+        padding-bottom: 36px;
+      }
+      .admin__monitor__item {
+        display: block;
+        font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
+        text-align: left;
+        line-height: 35px;
+        font-style: normal;
+        font-weight: 300;
+        color: var(--title-color);
+        text-decoration: none;
+        font-variant: normal;
+        font-size: 16px;
+      }
+      .admin__monitor__chooseItem {
+        cursor: pointer;
+        display: flex;
+        font-family: "Noto Sans TC", "Noto Sans JP", "微軟正黑體", sans-serif;
+        text-align: left;
+        line-height: 35px;
+        font-style: normal;
+        font-weight: 300;
+        color: var(--title-color);
+        text-decoration: none;
+        font-variant: normal;
+        font-size: 16px;
+        &:hover {
+          color: var(--subject-blue);
+          background-color: var(--second-bottom-hover-color);
+          transition: 0.5s;
+        }
+      }
+    }
+  }
+}

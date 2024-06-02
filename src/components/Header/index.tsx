@@ -6,8 +6,10 @@ import { useTranslation } from "react-i18next";
 import NavBar from "./NavBar";
 import ThemeSwitcher from "../ThemeSwitcher";
 import Logo from "../Logo";
+import useAuth from "../../hoc/AuthProvider";
 
 const Header = () => {
+  const { userRole, logoutGoogle } = useAuth();
   const { t, i18n } = useTranslation();
   const changeLanguage = (lng) => {
     localStorage.setItem("language", lng);
@@ -239,6 +241,16 @@ const Header = () => {
                       </div>
                       <ThemeSwitcher />
                     </div>
+                    {userRole && (
+                      <div
+                        className={styles.Top__nav__right_subtitle_a}
+                        onClick={logoutGoogle}
+                      >
+                        <div className={styles.Top__nav__right_subtitle_a_text}>
+                          登出管理員
+                        </div>
+                      </div>
+                    )}
                   </div>
                 </li>
               </ul>
@@ -255,7 +267,9 @@ const Header = () => {
           </div>
         </div>
         <div className={styles.PhoneTop__logo}>
-          <Logo className={styles.PhoneTop__logo__image} />
+          <Link to='/'>
+            <Logo className={styles.PhoneTop__logo__image} />
+          </Link>
         </div>
       </div>
       <NavBar

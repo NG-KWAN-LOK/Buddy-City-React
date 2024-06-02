@@ -4,6 +4,7 @@ import styles from "./style.module.scss";
 import { useTranslation } from "react-i18next";
 
 import ThemeSwitcher from "../../ThemeSwitcher";
+import useAuth from "../../../hoc/AuthProvider";
 interface NavBarProps {
   isNavBarDisplay: boolean;
   setMobileNavOff: () => void;
@@ -12,6 +13,7 @@ const NavBar: React.FC<NavBarProps> = ({
   isNavBarDisplay,
   setMobileNavOff,
 }) => {
+  const { userRole, logoutGoogle } = useAuth();
   const { t, i18n } = useTranslation();
   const changeLanguage = (lng) => {
     localStorage.setItem("language", lng);
@@ -199,6 +201,18 @@ const NavBar: React.FC<NavBarProps> = ({
             </div>
             <ThemeSwitcher />
           </div>
+          {userRole && (
+            <div className={styles.PhoneTop__mainnav__container__col__a}>
+              <div
+                className={
+                  styles.PhoneTop__mainnav__container__col__a__language
+                }
+                onClick={logoutGoogle}
+              >
+                登出管理員
+              </div>
+            </div>
+          )}
         </div>
       </div>
       <div
