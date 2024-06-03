@@ -4,3 +4,6 @@
 
 !build/\*\*
 !.
+
+build/building-list
+build/map-tiles

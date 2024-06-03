@@ -16,6 +16,7 @@
     width: 75%;
     height: 75%;
     overflow-y: auto;
+    overflow-x: hidden;
     background-color: var(--popup-bg-color);
     .data_username_title {
       padding: 20px;
