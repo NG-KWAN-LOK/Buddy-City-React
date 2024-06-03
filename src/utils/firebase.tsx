@@ -1,5 +1,10 @@
 import { getDatabase, ref, set } from "firebase/database";
-import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import {
+  getAuth,
+  signInWithPopup,
+  GoogleAuthProvider,
+  signInWithRedirect,
+} from "firebase/auth";
 
 import { firebaseApp } from "./firebaseConfig";
 
@@ -45,3 +50,6 @@ googleProvider.setCustomParameters({
 export const auth = getAuth();
 export const signInWithGooglePopup = () =>
   signInWithPopup(auth, googleProvider);
+
+export const signInWithGoogleRedirect = () =>
+  signInWithRedirect(auth, googleProvider);

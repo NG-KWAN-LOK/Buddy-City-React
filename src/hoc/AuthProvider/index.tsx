@@ -1,5 +1,9 @@
 import React, { useState, createContext, useCallback, useEffect } from "react";
-import { auth, getUserData, signInWithGooglePopup } from "../../utils/firebase";
+import {
+  auth,
+  getUserData,
+  signInWithGoogleRedirect,
+} from "../../utils/firebase";
 import { onValue } from "firebase/database";
 import { signOut } from "firebase/auth";
 
@@ -46,7 +50,7 @@ export const AuthProvider = ({ children }) => {
 
   const signInWithGoogle = async () => {
     try {
-      await signInWithGooglePopup();
+      await signInWithGoogleRedirect();
     } catch (error) {
       alert("登入失敗");
     }
