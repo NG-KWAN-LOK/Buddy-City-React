@@ -112,8 +112,8 @@ const discoveryRowData: IDiscoveryRowData = {
     rowTitle: "discover_subtitle_basic",
     rowIconData: [
       {
-        type: "pointer",
-        to: "",
+        type: "internal",
+        to: "/page/basic/what-is-buddy-city",
         src: image31,
         atoppadding: "discover_content_atoppadding_place",
         apadding: "discover_content_apadding_place",

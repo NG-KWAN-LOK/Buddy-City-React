@@ -24,7 +24,8 @@ const majorEvents: IMajorEvents = {
       eng_name: "Buddy City Development",
       jp_name: "Buddy 市開拓",
       display: true,
-      type: "pointer",
+      url: "/page/basic/what-is-buddy-city",
+      type: "internal",
     },
     {
       year: "2012",

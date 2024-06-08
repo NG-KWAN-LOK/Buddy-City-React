@@ -56,15 +56,27 @@
     white-space: pre-wrap;
     margin-top: 15px;
   }
-  .GeneralPageContainer__content__image{
-    display: flex;
+  .GeneralPageContainer__content__image {
     width: 100%;
     margin: 15px 0;
-    .GeneralPageContainer__content_contain{
+    .GeneralPageContainer__content_contain {
       display: flex;
-      .GeneralPageContainer__content__image_container_img{
+      .GeneralPageContainer__content__image_container_img {
         width: 100%;
         object-fit: cover;
+      }
+    }
+    .GeneralPageContainer__content__image_text {
+      display: flex;
+      align-items: center;
+      font-weight: 300;
+      color: var(--title-color);
+      font-size: 15px;
+      &::before {
+        content: "▶";
+        margin-right: 8px;
+        font-size: 10px;
+        line-height: 30px;
       }
     }
   }

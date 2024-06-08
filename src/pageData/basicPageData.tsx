@@ -3,8 +3,95 @@ import ERA_NAME from "../image/photo/generalpage/basic/era_name.jpg";
 import CITY_FLAG from "../image/photo/generalpage/basic/city_flag.jpg";
 import CITY_EMBLEM from "../image/photo/generalpage/basic/city_emblem.jpg";
 import HYDRANGEAS from "../image/photo/generalpage/basic/hydrangeas.jpg";
+import BOUNDLESS_REALM from "../image/photo/generalpage/what-is-buddy-city/boundless_realm.jpg";
+import ORIGINAL_PLACE from "../image/photo/generalpage/what-is-buddy-city/original_place.jpg";
+import NOW_PLACE from "../image/photo/generalpage/what-is-buddy-city/now_place.jpg";
+import BCCTB from "../image/photo/generalpage/what-is-buddy-city/bcctb.jpg";
 
 const BasicPageData: GeneralCategoryData = {
+  "what-is-buddy-city": {
+    pageTitle: "discover_content_atoppadding_place",
+    pageSubtitle: "discover_content_apadding_place",
+    contentName: "what-is-buddy-city",
+    contentData: [
+      {
+        contentType: "title",
+        contentText: "basic_place_title_1",
+      },
+      {
+        contentType: "image",
+        src: BOUNDLESS_REALM,
+        style: {
+          "max-width": 600,
+          "max-height": 400,
+        },
+        contentText: "basic_place_title_1_image_1",
+      },
+      {
+        contentType: "text",
+        contentText: "basic_place_title_1_1",
+      },
+      {
+        contentType: "title",
+        contentText: "basic_place_title_2",
+      },
+      {
+        contentType: "image",
+        src: ORIGINAL_PLACE,
+        style: {
+          "max-width": 600,
+          "max-height": 400,
+        },
+        contentText: "basic_place_title_2_image_1",
+      },
+      {
+        contentType: "text",
+        contentText: "basic_place_title_2_1",
+      },
+      {
+        contentType: "title",
+        contentText: "basic_place_title_3",
+      },
+      {
+        contentType: "image",
+        src: NOW_PLACE,
+        style: {
+          "max-width": 600,
+          "max-height": 400,
+        },
+        contentText: "basic_place_title_3_image_1",
+      },
+      {
+        contentType: "text",
+        contentText: "basic_place_title_3_1",
+      },
+      {
+        contentType: "title",
+        contentText: "basic_place_title_4",
+      },
+      {
+        contentType: "image",
+        src: BCCTB,
+        style: {
+          "max-width": 600,
+          "max-height": 400,
+        },
+        contentText: "basic_place_title_4_image_1",
+      },
+      {
+        contentType: "text",
+        contentText: "basic_place_title_4_1",
+      },
+      {
+        contentType: "title",
+        contentText: "basic_place_title_5",
+      },
+      {
+        contentType: "text",
+        contentText: "basic_place_title_5_1",
+      },
+    ],
+  },
   background: {
     pageTitle: "discover_content_atoppadding_background",
     pageSubtitle: "discover_content_apadding_background",

@@ -154,6 +154,13 @@ const GeneralPageContainer: React.FC<GeneralPageContainerProps> = ({
                     }
                   />
                 </div>
+                {data.contentText && (
+                  <div
+                    className={styles.GeneralPageContainer__content__image_text}
+                  >
+                    {t(String(data.contentText))}
+                  </div>
+                )}
               </div>
             );
           }
