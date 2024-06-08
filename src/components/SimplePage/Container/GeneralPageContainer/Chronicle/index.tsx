@@ -1,10 +1,9 @@
-import React, { JSX, memo, useCallback, useEffect, useState } from "react";
+import React, { JSX } from "react";
 import styles from "./style.module.scss";
 import {
   IMajorEventData,
   IMajorEvents,
 } from "../../../../../pageData/majorEvents";
-import { JsxElement, transform } from "typescript";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { ListItem, styled } from "@mui/material";
@@ -83,13 +82,14 @@ const StyledYearListItem = styled(ListItem, {
     content: '""',
     display: "inline-block",
     width: 40,
-    borderTop: month ? "2px solid var(--subject-blue)" : "none",
-    borderLeft: "2px solid var(--main-between-line-color)",
+    borderTop: month ? "2px solid var(--main-between-line-color)" : "none",
+    borderLeft: "2px solid var(--subject-blue)",
+    borderLeftStyle: isLast ? "dashed" : "solid",
     position: "absolute",
     left: 8,
     top: 35,
     height: "100%",
-    maxHeight: isLast ? 0 : "100%",
+    maxHeight: isLast ? "50%" : "100%",
   },
   ...((year || month) && {
     "&:before": {
@@ -99,7 +99,7 @@ const StyledYearListItem = styled(ListItem, {
       width: 40,
       height: 15,
       background: "var(--primary-button-title-color)",
-      border: "2px solid var(--main-between-line-color)",
+      border: "2px solid var(--subject-blue)",
       position: "absolute",
       left: -14,
       top: year ? 30 : 22,
@@ -126,7 +126,7 @@ const StyledMonthListItem = styled(ListItem, {
     width: 15,
     height: 15,
     background: "var(--primary-button-title-color)",
-    border: "2px solid var(--subject-blue)",
+    border: "2px solid var(--main-between-line-color)",
     position: "absolute",
     left: 0,
     top: 17,
@@ -137,7 +137,7 @@ const StyledMonthListItem = styled(ListItem, {
     content: '""',
     display: "inline-block",
     width: 2,
-    background: "var(--subject-blue)",
+    background: "var(--main-between-line-color)",
     position: "absolute",
     left: 8,
     top: 35,
@@ -188,7 +188,8 @@ const Chronicle: React.FC<ChronicleProps> = (eventData) => {
         tempComponent.push(
           <StyledYearListItem
             year={
-              index === eventData.eventData.data.length - 1
+              index === eventData.eventData.data.length - 1 &&
+              typeof tempDate[event.year] === "undefined"
                 ? event.year
                 : undefined
             }
