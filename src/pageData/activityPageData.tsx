@@ -57,7 +57,7 @@ export const activityPageData: GeneralCategoryData = {
       },
       {
         contentType: "title",
-        contentText: "active_buddy_road_besketball_court",
+        contentText: "active_buddy_road_basketball_court",
       },
       {
         contentType: "image",
@@ -69,7 +69,7 @@ export const activityPageData: GeneralCategoryData = {
       },
       {
         contentType: "text",
-        contentText: "active_buddy_road_besketball_court_content",
+        contentText: "active_buddy_road_basketball_court_content",
       },
       {
         contentType: "title",

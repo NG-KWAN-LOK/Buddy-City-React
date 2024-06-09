@@ -97,7 +97,10 @@ const Header = () => {
                       </Link>
                     </div>
                     <div className={styles.Top__nav__left_subtitle}>
-                      <Link to='/page/discover'>
+                      <Link
+                        to='/page/discover'
+                        title={t("discover_row_subtitle_basic")}
+                      >
                         <i
                           aria-hidden='true'
                           className={styles["ion-android-arrow-dropdown"]}
@@ -108,7 +111,11 @@ const Header = () => {
                       </Link>
                     </div>
                     <div className={styles.Top__nav__left_subtitle}>
-                      <a href='/online-map' target='_blank'>
+                      <Link
+                        to='/online-map'
+                        target='_blank'
+                        title={t("discover_content_apadding_webMap")}
+                      >
                         <i
                           aria-hidden='true'
                           className={styles["ion-android-arrow-dropdown"]}
@@ -116,12 +123,13 @@ const Header = () => {
                         <span id='topFooterLang_topOnlineMap'>
                           {t("topFooterLang_topOnlineMap")}
                         </span>
-                      </a>
+                      </Link>
                     </div>
                     <div className={styles.Top__nav__left_subtitle}>
                       <a
                         href={`${process.env.REACT_APP_DYNMAP_URL}`}
                         target='_blank'
+                        title={t("discover_content_apadding_gps")}
                       >
                         <i
                           aria-hidden='true'
@@ -133,7 +141,10 @@ const Header = () => {
                       </a>
                     </div>
                     <div className={styles.Top__nav__left_subtitle}>
-                      <Link to='/railway-route-map'>
+                      <Link
+                        to='/railway-route-map'
+                        title={t("discover_content_apadding_routeMap")}
+                      >
                         <i
                           aria-hidden='true'
                           className={styles["ion-android-arrow-dropdown"]}
@@ -144,7 +155,10 @@ const Header = () => {
                       </Link>
                     </div>
                     <div className={styles.Top__nav__left_subtitle}>
-                      <Link to='/building_list'>
+                      <Link
+                        to='/building_list'
+                        title={t("discover_content_apadding_buildingList")}
+                      >
                         <i
                           aria-hidden='true'
                           className={styles["ion-android-arrow-dropdown"]}
@@ -155,7 +169,7 @@ const Header = () => {
                       </Link>
                     </div>
                     <div className={styles.Top__nav__left_subtitle}>
-                      <Link to='/resident'>
+                      <Link to='/resident' title={t("ResidentList_subtitle")}>
                         <i
                           aria-hidden='true'
                           className={styles["ion-android-arrow-dropdown"]}
